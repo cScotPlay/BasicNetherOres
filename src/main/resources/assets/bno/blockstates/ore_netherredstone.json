@@ -1,0 +1,6 @@
+{
+    "variants":
+    {
+        "normal": { "model": "bno:ore_netherredstone"}
+    }
+}

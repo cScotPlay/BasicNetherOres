@@ -1,0 +1,22 @@
+{
+    "_comment": [
+        "Copper Ingot Crafting Recipe"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "NNN",
+        "NNN",
+        "NNN"
+    ],
+    "key": {
+        "N": {
+            "type": "forge:ore_dict",
+            "ore": "nuggetCopper"
+        }
+    },
+    "result": {
+        "item": "bno:ingot_copper",
+        "count": 1
+    }
+}
+
