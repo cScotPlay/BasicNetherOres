@@ -12,8 +12,12 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
+import java.io.File;
+
 @Mod(modid = BasicNetherOres.MOD_ID, name = BasicNetherOres.MOD_NAME, version = BasicNetherOres.VERSION)
 public class BasicNetherOres {
+
+	public static File config;
 
 	public static final String MOD_ID = "bno";
 	public static final String MOD_NAME = "Basic Nether Ores";
@@ -32,12 +36,12 @@ public class BasicNetherOres {
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public static void preInit(FMLPreInitializationEvent event) {RegistryHandler.preInitRegistries();}
+	public static void preInit(FMLPreInitializationEvent event) {RegistryHandler.preInitRegistries(event);}
 	
 	@EventHandler
-	public static void init(FMLInitializationEvent event) {RegistryHandler.initRegistries();}
+	public static void init(FMLInitializationEvent event) {RegistryHandler.initRegistries(event);}
 	
 	@EventHandler
-	public static void postInit(FMLPostInitializationEvent event) {RegistryHandler.postInitRegistries();}
+	public static void postInit(FMLPostInitializationEvent event) {RegistryHandler.postInitRegistries(event);}
 
 }

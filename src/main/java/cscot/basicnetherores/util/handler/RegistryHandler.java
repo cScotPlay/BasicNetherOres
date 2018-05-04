@@ -10,10 +10,12 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -64,13 +66,14 @@ public class RegistryHandler {
 		}
 	}
 
-	public static void preInitRegistries()
+	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
+		ConfigHandler.registerConfig(event);
 
 	}
 	
-	public static void initRegistries() {
+	public static void initRegistries(FMLInitializationEvent event) {
 		
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHEREMERALD, new ItemStack(Items.EMERALD), 1F);
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERDIAMOND, new ItemStack(Items.DIAMOND), 1F);
@@ -85,7 +88,7 @@ public class RegistryHandler {
 	}
 
 	
-	public static void postInitRegistries() {
+	public static void postInitRegistries(FMLPostInitializationEvent event) {
 		
 		OreDictionaryRegistry.registerDictionaryOres();
 	}
