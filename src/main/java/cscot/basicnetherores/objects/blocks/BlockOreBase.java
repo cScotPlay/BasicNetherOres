@@ -160,10 +160,13 @@ public class BlockOreBase extends Block implements IHasModel {
     }
     
     private void pigmenGuards(EntityPlayer thief, World world, BlockPos pos) {
-    	
-    	int x = pos.getX(), y = pos.getY(), z = pos.getZ();
-    	
-    	List<?> list = world.getEntitiesWithinAABB(EntityPigZombie.class, new AxisAlignedBB(x - 16, y - 16, z - 16, x + 16, y + 16, z + 16));
+
+		int x = pos.getX(), y = pos.getY(), z = pos.getZ();
+
+		int rngProt;
+		rngProt = ConfigHandler.protectionRange;
+
+    	List<?> list = world.getEntitiesWithinAABB(EntityPigZombie.class, new AxisAlignedBB(x - rngProt, y - rngProt, z - rngProt, x + rngProt, y + rngProt, z + rngProt));
     	
     	for(int i = 0; i < list.size(); i++) {
     		

@@ -11,6 +11,9 @@ public class ConfigHandler {
     public static Configuration config;
 
     public static boolean pigmanGuard;
+
+    public static int protectionRange = 16;
+
     //TODO add public static boolean for seperate areas
 
     public static void init(File file) {
@@ -22,7 +25,7 @@ public class ConfigHandler {
         category = "Ore Protector";
         config.addCustomCategoryComment(category, "Enable Pigman Projection of Nether Ores");
         pigmanGuard = config.getBoolean("Enable Pigmen Aggro when Ores are harvested", category, true, "If set to 'true' Pigmen will protect Nether Ores");
-
+        protectionRange = config.getInt("Projection Range", category, 16, 1, 64,"Set range that Pigmen will aggro when mining ores");
         config.save();
     }
 
