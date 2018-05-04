@@ -7,6 +7,7 @@ import cscot.basicnetherores.BasicNetherOres;
 import cscot.basicnetherores.init.BlockInit;
 import cscot.basicnetherores.init.BlockOreInit;
 import cscot.basicnetherores.init.ItemInit;
+import cscot.basicnetherores.util.handler.ConfigHandler;
 import cscot.basicnetherores.util.interfaces.IHasModel;
 
 import net.minecraft.block.Block;
@@ -151,14 +152,11 @@ public class BlockOreBase extends Block implements IHasModel {
     	
     	super.harvestBlock(world, thief, pos, state, te, stack);
 
-    	if (this == blockState.getBlock()) {
+    	if (ConfigHandler.pigmanGuard) {
     		
     		pigmenGuards(thief, world, pos);
     	}
-    	else if (this == Blocks.QUARTZ_ORE) {
-    		
-    		pigmenGuards(thief, world, pos);
-    	}
+
     }
     
     private void pigmenGuards(EntityPlayer thief, World world, BlockPos pos) {
