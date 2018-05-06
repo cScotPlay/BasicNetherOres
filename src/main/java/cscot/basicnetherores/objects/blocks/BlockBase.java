@@ -4,6 +4,7 @@ package cscot.basicnetherores.objects.blocks;
 import cscot.basicnetherores.BasicNetherOres;
 import cscot.basicnetherores.init.BlockInit;
 import cscot.basicnetherores.init.ItemInit;
+import cscot.basicnetherores.util.handler.ConfigHandler;
 import cscot.basicnetherores.util.interfaces.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,10 +20,10 @@ public class BlockBase extends Block implements IHasModel
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(BasicNetherOres.BASICNETHERORES);
-		
+
 		BlockInit.BLOCKS.add(this);
 		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
-		
+
 	}
 
 	@Override

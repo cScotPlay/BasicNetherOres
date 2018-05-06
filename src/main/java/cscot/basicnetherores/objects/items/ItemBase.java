@@ -7,8 +7,6 @@ import net.minecraft.item.Item;
 
 public class ItemBase extends Item implements IHasModel{
 
-	public String localizedName;
-	
 	public ItemBase(String name, String localName) {
 		
 		setUnlocalizedName(localName);
@@ -16,11 +14,13 @@ public class ItemBase extends Item implements IHasModel{
 		setCreativeTab(BasicNetherOres.BASICNETHERORES);
 
 		ItemInit.ITEMS.add(this);
+
 	}
 
 	@Override
 	public void registerModels() {
 		
 		BasicNetherOres.proxy.registerItemRenderer(this, 0, "inventory");
+
 	}
 }

@@ -2,6 +2,7 @@ package cscot.basicnetherores.util.handler;
 
 import cscot.basicnetherores.init.BlockInit;
 import cscot.basicnetherores.init.BlockOreInit;
+import cscot.basicnetherores.init.IngotInit;
 import cscot.basicnetherores.init.ItemInit;
 import cscot.basicnetherores.registries.OreDictionaryRegistry;
 import cscot.basicnetherores.util.interfaces.IHasModel;
@@ -19,6 +20,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+
 @EventBusSubscriber
 public class RegistryHandler {
 
@@ -33,11 +35,23 @@ public class RegistryHandler {
 	
 		event.getRegistry().registerAll(ItemInit.ITEMS.toArray(new Item[0]));
 	}
-	
+
+	@SubscribeEvent
+	public static void onIngotRegister(RegistryEvent.Register<Item> event) {
+
+		if(ConfigHandler.regeisterIngots) {
+
+			event.getRegistry().registerAll(IngotInit.ITEMINGOTS.toArray(new Item[0]));
+		}
+	}
+
 	@SubscribeEvent
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) {
 	
-		event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
+		if(ConfigHandler.regeisterIngots) {
+
+			event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
+		}
 	}
 	
 	@SubscribeEvent
@@ -64,6 +78,14 @@ public class RegistryHandler {
 				((IHasModel)item).registerModels();
 			}
 		}
+
+		for(Item item : IngotInit.ITEMINGOTS) {
+
+			if(item instanceof IHasModel) {
+
+				((IHasModel)item).registerModels();
+			}
+		}
 	}
 
 	public static void preInitRegistries(FMLPreInitializationEvent event)
@@ -82,8 +104,8 @@ public class RegistryHandler {
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERCOAL, new ItemStack(Items.COAL), 0.7F);
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERGOLD, new ItemStack(Items.GOLD_INGOT), 1F);
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERIRON, new ItemStack(Items.IRON_INGOT), 0.7F);
-		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERCOPPER, new ItemStack(ItemInit.INGOT_COPPER), 0.7F);
-		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERTIN, new ItemStack(ItemInit.INGOT_TIN), 0.7F);
+		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERCOPPER, new ItemStack(IngotInit.INGOT_COPPER), 0.7F);
+		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERTIN, new ItemStack(IngotInit.INGOT_TIN), 0.7F);
 		
 	}
 

@@ -2,6 +2,7 @@ package cscot.basicnetherores.registries;
 
 import cscot.basicnetherores.init.BlockInit;
 import cscot.basicnetherores.init.BlockOreInit;
+import cscot.basicnetherores.init.IngotInit;
 import cscot.basicnetherores.init.ItemInit;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -22,11 +23,11 @@ public class OreDictionaryRegistry {
 			
 		}
 
-		OreDictionary.registerOre("ingot" + ItemInit.INGOT_COPPER.getUnlocalizedName().substring(11, ItemInit.INGOT_COPPER.getUnlocalizedName().length() - 0), ItemInit.INGOT_COPPER);
-		OreDictionary.registerOre("ingot" + ItemInit.INGOT_TIN.getUnlocalizedName().substring(11, ItemInit.INGOT_TIN.getUnlocalizedName().length() - 0), ItemInit.INGOT_TIN);
+		OreDictionary.registerOre("ingot" + IngotInit.INGOT_COPPER.getUnlocalizedName().substring(11, IngotInit.INGOT_COPPER.getUnlocalizedName().length() - 0), IngotInit.INGOT_COPPER);
+		OreDictionary.registerOre("ingot" + IngotInit.INGOT_TIN.getUnlocalizedName().substring(11, IngotInit.INGOT_TIN.getUnlocalizedName().length() - 0), IngotInit.INGOT_TIN);
 		
-		OreDictionary.registerOre("nugget" + ItemInit.NUGGET_COPPER.getUnlocalizedName().substring(12, ItemInit.NUGGET_COPPER.getUnlocalizedName().length() - 0), ItemInit.NUGGET_COPPER);
-		OreDictionary.registerOre("nugget" + ItemInit.NUGGET_TIN.getUnlocalizedName().substring(12, ItemInit.NUGGET_TIN.getUnlocalizedName().length() - 0), ItemInit.NUGGET_TIN);
+		OreDictionary.registerOre("nugget" + IngotInit.NUGGET_COPPER.getUnlocalizedName().substring(12, IngotInit.NUGGET_COPPER.getUnlocalizedName().length() - 0), IngotInit.NUGGET_COPPER);
+		OreDictionary.registerOre("nugget" + IngotInit.NUGGET_TIN.getUnlocalizedName().substring(12, IngotInit.NUGGET_TIN.getUnlocalizedName().length() - 0), IngotInit.NUGGET_TIN);
 		
 	}
 }

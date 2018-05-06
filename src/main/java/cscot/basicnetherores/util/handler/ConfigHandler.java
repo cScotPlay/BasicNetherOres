@@ -11,6 +11,7 @@ public class ConfigHandler {
     public static Configuration config;
 
     public static boolean pigmanGuard;
+    public static boolean regeisterIngots;
 
     public static int protectionRange = 16;
 
@@ -23,9 +24,15 @@ public class ConfigHandler {
         String category;
 
         category = "Ore Protector";
-        config.addCustomCategoryComment(category, "Enable Pigman Projection of Nether Ores");
+        config.addCustomCategoryComment(category, "Pigman Projection Settings");
         pigmanGuard = config.getBoolean("Enable Pigmen Aggro when Ores are harvested", category, true, "If set to 'true' Pigmen will protect Nether Ores");
         protectionRange = config.getInt("Projection Range", category, 16, 1, 64,"Set range that Pigmen will aggro when mining ores");
+
+
+        category = "Nuggets, Ingots, & Blocks";
+        config.addCustomCategoryComment(category, "Register Ingot and Blocks");
+        regeisterIngots = config.getBoolean("Register Copper and Tin Items", category, true, "Set to false to turn off registering of Metals");
+
         config.save();
     }
 
