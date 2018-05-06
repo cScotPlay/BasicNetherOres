@@ -17,22 +17,27 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import net.minecraftforge.event.world.BlockEvent;
 
 public class BlockOreBase extends Block implements IHasModel {
 
@@ -153,8 +158,16 @@ public class BlockOreBase extends Block implements IHasModel {
     	super.harvestBlock(world, thief, pos, state, te, stack);
 
     	if (ConfigHandler.pigmanGuard) {
-    		
-    		pigmenGuards(thief, world, pos);
+
+    		EnumHand hand = thief.getActiveHand();
+    		ItemStack s = thief.getHeldItem(hand);
+
+    		if (s == null || EnchantmentHelper.getEnchantmentLevel(Enchantment.getEnchantmentByLocation("minecraft:silk_touch"), s) <= 0 || !ConfigHandler.silkEffect) {
+
+				pigmenGuards(thief, world, pos);
+    		}
+
+
     	}
 
     }
