@@ -160,16 +160,13 @@ public class BlockOreBase extends Block implements IHasModel {
     	if (ConfigHandler.pigmanGuard) {
 
     		EnumHand hand = thief.getActiveHand();
-    		ItemStack s = thief.getHeldItem(hand);
+    		ItemStack silkTouch = thief.getHeldItem(hand);
 
-    		if (s == null || EnchantmentHelper.getEnchantmentLevel(Enchantment.getEnchantmentByLocation("minecraft:silk_touch"), s) <= 0 || !ConfigHandler.silkEffect) {
+    		if (silkTouch == null || EnchantmentHelper.getEnchantmentLevel(Enchantment.getEnchantmentByLocation("minecraft:silk_touch"), silkTouch) <= 0 || !ConfigHandler.silkEffect) {
 
 				pigmenGuards(thief, world, pos);
     		}
-
-
     	}
-
     }
     
     private void pigmenGuards(EntityPlayer thief, World world, BlockPos pos) {

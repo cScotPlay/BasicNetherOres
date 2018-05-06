@@ -26,7 +26,7 @@ public class ConfigHandler {
 
         category = "Ore Protector";
         config.addCustomCategoryComment(category, "Pigman Projection Settings");
-        pigmanGuard = config.getBoolean("Enable Pigmen Aggro when Ores are harvested", category, true, "If set to 'true' Pigmen will protect Nether Ores");
+        pigmanGuard = config.getBoolean("Pigmen Protection", category, true, "If set to 'true' Pigmen will protect Nether Ores");
         protectionRange = config.getInt("Projection Range", category, 16, 1, 64,"Set range that Pigmen will aggro when mining ores");
         silkEffect = config.getBoolean("Silk Enchantment Effect", category, true, "Set to false if you want the Pigmen to attack when using Silk Touch Tools");
 
