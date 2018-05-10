@@ -4,6 +4,7 @@ import java.util.Random;
 
 import cscot.basicnetherores.init.BlockOreInit;
 
+import cscot.basicnetherores.util.handler.ConfigHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
@@ -30,15 +31,15 @@ public class WorldGenCustomOres implements IWorldGenerator
 	public WorldGenCustomOres() 
 	{
 		//Block that will spawn, size of the ore vein, block that the ore will spawn in
-		ore_netheremerald = new WorldGenMinable(BlockOreInit.ORE_NETHEREMERALD.getDefaultState(), 3, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		ore_netherdiamond = new WorldGenMinable(BlockOreInit.ORE_NETHERDIAMOND.getDefaultState(), 4, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		ore_netherredstone = new WorldGenMinable(BlockOreInit.ORE_NETHERREDSTONE.getDefaultState(), 6, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		ore_netherlapis = new WorldGenMinable(BlockOreInit.ORE_NETHERLAPIS.getDefaultState(), 5, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		ore_nethercoal = new WorldGenMinable(BlockOreInit.ORE_NETHERCOAL.getDefaultState(), 10, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		ore_nethergold = new WorldGenMinable(BlockOreInit.ORE_NETHERGOLD.getDefaultState(), 6, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		ore_netheriron = new WorldGenMinable(BlockOreInit.ORE_NETHERIRON.getDefaultState(), 8, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		ore_nethercopper = new WorldGenMinable(BlockOreInit.ORE_NETHERCOPPER.getDefaultState(), 6, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		ore_nethertin = new WorldGenMinable(BlockOreInit.ORE_NETHERTIN.getDefaultState(), 4, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		ore_netheremerald = new WorldGenMinable(BlockOreInit.ORE_NETHEREMERALD.getDefaultState(), ConfigHandler.emeraldVeinSize, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		ore_netherdiamond = new WorldGenMinable(BlockOreInit.ORE_NETHERDIAMOND.getDefaultState(), ConfigHandler.diamondVeinSize, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		ore_netherredstone = new WorldGenMinable(BlockOreInit.ORE_NETHERREDSTONE.getDefaultState(), ConfigHandler.redstoneVeinSize, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		ore_netherlapis = new WorldGenMinable(BlockOreInit.ORE_NETHERLAPIS.getDefaultState(), ConfigHandler.lapisVeinSize, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		ore_nethercoal = new WorldGenMinable(BlockOreInit.ORE_NETHERCOAL.getDefaultState(), ConfigHandler.coalVeinSize, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		ore_nethergold = new WorldGenMinable(BlockOreInit.ORE_NETHERGOLD.getDefaultState(), ConfigHandler.goldVeinSize, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		ore_netheriron = new WorldGenMinable(BlockOreInit.ORE_NETHERIRON.getDefaultState(), ConfigHandler.ironVeinSize, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		ore_nethercopper = new WorldGenMinable(BlockOreInit.ORE_NETHERCOPPER.getDefaultState(), ConfigHandler.copperVeinSize, BlockMatcher.forBlock(Blocks.NETHERRACK));
+		ore_nethertin = new WorldGenMinable(BlockOreInit.ORE_NETHERTIN.getDefaultState(), ConfigHandler.tinVeinSize, BlockMatcher.forBlock(Blocks.NETHERRACK));
 	}
 
 	@Override
@@ -48,15 +49,15 @@ public class WorldGenCustomOres implements IWorldGenerator
 		{
 		case -1: 
 			//Int represent the 
-			runGenerator(ore_netheremerald, world, random, chunkX, chunkZ, 15, 0, 125);
-			runGenerator(ore_netherdiamond, world, random, chunkX, chunkZ, 20, 0, 125);
-			runGenerator(ore_netherredstone, world, random, chunkX, chunkZ, 30, 0, 125);
-			runGenerator(ore_netherlapis, world, random, chunkX, chunkZ, 25, 0, 125);
-			runGenerator(ore_nethercoal, world, random, chunkX, chunkZ, 50, 0, 125);
-			runGenerator(ore_nethergold, world, random, chunkX, chunkZ, 30, 0, 125);
-			runGenerator(ore_netheriron, world, random, chunkX, chunkZ, 50, 0, 125);
-			runGenerator(ore_nethercopper, world, random, chunkX, chunkZ, 35, 0, 125);
-			runGenerator(ore_nethertin, world, random, chunkX, chunkZ, 30, 0, 125);
+			runGenerator(ore_netheremerald, world, random, chunkX, chunkZ, ConfigHandler.emeraldChance, ConfigHandler.emeraldMinHeight, ConfigHandler.emeraldMaxHeight);
+			runGenerator(ore_netherdiamond, world, random, chunkX, chunkZ, ConfigHandler.diamondChance, ConfigHandler.diamondMinHeight, ConfigHandler.diamondMaxHeight);
+			runGenerator(ore_netherredstone, world, random, chunkX, chunkZ, ConfigHandler.redstoneChance, ConfigHandler.redstoneMinHeight, ConfigHandler.redstoneMaxHeight);
+			runGenerator(ore_netherlapis, world, random, chunkX, chunkZ, ConfigHandler.lapisChance, ConfigHandler.lapisMinHeight, ConfigHandler.lapisMaxHeight);
+			runGenerator(ore_nethercoal, world, random, chunkX, chunkZ, ConfigHandler.coalChance, ConfigHandler.coalMinHeight, ConfigHandler.coalMaxHeight);
+			runGenerator(ore_nethergold, world, random, chunkX, chunkZ, ConfigHandler.goldChance, ConfigHandler.goldMinHeight, ConfigHandler.goldMaxHeight);
+			runGenerator(ore_netheriron, world, random, chunkX, chunkZ, ConfigHandler.ironChance, ConfigHandler.ironMinHeight, ConfigHandler.ironMaxHeight);
+			runGenerator(ore_nethercopper, world, random, chunkX, chunkZ, ConfigHandler.copperChance, ConfigHandler.copperMinHeight, ConfigHandler.copperMaxHeight);
+			runGenerator(ore_nethertin, world, random, chunkX, chunkZ, ConfigHandler.tinChance, ConfigHandler.tinMinHeight, ConfigHandler.tinMaxHeight);
 
 		}
 	}
