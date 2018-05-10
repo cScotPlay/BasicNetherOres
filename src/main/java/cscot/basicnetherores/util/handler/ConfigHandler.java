@@ -70,8 +70,6 @@ public class ConfigHandler {
     public static int tinMinHeight = 0;
     public static int tinMaxHeight = 125;
 
-    //TODO add public static boolean for seperate areas
-
     public static void init(File file) {
 
         config = new Configuration(file);
