@@ -160,7 +160,7 @@ public class BlockOreBase extends Block implements IHasModel {
     	if (ConfigHandler.pigmanGuard) {
 
     		EnumHand hand = thief.getActiveHand();
-    		ItemStack silkTouch = thief.getHeldItem(hand);
+    		ItemStack silkTouch = thief.getHeldItemMainhand();
 
     		if (silkTouch == null || EnchantmentHelper.getEnchantmentLevel(Enchantment.getEnchantmentByLocation("minecraft:silk_touch"), silkTouch) <= 0 || !ConfigHandler.silkEffect) {
 
