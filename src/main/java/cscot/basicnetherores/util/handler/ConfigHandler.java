@@ -14,7 +14,25 @@ public class ConfigHandler {
     public static boolean regeisterIngots;
     public static boolean silkEffect;
 
+    public static String[] protectedBlocksArray = new String[]{
+
+            "bno:ore_netheremerald",
+            "bno:ore_netherdiamond",
+            "bno:ore_netherlapis",
+            "bno:ore_netherredstone",
+            "bno:ore_nethergold",
+            "bno:ore_netheriron",
+            "bno:ore_nethercoal",
+            "bno:ore_nethercopper",
+            "bno:ore_nethertin",
+            "minecraft:glowstone",
+            "minecraft:quartz_ore"
+
+    };
+
     public static int protectionRange = 16;
+
+    public static String[] protectedBlocks;
 
     //Emerald Settings
     public static int emeraldVeinSize = 3;
@@ -81,7 +99,7 @@ public class ConfigHandler {
         pigmanGuard = config.getBoolean("Pigmen Protection", category, true, "If set to 'true' Pigmen will protect Nether Ores");
         protectionRange = config.getInt("Projection Range", category, 16, 1, 64,"Set range that Pigmen will aggro when mining ores");
         silkEffect = config.getBoolean("Silk Enchantment Effect", category, true, "Set to false if you want the Pigmen to attack when using Silk Touch Tools");
-
+        protectedBlocks = config.getStringList("Protected Blocks", category, protectedBlocksArray, "Add Blocks to be protected by Pigmen ***Not Fully Implemented Yet ***(Example: minecraft:glowstone)");
 
         category = "Nuggets, Ingots, & Blocks";
         config.addCustomCategoryComment(category, "Register Ingot and Blocks");

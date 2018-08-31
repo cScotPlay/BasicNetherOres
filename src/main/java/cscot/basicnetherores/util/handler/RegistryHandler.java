@@ -29,7 +29,7 @@ public class RegistryHandler {
 	
 		event.getRegistry().registerAll(BlockOreInit.BLOCKORES.toArray(new Block[0]));
 	}
-	
+
 	@SubscribeEvent
 	public static void onItemRegister(RegistryEvent.Register<Item> event) {
 	
@@ -53,7 +53,7 @@ public class RegistryHandler {
 			event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
 		}
 	}
-	
+
 	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event) {
 		
@@ -88,11 +88,9 @@ public class RegistryHandler {
 		}
 	}
 
-	public static void preInitRegistries(FMLPreInitializationEvent event)
-	{
+	public static void preInitRegistries(FMLPreInitializationEvent event) {
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
 		ConfigHandler.registerConfig(event);
-
 	}
 	
 	public static void initRegistries(FMLInitializationEvent event) {
@@ -106,12 +104,16 @@ public class RegistryHandler {
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERIRON, new ItemStack(Items.IRON_INGOT), 0.7F);
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERCOPPER, new ItemStack(IngotInit.INGOT_COPPER), 0.7F);
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERTIN, new ItemStack(IngotInit.INGOT_TIN), 0.7F);
-		
+
+
+
 	}
 
 	
 	public static void postInitRegistries(FMLPostInitializationEvent event) {
 		
 		OreDictionaryRegistry.registerDictionaryOres();
+
+
 	}
 }
