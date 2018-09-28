@@ -6,6 +6,7 @@ import java.util.Random;
 import cscot.basicnetherores.BasicNetherOres;
 import cscot.basicnetherores.init.BlockOreInit;
 import cscot.basicnetherores.init.ItemInit;
+import cscot.basicnetherores.registries.OreDictionaryRegistry;
 import cscot.basicnetherores.util.handler.ConfigHandler;
 import cscot.basicnetherores.util.interfaces.IHasModel;
 import net.minecraft.block.Block;

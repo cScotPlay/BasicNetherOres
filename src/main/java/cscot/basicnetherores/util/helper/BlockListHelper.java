@@ -48,7 +48,7 @@ public class BlockListHelper implements Predicate<IBlockState> {
                 Block block = Block.getBlockFromName(name);
                 if (block != null) {
                     list.add(block);
-                    System.out.println(" Test " );
+                    //System.out.println(" Test " );
                 }
             }
         }

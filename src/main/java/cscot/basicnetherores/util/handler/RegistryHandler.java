@@ -34,6 +34,7 @@ public class RegistryHandler {
 	public static void onItemRegister(RegistryEvent.Register<Item> event) {
 	
 		event.getRegistry().registerAll(ItemInit.ITEMS.toArray(new Item[0]));
+		OreDictionaryRegistry.registerDictionaryOres();
 	}
 
 	@SubscribeEvent
@@ -105,15 +106,9 @@ public class RegistryHandler {
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERCOPPER, new ItemStack(IngotInit.INGOT_COPPER), 0.7F);
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERTIN, new ItemStack(IngotInit.INGOT_TIN), 0.7F);
 
-
-
 	}
 
-	
 	public static void postInitRegistries(FMLPostInitializationEvent event) {
 		
-		OreDictionaryRegistry.registerDictionaryOres();
-
-
 	}
 }

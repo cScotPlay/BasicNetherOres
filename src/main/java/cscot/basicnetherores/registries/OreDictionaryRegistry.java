@@ -17,20 +17,20 @@ public class OreDictionaryRegistry {
 			
 			OreDictionary.registerOre("ore" + block.getLocalizedName().substring(7, block.getLocalizedName().length() - 4), block);
 		}
-		
-		for(Block block : BlockInit.BLOCKS) {
-			
-			OreDictionary.registerOre("block" + block.getLocalizedName().substring(0, block.getLocalizedName().length() - 6), block);
-			
-		}
 
 		if (ConfigHandler.regeisterIngots) {
 
-			OreDictionary.registerOre("ingot" + IngotInit.INGOT_COPPER.getUnlocalizedName().substring(11, IngotInit.INGOT_COPPER.getUnlocalizedName().length() - 0), IngotInit.INGOT_COPPER);
-			OreDictionary.registerOre("ingot" + IngotInit.INGOT_TIN.getUnlocalizedName().substring(11, IngotInit.INGOT_TIN.getUnlocalizedName().length() - 0), IngotInit.INGOT_TIN);
+			OreDictionary.registerOre("ingot" + IngotInit.INGOT_COPPER.getUnlocalizedName().substring(11, IngotInit.INGOT_COPPER.getUnlocalizedName().length()), IngotInit.INGOT_COPPER);
+			OreDictionary.registerOre("ingot" + IngotInit.INGOT_TIN.getUnlocalizedName().substring(11, IngotInit.INGOT_TIN.getUnlocalizedName().length()), IngotInit.INGOT_TIN);
 
-			OreDictionary.registerOre("nugget" + IngotInit.NUGGET_COPPER.getUnlocalizedName().substring(12, IngotInit.NUGGET_COPPER.getUnlocalizedName().length() - 0), IngotInit.NUGGET_COPPER);
-			OreDictionary.registerOre("nugget" + IngotInit.NUGGET_TIN.getUnlocalizedName().substring(12, IngotInit.NUGGET_TIN.getUnlocalizedName().length() - 0), IngotInit.NUGGET_TIN);
+			OreDictionary.registerOre("nugget" + IngotInit.NUGGET_COPPER.getUnlocalizedName().substring(12, IngotInit.NUGGET_COPPER.getUnlocalizedName().length()), IngotInit.NUGGET_COPPER);
+			OreDictionary.registerOre("nugget" + IngotInit.NUGGET_TIN.getUnlocalizedName().substring(12, IngotInit.NUGGET_TIN.getUnlocalizedName().length()), IngotInit.NUGGET_TIN);
+
+			for(Block block : BlockInit.BLOCKS) {
+
+				OreDictionary.registerOre("block" + block.getLocalizedName().substring(0, block.getLocalizedName().length() - 6), block);
+
+			}
 
 		}
 		
