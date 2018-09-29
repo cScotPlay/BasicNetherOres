@@ -32,9 +32,10 @@ public class RegistryHandler {
 
 	@SubscribeEvent
 	public static void onItemRegister(RegistryEvent.Register<Item> event) {
-	
+
 		event.getRegistry().registerAll(ItemInit.ITEMS.toArray(new Item[0]));
 		OreDictionaryRegistry.registerDictionaryOres();
+
 	}
 
 	@SubscribeEvent
@@ -55,6 +56,7 @@ public class RegistryHandler {
 		}
 	}
 
+
 	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event) {
 		
@@ -67,7 +69,7 @@ public class RegistryHandler {
 		
 		for (Block block : BlockInit.BLOCKS) {
 			
-			if (block instanceof IHasModel) {
+			if (block instanceof IHasModel && ConfigHandler.regeisterIngots) {
 				((IHasModel)block).registerModels();
 			}
 		}
@@ -82,7 +84,7 @@ public class RegistryHandler {
 
 		for(Item item : IngotInit.ITEMINGOTS) {
 
-			if(item instanceof IHasModel) {
+			if(item instanceof IHasModel && ConfigHandler.regeisterIngots) {
 
 				((IHasModel)item).registerModels();
 			}
@@ -106,8 +108,12 @@ public class RegistryHandler {
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERCOPPER, new ItemStack(IngotInit.INGOT_COPPER), 0.7F);
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERTIN, new ItemStack(IngotInit.INGOT_TIN), 0.7F);
 
+		if(ConfigHandler.regeisterIngots){
 
+			OreDictionaryRegistry.registerDictionaryItems();
+			OreDictionaryRegistry.registerDictionaryBlocks();
 
+		}
 	}
 
 	public static void postInitRegistries(FMLPostInitializationEvent event) {

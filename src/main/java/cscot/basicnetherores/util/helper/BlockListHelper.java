@@ -25,7 +25,7 @@ public class BlockListHelper implements Predicate<IBlockState> {
         return new BlockListHelper(blocks);
     }
 
-    public static BlockListHelper forBlock(List<Block> list)
+    private static BlockListHelper forBlock(List<Block> list)
     {
         return new BlockListHelper(list.toArray(new Block[]{}));
     }
@@ -40,7 +40,7 @@ public class BlockListHelper implements Predicate<IBlockState> {
         return false;
     }
 
-    public static List<Block> getBlockList(String[] array) {
+    private static List<Block> getBlockList(String[] array) {
 
         List<Block> list = new ArrayList<>();
         for (String name : array) {
