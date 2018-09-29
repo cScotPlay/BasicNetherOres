@@ -106,6 +106,8 @@ public class RegistryHandler {
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERCOPPER, new ItemStack(IngotInit.INGOT_COPPER), 0.7F);
 		GameRegistry.addSmelting(BlockOreInit.ORE_NETHERTIN, new ItemStack(IngotInit.INGOT_TIN), 0.7F);
 
+
+
 	}
 
 	public static void postInitRegistries(FMLPostInitializationEvent event) {
