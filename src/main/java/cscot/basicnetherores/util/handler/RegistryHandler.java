@@ -5,6 +5,7 @@ import cscot.basicnetherores.init.BlockOreInit;
 import cscot.basicnetherores.init.IngotInit;
 import cscot.basicnetherores.init.ItemInit;
 import cscot.basicnetherores.registries.OreDictionaryRegistry;
+import cscot.basicnetherores.util.helper.BlockListHelper;
 import cscot.basicnetherores.util.interfaces.IHasModel;
 import cscot.basicnetherores.world.gen.WorldGenCustomOres;
 import net.minecraft.block.Block;
@@ -19,6 +20,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
+
+import java.util.List;
 
 
 @EventBusSubscriber
@@ -55,7 +59,6 @@ public class RegistryHandler {
 			event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
 		}
 	}
-
 
 	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event) {
@@ -117,6 +120,9 @@ public class RegistryHandler {
 	}
 
 	public static void postInitRegistries(FMLPostInitializationEvent event) {
-		
+
+		BlockListHelper.PREDICATE_BLOCKS.toString();
+
 	}
+
 }
