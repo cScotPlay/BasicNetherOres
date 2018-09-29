@@ -5,7 +5,6 @@ import cscot.basicnetherores.init.BlockOreInit;
 import cscot.basicnetherores.init.IngotInit;
 import cscot.basicnetherores.init.ItemInit;
 import cscot.basicnetherores.registries.OreDictionaryRegistry;
-import cscot.basicnetherores.util.helper.BlockListHelper;
 import cscot.basicnetherores.util.interfaces.IHasModel;
 import cscot.basicnetherores.world.gen.WorldGenCustomOres;
 import net.minecraft.block.Block;
