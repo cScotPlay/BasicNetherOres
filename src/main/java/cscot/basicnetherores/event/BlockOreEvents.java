@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public final class BlockOreEvents {
 
 
-    @SubscribeEvent(priority=EventPriority.HIGHEST, receiveCanceled=false)
+    @SubscribeEvent(priority=EventPriority.HIGHEST, receiveCanceled=true)
     public static void onBlockHarvest(BlockEvent.HarvestDropsEvent event) {
 
         if(!event.isSilkTouching()) {
