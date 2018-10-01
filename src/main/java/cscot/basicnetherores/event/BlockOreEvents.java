@@ -17,7 +17,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber
 public final class BlockOreEvents {
 
-
     @SubscribeEvent(priority=EventPriority.HIGHEST, receiveCanceled=true)
     public static void onBlockHarvest(BlockEvent.HarvestDropsEvent event) {
 
@@ -31,7 +30,7 @@ public final class BlockOreEvents {
 
                 if(block.getBlock().isReplaceableOreGen(block, world, blockPos, BlockListHelper.PREDICATE_BLOCKS)) {
 
-                    BlockOreBase.pigmenGuards(event.getHarvester(), event.getWorld(), event.getPos());
+                  BlockOreBase.pigmenGuards(event.getHarvester(), event.getWorld(), event.getPos());
 
                 }
             }
