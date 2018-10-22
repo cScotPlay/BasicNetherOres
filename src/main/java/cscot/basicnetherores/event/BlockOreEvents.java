@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber
 public final class BlockOreEvents {
 
-    @SubscribeEvent(priority=EventPriority.HIGHEST, receiveCanceled=true)
+    @SubscribeEvent(priority=EventPriority.HIGH, receiveCanceled=true)
     public static void onBlockHarvest(BlockEvent.HarvestDropsEvent event) {
 
         if(!event.isSilkTouching()) {
@@ -25,13 +25,10 @@ public final class BlockOreEvents {
             if (ConfigHandler.pigmanGuard) {
 
                 IBlockState block = event.getState();
-                World world = event.getWorld();
-                BlockPos blockPos = event.getPos();
 
-                if(block.getBlock().isReplaceableOreGen(block, world, blockPos, BlockListHelper.PREDICATE_BLOCKS)) {
-
-                  BlockOreBase.pigmenGuards(event.getHarvester(), event.getWorld(), event.getPos());
-
+                if(BlockListHelper.PREDICATE_BLOCKS.apply(block))
+                {
+                    BlockOreBase.pigmenGuards(event.getHarvester(), event.getWorld(), event.getPos());
                 }
             }
         }
