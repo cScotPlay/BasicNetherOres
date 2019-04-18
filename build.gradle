@@ -16,7 +16,7 @@ apply plugin: 'maven-publish'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.12.2-1.0.4.0"
+version = "1.13.2-1.5.0.0"
 group = "cscot.basicnetherores" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "BasicNetherOres"
 
@@ -26,7 +26,7 @@ compileJava {
 }
 
 minecraft {
-    mappings channel: 'snapshot', version: '20180921-1.13'
+    mappings channel: 'snapshot', version: '20190413-1.13.2'
 
     runs {
         client {
