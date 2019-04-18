@@ -25,10 +25,10 @@ public class DimensionalGenerator<F extends IFeatureConfig, P extends IPlacement
     }
 
     @Override
-    public boolean func_212245_a(IWorld world, IChunkGenerator<? extends IChunkGenSettings> p_212245_2_, Random p_212245_3_, BlockPos p_212245_4_, NoFeatureConfig p_212245_5_)
+    public boolean place(IWorld world, IChunkGenerator<? extends IChunkGenSettings> p_212245_2_, Random p_212245_3_, BlockPos p_212245_4_, NoFeatureConfig p_212245_5_)
     {
         if (world.getDimension().getType().equals(dimension)) {
-            return super.func_212245_a(world, p_212245_2_, p_212245_3_, p_212245_4_, p_212245_5_);
+            return super.place(world, p_212245_2_, p_212245_3_, p_212245_4_, p_212245_5_);
         }
         return false;
     }
