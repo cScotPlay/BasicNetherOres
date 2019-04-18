@@ -1,0 +1,26 @@
+{
+    "conditions": [
+        {
+            "type": "bno:recipe_enabled"
+        }
+    ],
+    "_comment": [
+        "Copper Ingot Crafting Recipe"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "NNN",
+        "NNN",
+        "NNN"
+    ],
+    "key": {
+        "N": {
+            "item": "bno:copper_nugget"
+        }
+    },
+    "result": {
+        "item": "bno:copper_ingot",
+        "count": 1
+    }
+}
+

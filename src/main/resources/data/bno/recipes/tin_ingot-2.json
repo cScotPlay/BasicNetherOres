@@ -1,0 +1,21 @@
+{
+    "conditions": [
+        {
+            "type": "bno:recipe_enabled"
+        }
+    ],
+    "_comment": [
+        "Craft Copper Ingot from Copper Block"
+    ],
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "bno:tin_block"
+        }
+    ],
+    "result": {
+        "item": "bno:tin_ingot",
+        "count": 9
+    }
+}
+

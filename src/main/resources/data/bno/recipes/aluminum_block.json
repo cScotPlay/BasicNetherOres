@@ -1,0 +1,26 @@
+{
+    "conditions": [
+        {
+            "type": "bno:recipe_enabled"
+        }
+    ],
+    "_comment": [
+        "aluminum Block Crafting Recipe"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "III",
+        "III",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "tag": "bno:ingots/aluminum"
+        }
+    },
+    "result": {
+        "item": "bno:aluminum_block",
+        "count": 1
+    }
+}
+

@@ -1,0 +1,26 @@
+{
+    "conditions": [
+        {
+            "type": "bno:recipe_enabled"
+        }
+    ],
+    "_comment": [
+        "Copper Block Crafting Recipe"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "III",
+        "III",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "tag": "bno:ingots/copper"
+        }
+    },
+    "result": {
+        "item": "bno:copper_block",
+        "count": 1
+    }
+}
+

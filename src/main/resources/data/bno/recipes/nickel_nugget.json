@@ -1,0 +1,21 @@
+{
+    "conditions": [
+        {
+            "type": "bno:recipe_enabled"
+        }
+    ],
+    "_comment": [
+        "Craft nickel Ingot from nickel Block"
+    ],
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "bno:nickel_ingot"
+        }
+    ],
+    "result": {
+        "item": "bno:nickel_nugget",
+        "count": 9
+    }
+}
+

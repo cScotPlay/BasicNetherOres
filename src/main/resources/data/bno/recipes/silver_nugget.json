@@ -1,0 +1,21 @@
+{
+    "conditions": [
+        {
+            "type": "bno:recipe_enabled"
+        }
+    ],
+    "_comment": [
+        "Craft silver Ingot from silver Block"
+    ],
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "bno:silver_ingot"
+        }
+    ],
+    "result": {
+        "item": "bno:silver_nugget",
+        "count": 9
+    }
+}
+

@@ -1,0 +1,26 @@
+{
+    "conditions": [
+        {
+            "type": "bno:recipe_enabled"
+        }
+    ],
+    "_comment": [
+        "nickel Ingot Crafting Recipe"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "NNN",
+        "NNN",
+        "NNN"
+    ],
+    "key": {
+        "N": {
+            "item": "bno:nickel_nugget"
+        }
+    },
+    "result": {
+        "item": "bno:nickel_ingot",
+        "count": 1
+    }
+}
+
