@@ -8,6 +8,7 @@ import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
@@ -19,8 +20,8 @@ public class BlockBase extends Block
     public BlockBase(String name)
     {
         super(Properties.create(Material.IRON).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.METAL));
-        this.name = name;
-        this.setRegistryName(BasicNetherOres.modid, name);
+
+        setRegistryName(BasicNetherOres.modid, name);
 
         if(ConfigHandler.NuggetsIngotsBlocks.registerIngots.get())
         {
