@@ -95,11 +95,11 @@ public class OreGenerationConfig
                 .comment("Set Emerald Spawn Chance (Default = 2)")
                 .defineInRange("ore_generation.emerald.emeraldChance", 2, 0, 32);
         emeraldMinHeight = builder
-                .comment("Set Emerald Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.emerald.emeraldMinHeight", 0, 0, 32);
+                .comment("Set Emerald Min Spawn Height (Default = 25)")
+                .defineInRange("ore_generation.emerald.emeraldMinHeight", 25, 0, 120);
         emeraldMaxHeight = builder
-                .comment("Set Emerald Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.emerald.emeraldMaxHeight", 255, 0, 255);
+                .comment("Set Emerald Max Spawn Height (Default = 55)")
+                .defineInRange("ore_generation.emerald.emeraldMaxHeight", 55, 0, 125);
 
 
         //Diamond Ore Values
@@ -110,11 +110,11 @@ public class OreGenerationConfig
                 .comment("Set Diamond Spawn Chance (Default = 3)")
                 .defineInRange("ore_generation.diamond.diamondChance", 3, 0, 32);
         diamondMinHeight = builder
-                .comment("Set Diamond Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.diamond.diamondMinHeight", 0, 0, 32);
+                .comment("Set Diamond Min Spawn Height (Default = 90)")
+                .defineInRange("ore_generation.diamond.diamondMinHeight", 90, 0, 120);
         diamondMaxHeight = builder
-                .comment("Set Diamond Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.diamond.diamondMaxHeight", 255, 0, 255);
+                .comment("Set Diamond Max Spawn Height (Default = 125)")
+                .defineInRange("ore_generation.diamond.diamondMaxHeight", 125, 0, 125);
 
         //Redstone Ore Values
         redstoneVeinSize = builder
@@ -124,11 +124,11 @@ public class OreGenerationConfig
                 .comment("Set Redstone Spawn Chance (Default = 8)")
                 .defineInRange("ore_generation.redstone.redstoneChance", 8, 0, 64);
         redstoneMinHeight = builder
-                .comment("Set Redstone Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.redstone.redstoneMinHeight", 0, 0, 32);
+                .comment("Set Redstone Min Spawn Height (Default = 80)")
+                .defineInRange("ore_generation.redstone.redstoneMinHeight", 80, 0, 120);
         redstoneMaxHeight = builder
-                .comment("Set Redstone Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.redstone.redstoneMaxHeight", 255, 0, 255);
+                .comment("Set Redstone Max Spawn Height (Default = 115)")
+                .defineInRange("ore_generation.redstone.redstoneMaxHeight", 115, 0, 125);
 
         //Lapis Ore Values
         lapisVeinSize = builder
@@ -138,11 +138,11 @@ public class OreGenerationConfig
                 .comment("Set Lapis Spawn Chance (Default = 2)")
                 .defineInRange("ore_generation.lapis.lapisChance", 2, 0, 64);
         lapisMinHeight = builder
-                .comment("Set Lapis Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.lapis.lapisMinHeight", 0, 0, 32);
+                .comment("Set Lapis Min Spawn Height (Default = 30)")
+                .defineInRange("ore_generation.lapis.lapisMinHeight", 30, 0, 120);
         lapisMaxHeight = builder
-                .comment("Set Lapis Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.lapis.lapisMaxHeight", 255, 0, 255);
+                .comment("Set Lapis Max Spawn Height (Default = 60)")
+                .defineInRange("ore_generation.lapis.lapisMaxHeight", 60, 0, 125);
 
         //Coal Ore Values
         coalVeinSize = builder
@@ -152,11 +152,11 @@ public class OreGenerationConfig
                 .comment("Set Coal Spawn Chance (Default = 20)")
                 .defineInRange("ore_generation.coal.coalChance", 20, 0, 64);
         coalMinHeight = builder
-                .comment("Set Coal Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.coal.coalMinHeight", 0, 0, 32);
+                .comment("Set Coal Min Spawn Height (Default = 25)")
+                .defineInRange("ore_generation.coal.coalMinHeight", 25, 0, 120);
         coalMaxHeight = builder
-                .comment("Set Coal Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.coal.coalMaxHeight", 255, 0, 255);
+                .comment("Set Coal Max Spawn Height (Default = 115)")
+                .defineInRange("ore_generation.coal.coalMaxHeight", 115, 0, 125);
 
         //Gold Ore Values
         goldVeinSize = builder
@@ -166,11 +166,11 @@ public class OreGenerationConfig
                 .comment("Set Gold Spawn Chance (Default = 4)")
                 .defineInRange("ore_generation.gold.goldChance", 4, 0, 64);
         goldMinHeight = builder
-                .comment("Set Gold Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.gold.goldMinHeight", 0, 0, 32);
+                .comment("Set Gold Min Spawn Height (Default = 40)")
+                .defineInRange("ore_generation.gold.goldMinHeight", 40, 0, 120);
         goldMaxHeight = builder
-                .comment("Set Gold Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.gold.goldMaxHeight", 255, 0, 255);
+                .comment("Set Gold Max Spawn Height (Default = 80)")
+                .defineInRange("ore_generation.gold.goldMaxHeight", 80, 0, 125);
 
         //Silver Ore Values
         silverVeinSize = builder
@@ -180,11 +180,11 @@ public class OreGenerationConfig
                 .comment("Set Silver Spawn Chance (Default = 4)")
                 .defineInRange("ore_generation.silver.silverChance", 4, 0, 64);
         silverMinHeight = builder
-                .comment("Set Silver Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.silver.silverMinHeight", 0, 0, 32);
+                .comment("Set Silver Min Spawn Height (Default = 30)")
+                .defineInRange("ore_generation.silver.silverMinHeight", 30, 0, 120);
         silverMaxHeight = builder
-                .comment("Set Silver Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.silver.silverMaxHeight", 255, 0, 255);
+                .comment("Set Silver Max Spawn Height (Default = 60)")
+                .defineInRange("ore_generation.silver.silverMaxHeight", 60, 0, 125);
         
         //Iron Ore Values
         ironVeinSize = builder
@@ -194,11 +194,11 @@ public class OreGenerationConfig
                 .comment("Set Iron Spawn Chance (Default = 20)")
                 .defineInRange("ore_generation.iron.ironChance", 20, 0, 64);
         ironMinHeight = builder
-                .comment("Set Iron Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.iron.ironMinHeight", 0, 0, 32);
+                .comment("Set Iron Min Spawn Height (Default = 40)")
+                .defineInRange("ore_generation.iron.ironMinHeight", 40, 0, 120);
         ironMaxHeight = builder
-                .comment("Set Iron Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.iron.ironMaxHeight", 255, 0, 255);
+                .comment("Set Iron Max Spawn Height (Default = 110)")
+                .defineInRange("ore_generation.iron.ironMaxHeight", 110, 0, 125);
 
         //Lead Ore Values
         leadVeinSize = builder
@@ -208,11 +208,11 @@ public class OreGenerationConfig
                 .comment("Set Lead Spawn Chance (Default = 8)")
                 .defineInRange("ore_generation.lead.leadChance", 8, 0, 64);
         leadMinHeight = builder
-                .comment("Set Lead Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.lead.leadMinHeight", 0, 0, 32);
+                .comment("Set Lead Min Spawn Height (Default = 40)")
+                .defineInRange("ore_generation.lead.leadMinHeight", 40, 0, 120);
         leadMaxHeight = builder
-                .comment("Set Lead Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.lead.leadMaxHeight", 255, 0, 255);
+                .comment("Set Lead Max Spawn Height (Default = 110)")
+                .defineInRange("ore_generation.lead.leadMaxHeight", 110, 0, 125);
 
         //nickel Ore Values
         nickelVeinSize = builder
@@ -222,11 +222,11 @@ public class OreGenerationConfig
                 .comment("Set Nickel Spawn Chance (Default = 4)")
                 .defineInRange("ore_generation.nickel.nickelChance", 4, 0, 64);
         nickelMinHeight = builder
-                .comment("Set Nickel Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.nickel.nickelMinHeight", 0, 0, 32);
+                .comment("Set Nickel Min Spawn Height (Default = 30)")
+                .defineInRange("ore_generation.nickel.nickelMinHeight", 30, 0, 120);
         nickelMaxHeight = builder
-                .comment("Set Nickel Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.nickel.nickelMaxHeight", 255, 0, 255);
+                .comment("Set Nickel Max Spawn Height (Default = 50)")
+                .defineInRange("ore_generation.nickel.nickelMaxHeight", 50, 0, 125);
 
         //Copper Ore Values
         copperVeinSize = builder
@@ -236,11 +236,11 @@ public class OreGenerationConfig
                 .comment("Set Copper Spawn Chance (Default = 20)")
                 .defineInRange("ore_generation.copper.copperChance", 20, 0, 64);
         copperMinHeight = builder
-                .comment("Set Copper Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.copper.copperMinHeight", 0, 0, 32);
+                .comment("Set Copper Min Spawn Height (Default = 35)")
+                .defineInRange("ore_generation.copper.copperMinHeight", 30, 0, 120);
         copperMaxHeight = builder
-                .comment("Set Copper Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.copper.copperMaxHeight", 255, 0, 255);
+                .comment("Set Copper Max Spawn Height (Default = 75)")
+                .defineInRange("ore_generation.copper.copperMaxHeight", 75, 0, 125);
 
         //Aluminum Ore Values
         aluminumVeinSize = builder
@@ -250,11 +250,11 @@ public class OreGenerationConfig
                 .comment("Set Aluminum Spawn Chance (Default = 10)")
                 .defineInRange("ore_generation.aluminum.aluminumChance", 10, 0, 64);
         aluminumMinHeight = builder
-                .comment("Set Aluminum Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.aluminum.aluminumMinHeight", 0, 0, 32);
+                .comment("Set Aluminum Min Spawn Height (Default = 75)")
+                .defineInRange("ore_generation.aluminum.aluminumMinHeight", 75, 0, 120);
         aluminumMaxHeight = builder
-                .comment("Set Aluminum Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.aluminum.aluminumMaxHeight", 255, 0, 255);
+                .comment("Set Aluminum Max Spawn Height (Default = 110)")
+                .defineInRange("ore_generation.aluminum.aluminumMaxHeight", 110, 0, 125);
 
         //Tin Ore Values
         tinVeinSize = builder
@@ -264,11 +264,11 @@ public class OreGenerationConfig
                 .comment("Set Tin Spawn Chance (Default = 20)")
                 .defineInRange("ore_generation.tin.tinChance", 20, 0, 64);
         tinMinHeight = builder
-                .comment("Set Tin Min Spawn Height (Default = 0)")
-                .defineInRange("ore_generation.tin.tinMinHeight", 0, 0, 32);
+                .comment("Set Tin Min Spawn Height (Default = 40)")
+                .defineInRange("ore_generation.tin.tinMinHeight", 40, 0, 120);
         tinMaxHeight = builder
-                .comment("Set Tin Max Spawn Height (Default = 255)")
-                .defineInRange("ore_generation.tin.tinMaxHeight", 255, 0, 255);
+                .comment("Set Tin Max Spawn Height (Default = 110)")
+                .defineInRange("ore_generation.tin.tinMaxHeight", 110, 0, 125);
 
     }
 }
