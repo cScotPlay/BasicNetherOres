@@ -36,7 +36,6 @@ public class BasicNetherOres
     {
         instance = this;
 
-
         // Register the setup method for mod loading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the clientRegistries method for mod loading
