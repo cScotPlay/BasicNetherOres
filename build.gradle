@@ -16,7 +16,7 @@ apply plugin: 'maven-publish'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.13.2-1.5.0.0"
+version = "${version_mc}-${version_bno}"
 group = "cscot.basicnetherores" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "BasicNetherOres"
 
@@ -65,7 +65,19 @@ minecraft {
 
 dependencies {
 
-    minecraft 'net.minecraftforge:forge:1.13.2-25.0.146'
+    minecraft 'net.minecraftforge:forge:1.13.2-25.0.149'
+}
 
-
+jar {
+    manifest {
+        attributes([
+                "Specification-Title": "engineersdecor",
+                "Specification-Vendor": "cscot",
+                "Specification-Version": "1",
+                "Implementation-Title": project.name,
+                "Implementation-Version": "${version_bno}",
+                "Implementation-Vendor" :"cscot",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
 }
