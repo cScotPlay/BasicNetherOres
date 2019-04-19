@@ -26,7 +26,7 @@ public class RegisteryHandler
         @SubscribeEvent
         public static void onOreRegistry(final RegistryEvent.Register<Block> oreRegistryEvent)
         {
-            //For loopo to register the Array of the ore blocks
+            //For loop to register the Array of the ore blocks
             for (Block block : BlockOreList.blockores)
             {
                 oreRegistryEvent.getRegistry().register(block);
