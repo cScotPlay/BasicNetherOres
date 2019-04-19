@@ -48,7 +48,6 @@ public class BlockOreBase extends BlockOre
         ItemList.items.add(new ItemBlock(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(oreName)));
         BlockOreList.blockores.add(this);
     }
-    //TODO add information regarding spawn charactisitics to Ores
     @Override
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
