@@ -4,7 +4,6 @@ import com.cscot.basicnetherores.BasicNetherOres;
 import com.cscot.basicnetherores.config.OreProtectionConfig;
 import com.cscot.basicnetherores.lists.BlockOreList;
 import com.cscot.basicnetherores.lists.ItemList;
-import com.cscot.basicnetherores.util.handler.ConfigHandler;
 import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
@@ -34,10 +33,7 @@ public class BlockOreBase extends BlockOre
     public BlockOreBase(String oreName)
     {
         super(Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f));
-        this.oreName = oreName;
-        this.setRegistryName(BasicNetherOres.modid, oreName);
-
-
+        setRegistryName(BasicNetherOres.modid, oreName);
 
         ItemList.items.add(new ItemBlock(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(oreName)));
         BlockOreList.blockores.add(this);
