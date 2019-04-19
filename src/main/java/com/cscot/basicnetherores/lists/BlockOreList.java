@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.cscot.basicnetherores.objects.BlockOreBase;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+
 
 public class BlockOreList {
 
