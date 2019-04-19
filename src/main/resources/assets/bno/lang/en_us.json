@@ -1,14 +1,12 @@
 {
     "itemGroup.basicnetheroreitemgroup": "Basic Nether Ores",
 
-
     "item.bno.aluminum_nugget": "Aluminum Nugget",
     "item.bno.copper_nugget": "Copper Nugget",
     "item.bno.lead_nugget": "Lead Nugget",
     "item.bno.nickel_nugget": "Nickel Nugget",
     "item.bno.silver_nugget": "Silver Nugget",
     "item.bno.tin_nugget": "Tin Nugget",
-
 
     "item.bno.aluminum_ingot": "Aluminum Ingot",
     "item.bno.copper_ingot": "Copper Ingot",
@@ -38,6 +36,20 @@
     "block.bno.nethercoal_ore": "Nether Coal Ore",
 
     "block.bno.nethergold_ore": "Nether Gold Ore",
-    "block.bno.netheriron_ore": "Nether Iron Ore"
+    "block.bno.netheriron_ore": "Nether Iron Ore",
+
+    "tooltip.netheremerald_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.netherdiamond_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.netherredstone_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.netherlapis_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.nethercoal_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.nethergold_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.nethersilver_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.netheriron_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.netherlead_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.nethernickel_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.nethercopper_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.netheraluminum_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.nethertin_ore.tip": "§aFound between y{0} to y{1}"
 
 }
