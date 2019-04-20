@@ -71,7 +71,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title": "engineersdecor",
+                "Specification-Title": "basicnetherores",
                 "Specification-Vendor": "cscot",
                 "Specification-Version": "1",
                 "Implementation-Title": project.name,
