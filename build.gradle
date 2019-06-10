@@ -20,13 +20,10 @@ version = "${version_mc}-${version_bno}"
 group = "cscot.basicnetherores" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "BasicNetherOres"
 
-sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
-compileJava {
-    sourceCompatibility = targetCompatibility = '1.8'
-}
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 minecraft {
-    mappings channel: 'snapshot', version: '20190413-1.13.2'
+    mappings channel: 'snapshot', version: '20190608-1.14.2'
 
     runs {
         client {
@@ -65,7 +62,7 @@ minecraft {
 
 dependencies {
 
-    minecraft 'net.minecraftforge:forge:1.13.2-25.0.149'
+    minecraft 'net.minecraftforge:forge:1.14.2-26.0.13'
 }
 
 jar {
