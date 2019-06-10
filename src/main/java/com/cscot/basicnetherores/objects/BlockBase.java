@@ -8,9 +8,8 @@ import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 
 //This class takes the BlockList blocks and creates them with specific properties
 public class BlockBase extends Block
@@ -25,9 +24,9 @@ public class BlockBase extends Block
 
         if(ConfigHandler.NuggetsIngotsBlocks.registerIngots.get())
         {
-            ItemList.items.add(new ItemBlock(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
+            ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
         }
-        else ItemList.items.add(new ItemBlock(this.getBlock(), new Item.Properties()).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
+        else ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties()).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
 
         BlockList.blocks.add(this);
         //ItemList.items.add(new ItemBlock(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
