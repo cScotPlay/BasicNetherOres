@@ -74,6 +74,7 @@ public class RegisteryHandler
                         IngotList.nickel_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("nickel_ingot")),
                         IngotList.silver_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("silver_ingot")),
                         IngotList.tin_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("tin_ingot")),
+                        IngotList.uranium_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("uranium_ingot")),
 
                         //Register Nuggets
                         IngotList.aluminum_nugget = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("aluminum_nugget")),
@@ -94,6 +95,7 @@ public class RegisteryHandler
                         IngotList.nickel_ingot = new Item(new Item.Properties()).setRegistryName(location("nickel_ingot")),
                         IngotList.silver_ingot = new Item(new Item.Properties()).setRegistryName(location("silver_ingot")),
                         IngotList.tin_ingot = new Item(new Item.Properties()).setRegistryName(location("tin_ingot")),
+                        IngotList.uranium_ingot = new Item(new Item.Properties()).setRegistryName(location("uranium_ingot")),
 
                         //Register Nuggets
                         IngotList.aluminum_nugget = new Item(new Item.Properties()).setRegistryName(location("aluminum_nugget")),

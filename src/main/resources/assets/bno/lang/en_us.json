@@ -14,6 +14,7 @@
     "item.bno.nickel_ingot": "Nickel Ingot",
     "item.bno.silver_ingot": "Silver Ingot",
     "item.bno.tin_ingot": "Tin Ingot",
+    "item.bno.uranium_ingot": "Uranium Ingot",
 
     "block.bno.aluminum_block": "Aluminum Block",
     "block.bno.copper_block": "Copper Block",
@@ -21,6 +22,7 @@
     "block.bno.nickel_block": "Nickel Block",
     "block.bno.silver_block": "Silver Block",
     "block.bno.tin_block": "Tin Block",
+    "block.bno.uranium_block": "Uranium Block",
 
     "block.bno.netheraluminum_ore": "Nether Aluminum Ore",
     "block.bno.nethercopper_ore": "Nether Copper Ore",
@@ -28,6 +30,7 @@
     "block.bno.nethernickel_ore": "Nether Nickel Ore",
     "block.bno.nethersilver_ore": "Nether Silver Ore",
     "block.bno.nethertin_ore": "Nether Tin Ore",
+    "block.bno.netheruranium_ore": "Nether Uranium Ore",
 
     "block.bno.netheremerald_ore": "Nether Emerald Ore",
     "block.bno.netherdiamond_ore": "Nether Diamond Ore",
@@ -50,6 +53,7 @@
     "tooltip.nethernickel_ore.tip": "§aFound between y{0} to y{1}",
     "tooltip.nethercopper_ore.tip": "§aFound between y{0} to y{1}",
     "tooltip.netheraluminum_ore.tip": "§aFound between y{0} to y{1}",
-    "tooltip.nethertin_ore.tip": "§aFound between y{0} to y{1}"
+    "tooltip.nethertin_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.netheruranium_ore.tip": "§aFound between y{0} to y{1}"
 
 }

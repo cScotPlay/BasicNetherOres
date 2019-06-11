@@ -14,6 +14,7 @@ public class IngotList
     public static Item nickel_ingot;    
     public static Item silver_ingot;
     public static Item tin_ingot;
+    public static Item uranium_ingot;
 
     //Nugget List TODO Add Forge Tags for Nuggets
     public static Item aluminum_nugget;

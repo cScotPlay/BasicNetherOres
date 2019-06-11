@@ -1,0 +1,6 @@
+{
+    "variants":
+    {
+        "": { "model": "bno:block/netheruranium_ore"}
+    }
+}

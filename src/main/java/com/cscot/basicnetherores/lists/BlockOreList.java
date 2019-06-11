@@ -26,6 +26,7 @@ public class BlockOreList {
 	public static Block nethercopper_ore = new BlockOreBase("nethercopper_ore");
 	public static Block netheraluminum_ore = new BlockOreBase("netheraluminum_ore");
 	public static Block nethertin_ore = new BlockOreBase("nethertin_ore");
+	public static Block netheruranium_ore = new BlockOreBase("netheruranium_ore");
 }
 
 

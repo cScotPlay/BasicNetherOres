@@ -1,0 +1,21 @@
+{
+    "conditions": [
+        {
+            "type": "bno:recipe_enabled"
+        }
+    ],
+    "_comment": [
+        "Craft Uranium Ingot from Uranium Block"
+    ],
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "bno:uranium_block"
+        }
+    ],
+    "result": {
+        "item": "bno:uranium_ingot",
+        "count": 9
+    }
+}
+

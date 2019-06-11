@@ -78,6 +78,10 @@ public class OreGenerator
                     new OreFeatureConfig(NETHERRACK, BlockOreList.nethertin_ore.getDefaultState(), OreGenerationConfig.tinVeinSize.get()),
                     COUNT_RANGE, new CountRangeConfig(OreGenerationConfig.tinPerChunk.get(), OreGenerationConfig.tinMinHeight.get(), OreGenerationConfig.tinMinHeight.get(), OreGenerationConfig.tinMaxHeight.get())));
 
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE,
+                    new OreFeatureConfig(NETHERRACK, BlockOreList.netheruranium_ore.getDefaultState(), OreGenerationConfig.uraniumVeinSize.get()),
+                    COUNT_RANGE, new CountRangeConfig(OreGenerationConfig.uraniumPerChunk.get(), OreGenerationConfig.uraniumMinHeight.get(), OreGenerationConfig.uraniumMinHeight.get(), OreGenerationConfig.uraniumMaxHeight.get())));
+
         }
     }
 }

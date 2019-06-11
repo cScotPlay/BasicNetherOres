@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "bno:block/uranium_block" }
+    }
+}

@@ -77,6 +77,8 @@ public class BlockOreBase extends OreBlock
             tooltip.add(new TranslationTextComponent(AluminumOreTip.oreTip, OreGenerationConfig.aluminumMinHeight.get().toString(), OreGenerationConfig.aluminumMaxHeight.get().toString()));}
         else if (this == BlockOreList.nethertin_ore){
             tooltip.add(new TranslationTextComponent(TinOreTip.oreTip, OreGenerationConfig.tinMinHeight.get().toString(), OreGenerationConfig.tinMaxHeight.get().toString()));}
+        else if (this == BlockOreList.netheruranium_ore){
+            tooltip.add(new TranslationTextComponent(TinOreTip.oreTip, OreGenerationConfig.uraniumMinHeight.get().toString(), OreGenerationConfig.uraniumMaxHeight.get().toString()));}
     }
 
     @Override

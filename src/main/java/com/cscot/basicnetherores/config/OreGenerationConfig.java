@@ -84,6 +84,12 @@ public class OreGenerationConfig
     public static ForgeConfigSpec.IntValue tinMinHeight;
     public static ForgeConfigSpec.IntValue tinMaxHeight;
 
+    //Tin Settings
+    public static ForgeConfigSpec.IntValue uraniumVeinSize;
+    public static ForgeConfigSpec.IntValue uraniumPerChunk;
+    public static ForgeConfigSpec.IntValue uraniumMinHeight;
+    public static ForgeConfigSpec.IntValue uraniumMaxHeight;
+
 
     public static void Init(ForgeConfigSpec.Builder builder) {
 
@@ -269,6 +275,21 @@ public class OreGenerationConfig
         tinMaxHeight = builder
                 .comment("Set Tin Max Spawn Height (Default = 110)")
                 .defineInRange("ore_generation.tin.tinMaxHeight", 110, 0, 125);
+
+        //Uranium Ore Values
+        //Tin Ore Values
+        uraniumVeinSize = builder
+                .comment("Set Max Tin Vein Size (Default = 4)")
+                .defineInRange("ore_generation.tin.tinVeinSize", 4, 0, 32);
+        uraniumPerChunk = builder
+                .comment("Set Tin Spawn Chance (Default = 6)")
+                .defineInRange("ore_generation.tin.tinChance", 6, 0, 64);
+        uraniumMinHeight = builder
+                .comment("Set Tin Min Spawn Height (Default = 90)")
+                .defineInRange("ore_generation.tin.tinMinHeight", 90, 0, 120);
+        uraniumMaxHeight = builder
+                .comment("Set Tin Max Spawn Height (Default = 125)")
+                .defineInRange("ore_generation.tin.tinMaxHeight", 125, 0, 125);
 
     }
 }
