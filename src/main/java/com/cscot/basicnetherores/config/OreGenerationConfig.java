@@ -89,8 +89,8 @@ public class OreGenerationConfig
 
         //Emerald Ore Values
         emeraldVeinSize = builder
-                .comment("Set Max Emerald Vein Size (Default = 8)")
-                .defineInRange("ore_generation.emerald.emeraldVeinSize", 8, 0, 36);
+                .comment("Set Max Emerald Vein Size (Default = 4)")
+                .defineInRange("ore_generation.emerald.emeraldVeinSize", 4, 0, 36);
         emeraldPerChunk = builder
                 .comment("Set Emerald Spawn Chance (Default = 2)")
                 .defineInRange("ore_generation.emerald.emeraldChance", 2, 0, 32);
@@ -188,7 +188,7 @@ public class OreGenerationConfig
         
         //Iron Ore Values
         ironVeinSize = builder
-                .comment("Set Max Iron Vein Size (Default = 9)")
+                .comment("Set Max Iron Vein Size (Default = 8)")
                 .defineInRange("ore_generation.iron.ironVeinSize", 8, 0, 32);
         ironPerChunk = builder
                 .comment("Set Iron Spawn Chance (Default = 20)")
@@ -202,7 +202,7 @@ public class OreGenerationConfig
 
         //Lead Ore Values
         leadVeinSize = builder
-                .comment("Set Max Lead Vein Size (Default = 9)")
+                .comment("Set Max Lead Vein Size (Default = 8)")
                 .defineInRange("ore_generation.lead.leadVeinSize", 8, 0, 32);
         leadPerChunk = builder
                 .comment("Set Lead Spawn Chance (Default = 8)")
@@ -216,7 +216,7 @@ public class OreGenerationConfig
 
         //nickel Ore Values
         nickelVeinSize = builder
-                .comment("Set Max Nickel Vein Size (Default = 9)")
+                .comment("Set Max Nickel Vein Size (Default = 8)")
                 .defineInRange("ore_generation.nickel.nickelVeinSize", 8, 0, 32);
         nickelPerChunk = builder
                 .comment("Set Nickel Spawn Chance (Default = 4)")
@@ -230,21 +230,21 @@ public class OreGenerationConfig
 
         //Copper Ore Values
         copperVeinSize = builder
-                .comment("Set Max Copper Vein Size (Default = 9)")
+                .comment("Set Max Copper Vein Size (Default = 8)")
                 .defineInRange("ore_generation.copper.copperVeinSize", 8, 0, 32);
         copperPerChunk = builder
                 .comment("Set Copper Spawn Chance (Default = 20)")
                 .defineInRange("ore_generation.copper.copperChance", 20, 0, 64);
         copperMinHeight = builder
                 .comment("Set Copper Min Spawn Height (Default = 35)")
-                .defineInRange("ore_generation.copper.copperMinHeight", 30, 0, 120);
+                .defineInRange("ore_generation.copper.copperMinHeight", 35, 0, 120);
         copperMaxHeight = builder
                 .comment("Set Copper Max Spawn Height (Default = 75)")
                 .defineInRange("ore_generation.copper.copperMaxHeight", 75, 0, 125);
 
         //Aluminum Ore Values
         aluminumVeinSize = builder
-                .comment("Set Max Aluminum Vein Size (Default = 9)")
+                .comment("Set Max Aluminum Vein Size (Default = 8)")
                 .defineInRange("ore_generation.aluminum.aluminumVeinSize", 8, 0, 32);
         aluminumPerChunk = builder
                 .comment("Set Aluminum Spawn Chance (Default = 10)")
@@ -258,7 +258,7 @@ public class OreGenerationConfig
 
         //Tin Ore Values
         tinVeinSize = builder
-                .comment("Set Max Tin Vein Size (Default = 9)")
+                .comment("Set Max Tin Vein Size (Default = 8)")
                 .defineInRange("ore_generation.tin.tinVeinSize", 8, 0, 32);
         tinPerChunk = builder
                 .comment("Set Tin Spawn Chance (Default = 20)")
