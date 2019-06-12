@@ -9,6 +9,7 @@ import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import com.cscot.basicnetherores.util.helpers.OreTooltipHelper.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
@@ -19,18 +20,22 @@ import net.minecraft.item.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Items;
 import net.minecraft.util.IItemProvider;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.ServerWorld;
 import net.minecraft.world.World;
+import net.minecraft.world.storage.loot.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -47,6 +52,7 @@ public class BlockOreBase extends OreBlock
         ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(oreName)));
         BlockOreList.blockores.add(this);
     }
+
     @Override
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
@@ -91,34 +97,36 @@ public class BlockOreBase extends OreBlock
         return 2;
     }
 
-    //@Override
-    public IItemProvider getItemDropped(BlockState state, World worldIn, BlockPos pos, int fortune)
-    {
+    @Override  //ToDo Update getItemDropped when MCP updates
+    protected int func_220281_a(Random p_220281_1_) {
         if (this == BlockOreList.nethercoal_ore) {
-            return Items.COAL;}
-        else if (this == BlockOreList.netherdiamond_ore) {
-            return Items.DIAMOND;}
-        else if (this == BlockOreList.netherlapis_ore) {
-            return Items.LAPIS_LAZULI;}
-        else if (this == BlockOreList.netheremerald_ore) {
-            return Items.EMERALD;}
-        else
-            return (IItemProvider)(this == BlockOreList.netherredstone_ore ? Items.REDSTONE : this);
+            return MathHelper.nextInt(p_220281_1_, 0, 2);
+        } else if (this == BlockOreList.netherdiamond_ore) {
+            return MathHelper.nextInt(p_220281_1_, 3, 7);
+        } else if (this == BlockOreList.netheremerald_ore) {
+            return MathHelper.nextInt(p_220281_1_, 3, 7);
+        } else if (this == BlockOreList.netherlapis_ore) {
+            return MathHelper.nextInt(p_220281_1_, 2, 5);
+        } else {
+            return this == BlockOreList.netherredstone_ore ? MathHelper.nextInt(p_220281_1_, 2, 5) : 0;
+        }
     }
 
-    //@Override
-    public int quantityDropped(BlockState state, Random random)
+    /**
+     * Spawn additional block drops such as experience or other entities
+     */
+    @Override
+    public void spawnAdditionalDrops(BlockState p_220062_1_, World p_220062_2_, BlockPos p_220062_3_, ItemStack p_220062_4_) {
+        super.spawnAdditionalDrops(p_220062_1_, p_220062_2_, p_220062_3_, p_220062_4_);
+    }
+
+    @Override  //New from 1.13 Upadated function now has SilkTouch as a variable
+    public int getExpDrop(BlockState state, net.minecraft.world.IWorldReader reader, BlockPos pos, int fortune, int silktouch)
     {
-        if (this == BlockOreList.netherlapis_ore)
-            return 4 + random.nextInt(5);
-        else
-            return this == BlockOreList.netherredstone_ore ? 4 + random.nextInt(2) : 1;
-    }
-
-    //@Override
-    public int getExpDrop(BlockState state, net.minecraft.world.IWorldReader reader, BlockPos pos, int fortune) {
         World world = reader instanceof World ? (World)reader : null;
-        if (world == null || this.getItemDropped(state, world, pos, fortune) != this) {
+
+        if (silktouch == 0)
+        {
             int i = 0;
             if (this == BlockOreList.nethercoal_ore) {
                 i = MathHelper.nextInt(RANDOM, 1, 3);
