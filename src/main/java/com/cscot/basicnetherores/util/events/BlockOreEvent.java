@@ -15,7 +15,7 @@ public class BlockOreEvent
 
     //When a Nether Ore is harvested it is checked against the following conditions
     @SubscribeEvent (priority = EventPriority.HIGH, receiveCanceled = true)
-    public static void onBlockHarvest(BlockEvent.HarvestDropsEvent event) {
+    public static void onBlockHarvested(BlockEvent.HarvestDropsEvent event) {
 
         //Check to see if tool has Silk Touch
         if(!event.isSilkTouching() && OreProtectionConfig.silkEffect.get()) {
