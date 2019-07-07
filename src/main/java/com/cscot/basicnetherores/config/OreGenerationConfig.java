@@ -277,19 +277,17 @@ public class OreGenerationConfig
                 .defineInRange("ore_generation.tin.tinMaxHeight", 110, 0, 125);
 
         //Uranium Ore Values
-        //Tin Ore Values
         uraniumVeinSize = builder
-                .comment("Set Max Tin Vein Size (Default = 4)")
-                .defineInRange("ore_generation.tin.tinVeinSize", 4, 0, 32);
+                .comment("Set Max Uranium Vein Size (Default = 4)")
+                .defineInRange("ore_generation.uranium.uraniumVeinSize", 4, 0, 32);
         uraniumPerChunk = builder
-                .comment("Set Tin Spawn Chance (Default = 6)")
-                .defineInRange("ore_generation.tin.tinChance", 6, 0, 64);
+                .comment("Set Uranium Spawn Chance (Default = 6)")
+                .defineInRange("ore_generation.uranium.uraniumChance", 6, 0, 64);
         uraniumMinHeight = builder
-                .comment("Set Tin Min Spawn Height (Default = 90)")
-                .defineInRange("ore_generation.tin.tinMinHeight", 90, 0, 120);
+                .comment("Set Uranium Min Spawn Height (Default = 90)")
+                .defineInRange("ore_generation.uranium.uraniumMinHeight", 90, 0, 120);
         uraniumMaxHeight = builder
-                .comment("Set Tin Max Spawn Height (Default = 125)")
-                .defineInRange("ore_generation.tin.tinMaxHeight", 125, 0, 125);
-
+                .comment("Set Uranium Max Spawn Height (Default = 125)")
+                .defineInRange("ore_generation.uranium.uraniumMaxHeight", 125, 0, 125);
     }
 }
