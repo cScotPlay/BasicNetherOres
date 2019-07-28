@@ -1,4 +1,4 @@
-package com.cscot.basicnetherores.util.events;
+package com.cscot.basicnetherores.api;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.monster.ZombiePigmanEntity;
