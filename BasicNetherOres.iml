@@ -2,21 +2,16 @@
 <module version="4">
   <component name="FacetManager">
     <facet type="minecraft" name="Minecraft">
-      <configuration>
-        <autoDetectTypes>
-          <platformType>FORGE</platformType>
-          <platformType>MCP</platformType>
-        </autoDetectTypes>
-      </configuration>
+      <configuration />
     </facet>
   </component>
   <component name="McpModuleSettings">
     <option name="mappingFiles">
       <set>
-        <option value="C:\Users\CMSSS_2016\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\1.12.2\srgs\mcp-notch.srg" />
-        <option value="C:\Users\CMSSS_2016\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\1.12.2\srgs\srg.exc" />
         <option value="C:\Users\CMSSS_2016\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\1.12.2\srgs\mcp-srg.srg" />
         <option value="C:\Users\CMSSS_2016\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\1.12.2\srgs\notch-srg.srg" />
+        <option value="C:\Users\CMSSS_2016\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\1.12.2\srgs\mcp-notch.srg" />
+        <option value="C:\Users\CMSSS_2016\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\1.12.2\srgs\srg.exc" />
         <option value="C:\Users\CMSSS_2016\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\1.12.2\srgs\mcp.exc" />
         <option value="C:\Users\CMSSS_2016\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\1.12.2\srgs\notch-mcp.srg" />
       </set>
