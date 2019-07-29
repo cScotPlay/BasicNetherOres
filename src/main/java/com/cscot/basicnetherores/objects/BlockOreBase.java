@@ -5,6 +5,7 @@ import com.cscot.basicnetherores.config.OreGenerationConfig;
 import com.cscot.basicnetherores.config.OreProtectionConfig;
 import com.cscot.basicnetherores.lists.BlockOreList;
 import com.cscot.basicnetherores.lists.ItemList;
+import com.cscot.basicnetherores.api.PigmanEvent;
 import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import com.cscot.basicnetherores.util.helpers.OreTooltipHelper.*;
 import net.minecraft.block.Block;
@@ -12,7 +13,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.ZombiePigmanEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -144,16 +144,14 @@ public class BlockOreBase extends OreBlock
 
         rngProt = OreProtectionConfig.protectionRange.get();
 
-        List<?> list = worldIn.getEntitiesWithinAABB(ZombiePigmanEntity.class, new AxisAlignedBB(x - rngProt, y - rngProt, z - rngProt, x + rngProt, y + rngProt, z + rngProt));
+        List<ZombiePigmanEntity> list = worldIn.getEntitiesWithinAABB(ZombiePigmanEntity.class, new AxisAlignedBB(x - rngProt, y - rngProt, z - rngProt, x + rngProt, y + rngProt, z + rngProt));
 
-        for(int i = 0; i < list.size(); i++) {
+        PigmanEvent event = new PigmanEvent(worldIn, pos, thief, list);
+        if (net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(event)) return;
 
-            Entity entity = (Entity)list.get(i);
-            if(entity instanceof ZombiePigmanEntity) {
+        for(ZombiePigmanEntity guard : list) {
 
-                ZombiePigmanEntity guardPigs = (ZombiePigmanEntity)entity;
-                guardPigs.setRevengeTarget(thief);
-            }
+            guard.setRevengeTarget(thief);
         }
     }
 }
