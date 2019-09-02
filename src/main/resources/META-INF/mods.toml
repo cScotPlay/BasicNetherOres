@@ -18,7 +18,7 @@ displayURL="https://minecraft.curseforge.com/projects/basic-nether-ores" #option
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="bno-logo.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks to An Sar for the help in working through this.  Thanks to Harry Talk & McJty for putting together the tutorial videos that helped me to accomplish this." #optional
+credits="Thanks to An Sar for the help in working through this.  Thanks to McJty for putting together the tutorial videos that helped me to accomplish this."
 # A text field displayed in the mod UI
 authors="cScotPlay" #optional
 # The description text for the mod (multi line!) (#mandatory)
