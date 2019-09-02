@@ -25,18 +25,17 @@ import static net.minecraftforge.fml.Logging.CORE;
 @Mod.EventBusSubscriber
 public class ConfigHandler
 {
-    public static final ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
-    public static ForgeConfigSpec COMMON_CONFIG;
+    public static final ForgeConfigSpec.Builder SERVER_BUILDER = new ForgeConfigSpec.Builder();
+    public static ForgeConfigSpec SERVER_CONFIG;
 
     static
     {
-        NuggetsIngotsBlocks.Init(COMMON_BUILDER);
         //Loaded from class in Config folder
-        OreGenerationConfig.Init(COMMON_BUILDER);
+        OreGenerationConfig.Init(SERVER_BUILDER);
         //Loaded from class in Config folder
-        OreProtectionConfig.Init(COMMON_BUILDER);
+        OreProtectionConfig.Init(SERVER_BUILDER);
 
-        COMMON_CONFIG = COMMON_BUILDER.build();
+        SERVER_CONFIG = SERVER_BUILDER.build();
     }
 
     public static void loadConfig(ForgeConfigSpec spec, Path file)
@@ -50,19 +49,6 @@ public class ConfigHandler
 
         configData.load();
         spec.setConfig(configData);
-    }
-
-    public static class NuggetsIngotsBlocks
-    {
-        //Variables for Nuggets Ingots and Blocks
-        public static BooleanValue registerIngots;
-
-        public static void Init(ForgeConfigSpec.Builder builder) {
-
-            registerIngots = builder
-                    .comment("Register Copper and Tin Items. Set to false to turn off registering of Metals.")
-                    .define("nuggets_ingots_and_blocks.register_ingots", true);
-        }
     }
 
     @SubscribeEvent
