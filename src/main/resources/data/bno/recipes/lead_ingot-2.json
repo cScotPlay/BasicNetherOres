@@ -1,11 +1,6 @@
 {
-    "conditions": [
-        {
-            "type": "bno:recipe_enabled"
-        }
-    ],
     "_comment": [
-        "Craft lead Ingot from lead Block"
+        "Craft Lead Ingot from Lead Block"
     ],
     "type": "minecraft:crafting_shapeless",
     "ingredients": [

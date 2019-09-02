@@ -1,11 +1,6 @@
 {
-    "conditions": [
-        {
-            "type": "bno:recipe_enabled"
-        }
-    ],
     "_comment": [
-        "Copper Ingot Crafting Recipe"
+        "Tin Ingot Crafting Recipe"
     ],
     "type": "minecraft:crafting_shaped",
     "pattern": [

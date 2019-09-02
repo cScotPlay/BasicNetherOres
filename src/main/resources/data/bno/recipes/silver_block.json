@@ -1,11 +1,6 @@
 {
-    "conditions": [
-        {
-            "type": "bno:recipe_enabled"
-        }
-    ],
     "_comment": [
-        "silver Block Crafting Recipe"
+        "Silver Block Crafting Recipe"
     ],
     "type": "minecraft:crafting_shaped",
     "pattern": [

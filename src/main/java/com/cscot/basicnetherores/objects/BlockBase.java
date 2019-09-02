@@ -22,14 +22,8 @@ public class BlockBase extends Block
 
         setRegistryName(BasicNetherOres.modid, name);
 
-        if(ConfigHandler.NuggetsIngotsBlocks.registerIngots.get())
-        {
-            ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
-        }
-        else ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties()).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
+        ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
 
         BlockList.blocks.add(this);
-        //ItemList.items.add(new ItemBlock(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
-
     }
 }

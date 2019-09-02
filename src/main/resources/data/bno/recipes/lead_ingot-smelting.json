@@ -1,12 +1,7 @@
 {
-  "conditions": [
-    {
-      "type": "bno:recipe_enabled"
-    }
-  ],
   "type": "smelting",
   "ingredient": {
-    "tag": "bno:ores/lead"
+    "item": "bno:netherlead_ore"
   },
   "result": "bno:lead_ingot",
   "experience": 0.7,

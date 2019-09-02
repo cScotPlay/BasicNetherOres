@@ -1,11 +1,6 @@
 {
-    "conditions": [
-        {
-            "type": "bno:recipe_enabled"
-        }
-    ],
     "_comment": [
-        "Craft Copper Ingot from Copper Block"
+        "Craft Tin Ingot from Tin Block"
     ],
     "type": "minecraft:crafting_shapeless",
     "ingredients": [

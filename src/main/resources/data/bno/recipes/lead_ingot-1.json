@@ -1,11 +1,6 @@
 {
-    "conditions": [
-        {
-            "type": "bno:recipe_enabled"
-        }
-    ],
     "_comment": [
-        "lead Ingot Crafting Recipe"
+        "Lead Ingot Crafting Recipe"
     ],
     "type": "minecraft:crafting_shaped",
     "pattern": [

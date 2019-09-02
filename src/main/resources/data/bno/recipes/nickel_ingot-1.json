@@ -1,11 +1,6 @@
 {
-    "conditions": [
-        {
-            "type": "bno:recipe_enabled"
-        }
-    ],
     "_comment": [
-        "nickel Ingot Crafting Recipe"
+        "Nickel Ingot Crafting Recipe"
     ],
     "type": "minecraft:crafting_shaped",
     "pattern": [

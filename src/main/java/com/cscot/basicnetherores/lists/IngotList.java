@@ -7,7 +7,7 @@ import java.util.List;
 
 public class IngotList
 {
-    //Ingots List  TODO Add Forge Tags for Ingots
+    //Ingots List
     public static Item aluminum_ingot;
     public static Item copper_ingot;
     public static Item lead_ingot;
@@ -16,7 +16,7 @@ public class IngotList
     public static Item tin_ingot;
     public static Item uranium_ingot;
 
-    //Nugget List TODO Add Forge Tags for Nuggets
+    //Nugget List
     public static Item aluminum_nugget;
     public static Item copper_nugget;
     public static Item lead_nugget;

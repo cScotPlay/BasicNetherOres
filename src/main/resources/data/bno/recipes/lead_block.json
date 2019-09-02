@@ -1,11 +1,6 @@
 {
-    "conditions": [
-        {
-            "type": "bno:recipe_enabled"
-        }
-    ],
     "_comment": [
-        "lead Block Crafting Recipe"
+        "Lead Block Crafting Recipe"
     ],
     "type": "minecraft:crafting_shaped",
     "pattern": [

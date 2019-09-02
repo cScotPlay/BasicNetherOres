@@ -1,11 +1,6 @@
 {
-    "conditions": [
-        {
-            "type": "bno:recipe_enabled"
-        }
-    ],
     "_comment": [
-        "Craft silver Ingot from silver Block"
+        "Craft Silver Ingot from Silver Block"
     ],
     "type": "minecraft:crafting_shapeless",
     "ingredients": [

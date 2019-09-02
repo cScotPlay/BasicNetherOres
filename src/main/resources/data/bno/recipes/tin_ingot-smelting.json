@@ -1,9 +1,4 @@
 {
-  "conditions": [
-    {
-      "type": "bno:recipe_enabled"
-    }
-  ],
   "type": "smelting",
   "ingredient": {
     "tag": "bno:ores/tin"

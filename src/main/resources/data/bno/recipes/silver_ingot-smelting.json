@@ -1,12 +1,7 @@
 {
-  "conditions": [
-    {
-      "type": "bno:recipe_enabled"
-    }
-  ],
   "type": "smelting",
   "ingredient": {
-    "tag": "bno:ores/silver"
+    "item": "bno:nethersilver_ore"
   },
   "result": "bno:silver_ingot",
   "experience": 0.7,

@@ -1,9 +1,4 @@
 {
-  "conditions": [
-    {
-      "type": "bno:recipe_enabled"
-    }
-  ],
   "type": "blasting",
   "ingredient": {
     "item": "bno:nethersilver_ore"

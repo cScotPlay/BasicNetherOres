@@ -2,14 +2,11 @@ package com.cscot.basicnetherores;
 
 
 import com.cscot.basicnetherores.util.handler.ConfigHandler;
-import com.cscot.basicnetherores.util.handler.RecipeHandler;
 import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import com.cscot.basicnetherores.util.itemgroups.BNOItemGroup;
 import com.cscot.basicnetherores.world.OreGenerator;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -44,9 +41,8 @@ public class BasicNetherOres
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Registers and Loads Config File
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.COMMON_CONFIG);
-        ConfigHandler.loadConfig(ConfigHandler.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve("bno-common.toml"));
-
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ConfigHandler.SERVER_CONFIG);
+        ConfigHandler.loadConfig(ConfigHandler.SERVER_CONFIG, FMLPaths.CONFIGDIR.get().resolve("bno-server.toml"));
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -57,8 +53,6 @@ public class BasicNetherOres
     //This used to be the PreInit
     private void setup(FMLCommonSetupEvent event)
     {
-
-        CraftingHelper.register(new ResourceLocation(modid, "recipe_enabled"), new RecipeHandler());
         OreGenerator.setupOreGenerator();
         RegisteryHandler.ProtectedListInit();
 

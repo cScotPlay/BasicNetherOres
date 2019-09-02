@@ -1,9 +1,4 @@
 {
-    "conditions": [
-        {
-            "type": "bno:recipe_enabled"
-        }
-    ],
     "_comment": [
         "Copper Block Crafting Recipe"
     ],

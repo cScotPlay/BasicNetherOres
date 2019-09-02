@@ -1,12 +1,7 @@
 {
-  "conditions": [
-    {
-      "type": "bno:recipe_enabled"
-    }
-  ],
   "type": "smelting",
   "ingredient": {
-    "tag": "bno:ores/aluminum"
+    "item": "bno:netheraluminum_ore"
   },
   "result": "bno:aluminum_ingot",
   "experience": 0.7,

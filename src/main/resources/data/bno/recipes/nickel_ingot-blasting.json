@@ -1,9 +1,4 @@
 {
-  "conditions": [
-    {
-      "type": "bno:recipe_enabled"
-    }
-  ],
   "type": "minecraft:blasting",
   "ingredient": {
     "item": "bno:nethernickel_ore"
