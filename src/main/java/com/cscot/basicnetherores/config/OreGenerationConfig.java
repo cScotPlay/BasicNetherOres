@@ -90,6 +90,22 @@ public class OreGenerationConfig
     public static ForgeConfigSpec.IntValue uraniumMinHeight;
     public static ForgeConfigSpec.IntValue uraniumMaxHeight;
 
+    //Ore Generation Toggle
+    public static ForgeConfigSpec.BooleanValue emeraldGeneration;
+    public static ForgeConfigSpec.BooleanValue diamondGeneration;
+    public static ForgeConfigSpec.BooleanValue redstoneGeneration;
+    public static ForgeConfigSpec.BooleanValue lapisGeneration;
+    public static ForgeConfigSpec.BooleanValue coalGeneration;
+    public static ForgeConfigSpec.BooleanValue goldGeneration;
+    public static ForgeConfigSpec.BooleanValue silverGeneration;
+    public static ForgeConfigSpec.BooleanValue ironGeneration;
+    public static ForgeConfigSpec.BooleanValue leadGeneration;
+    public static ForgeConfigSpec.BooleanValue nickelGeneration;
+    public static ForgeConfigSpec.BooleanValue copperGeneration;
+    public static ForgeConfigSpec.BooleanValue aluminumGeneration;
+    public static ForgeConfigSpec.BooleanValue tinGeneration;
+    public static ForgeConfigSpec.BooleanValue uraniumGeneration;
+
 
     public static void Init(ForgeConfigSpec.Builder builder) {
 
@@ -106,7 +122,6 @@ public class OreGenerationConfig
         emeraldMaxHeight = builder
                 .comment("Set Emerald Max Spawn Height (Default = 55)")
                 .defineInRange("ore_generation.emerald.emeraldMaxHeight", 55, 0, 125);
-
 
         //Diamond Ore Values
         diamondVeinSize = builder
@@ -289,5 +304,49 @@ public class OreGenerationConfig
         uraniumMaxHeight = builder
                 .comment("Set Uranium Max Spawn Height (Default = 125)")
                 .defineInRange("ore_generation.uranium.uraniumMaxHeight", 125, 0, 125);
+
+        //World Ore Generation
+        emeraldGeneration = builder
+                .comment("Generate Emerald Ore")
+                .define("ore_generation.world_generation.emerald", true);
+        diamondGeneration = builder
+                .comment("Generate Diamond Ore")
+                .define("ore_generation.world_generation.diamond", true);
+        redstoneGeneration = builder
+                .comment("Generate Redstone Ore")
+                .define("ore_generation.world_generation.redstone", true);
+        lapisGeneration = builder
+                .comment("Generate Lapis Ore")
+                .define("ore_generation.world_generation.lapis", true);
+        coalGeneration = builder
+                .comment("Generate Coal Ore")
+                .define("ore_generation.world_generation.coal", true);
+        goldGeneration = builder
+                .comment("Generate Gold Ore")
+                .define("ore_generation.world_generation.gold", true);
+        silverGeneration = builder
+                .comment("Generate Silver Ore")
+                .define("ore_generation.world_generation.silver", true);
+        ironGeneration = builder
+                .comment("Generate Iron Ore")
+                .define("ore_generation.world_generation.iron", true);
+        leadGeneration = builder
+                .comment("Generate Lead Ore")
+                .define("ore_generation.world_generation.lead", true);
+        nickelGeneration = builder
+                .comment("Generate Nickel Ore")
+                .define("ore_generation.world_generation.nickel", true);
+        copperGeneration = builder
+                .comment("Generate Copper Ore")
+                .define("ore_generation.world_generation.copper", true);
+       aluminumGeneration = builder
+                .comment("Generate Aluminum Ore")
+                .define("ore_generation.world_generation.aluminum", true);
+        tinGeneration = builder
+                .comment("Generate Tin Ore")
+                .define("ore_generation.world_generation.tin", true);
+        uraniumGeneration = builder
+                .comment("Generate Uranium Ore")
+                .define("ore_generation.world_generation.uranium", true);
     }
 }
