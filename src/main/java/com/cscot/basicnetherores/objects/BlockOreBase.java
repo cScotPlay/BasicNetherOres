@@ -51,33 +51,61 @@ public class BlockOreBase extends OreBlock
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
     {
         if(this == BlockOreList.netheremerald_ore){
-            tooltip.add(new TranslationTextComponent(EmeraldOreTip.oreTip, OreGenerationConfig.emeraldMinHeight.get().toString(), OreGenerationConfig.emeraldMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.emeraldGeneration.get()){
+            tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(EmeraldOreTip.oreTip, OreGenerationConfig.emeraldMinHeight.get().toString(), OreGenerationConfig.emeraldMaxHeight.get().toString()));}
         else if (this == BlockOreList.netherdiamond_ore){
-            tooltip.add(new TranslationTextComponent(DiamondOreTip.oreTip, OreGenerationConfig.diamondMinHeight.get().toString(), OreGenerationConfig.diamondMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.diamondGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(DiamondOreTip.oreTip, OreGenerationConfig.diamondMinHeight.get().toString(), OreGenerationConfig.diamondMaxHeight.get().toString()));}
         else if (this == BlockOreList.netherredstone_ore){
-            tooltip.add(new TranslationTextComponent(RedstoneOreTip.oreTip, OreGenerationConfig.redstoneMinHeight.get().toString(), OreGenerationConfig.redstoneMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.redstoneGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(RedstoneOreTip.oreTip, OreGenerationConfig.redstoneMinHeight.get().toString(), OreGenerationConfig.redstoneMaxHeight.get().toString()));}
         else if (this == BlockOreList.netherlapis_ore){
-            tooltip.add(new TranslationTextComponent(LapisOreTip.oreTip, OreGenerationConfig.lapisMinHeight.get().toString(), OreGenerationConfig.lapisMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.lapisGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(LapisOreTip.oreTip, OreGenerationConfig.lapisMinHeight.get().toString(), OreGenerationConfig.lapisMaxHeight.get().toString()));}
         else if (this == BlockOreList.nethercoal_ore){
-            tooltip.add(new TranslationTextComponent(CoalOreTip.oreTip, OreGenerationConfig.coalMinHeight.get().toString(), OreGenerationConfig.coalMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.coalGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(CoalOreTip.oreTip, OreGenerationConfig.coalMinHeight.get().toString(), OreGenerationConfig.coalMaxHeight.get().toString()));}
         else if (this == BlockOreList.nethergold_ore){
-            tooltip.add(new TranslationTextComponent(GoldOreTip.oreTip, OreGenerationConfig.goldMinHeight.get().toString(), OreGenerationConfig.goldMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.goldGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(GoldOreTip.oreTip, OreGenerationConfig.goldMinHeight.get().toString(), OreGenerationConfig.goldMaxHeight.get().toString()));}
         else if (this == BlockOreList.nethersilver_ore){
-            tooltip.add(new TranslationTextComponent(SilverOreTip.oreTip, OreGenerationConfig.silverMinHeight.get().toString(), OreGenerationConfig.silverMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.silverGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(SilverOreTip.oreTip, OreGenerationConfig.silverMinHeight.get().toString(), OreGenerationConfig.silverMaxHeight.get().toString()));}
         else if (this == BlockOreList.netheriron_ore){
-            tooltip.add(new TranslationTextComponent(IronOreTip.oreTip, OreGenerationConfig.ironMinHeight.get().toString(), OreGenerationConfig.ironMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.ironGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(IronOreTip.oreTip, OreGenerationConfig.ironMinHeight.get().toString(), OreGenerationConfig.ironMaxHeight.get().toString()));}
         else if (this == BlockOreList.netherlead_ore){
-            tooltip.add(new TranslationTextComponent(LeadOreTip.oreTip, OreGenerationConfig.leadMinHeight.get().toString(), OreGenerationConfig.leadMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.leadGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(LeadOreTip.oreTip, OreGenerationConfig.leadMinHeight.get().toString(), OreGenerationConfig.leadMaxHeight.get().toString()));}
         else if (this == BlockOreList.nethernickel_ore){
-            tooltip.add(new TranslationTextComponent(NickelOreTip.oreTip, OreGenerationConfig.nickelMinHeight.get().toString(), OreGenerationConfig.nickelMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.nickelGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(NickelOreTip.oreTip, OreGenerationConfig.nickelMinHeight.get().toString(), OreGenerationConfig.nickelMaxHeight.get().toString()));}
         else if (this == BlockOreList.nethercopper_ore){
-            tooltip.add(new TranslationTextComponent(CopperOreTip.oreTip, OreGenerationConfig.copperMinHeight.get().toString(), OreGenerationConfig.copperMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.copperGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(CopperOreTip.oreTip, OreGenerationConfig.copperMinHeight.get().toString(), OreGenerationConfig.copperMaxHeight.get().toString()));}
         else if (this == BlockOreList.netheraluminum_ore){
-            tooltip.add(new TranslationTextComponent(AluminumOreTip.oreTip, OreGenerationConfig.aluminumMinHeight.get().toString(), OreGenerationConfig.aluminumMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.aluminumGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(AluminumOreTip.oreTip, OreGenerationConfig.aluminumMinHeight.get().toString(), OreGenerationConfig.aluminumMaxHeight.get().toString()));}
         else if (this == BlockOreList.nethertin_ore){
-            tooltip.add(new TranslationTextComponent(TinOreTip.oreTip, OreGenerationConfig.tinMinHeight.get().toString(), OreGenerationConfig.tinMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.tinGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(TinOreTip.oreTip, OreGenerationConfig.tinMinHeight.get().toString(), OreGenerationConfig.tinMaxHeight.get().toString()));}
         else if (this == BlockOreList.netheruranium_ore){
-            tooltip.add(new TranslationTextComponent(TinOreTip.oreTip, OreGenerationConfig.uraniumMinHeight.get().toString(), OreGenerationConfig.uraniumMaxHeight.get().toString()));}
+            if (!OreGenerationConfig.uraniumGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(TinOreTip.oreTip, OreGenerationConfig.uraniumMinHeight.get().toString(), OreGenerationConfig.uraniumMaxHeight.get().toString()));}
     }
 
     @Override
@@ -90,8 +118,8 @@ public class BlockOreBase extends OreBlock
         return 2;
     }
 
-    @Override  //ToDo Update getItemDropped when MCP updates
-    protected int func_220281_a(Random p_220281_1_) {
+    @Override  //Updated getExperience
+    protected int getExperience(Random p_220281_1_) {
         if (this == BlockOreList.nethercoal_ore) {
             return MathHelper.nextInt(p_220281_1_, 0, 2);
         } else if (this == BlockOreList.netherdiamond_ore) {
