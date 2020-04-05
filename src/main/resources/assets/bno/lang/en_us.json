@@ -54,6 +54,7 @@
     "tooltip.nethercopper_ore.tip": "§aFound between y{0} to y{1}",
     "tooltip.netheraluminum_ore.tip": "§aFound between y{0} to y{1}",
     "tooltip.nethertin_ore.tip": "§aFound between y{0} to y{1}",
-    "tooltip.netheruranium_ore.tip": "§aFound between y{0} to y{1}"
+    "tooltip.netheruranium_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.config.tip": "§4§oWorld Generation Disabled - Enable through Config File"
 
 }
