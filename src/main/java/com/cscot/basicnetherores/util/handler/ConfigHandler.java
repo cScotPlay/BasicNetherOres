@@ -56,7 +56,7 @@ public class ConfigHandler
     }
 
     @SubscribeEvent
-    public static void onChange(final ModConfig.ConfigReloading event)
+    public static void onChange(final ModConfig.Reloading event)
     {
         if(event.getConfig().getModId().equals(BasicNetherOres.modid))
         {
