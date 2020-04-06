@@ -23,7 +23,7 @@ archivesBaseName = "BasicNetherOres"
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 minecraft {
-    mappings channel: 'stable', version: '58-1.14.4'
+    mappings channel: 'snapshot', version: '20200403-1.15.1'
 
     runs {
         client {
@@ -61,8 +61,7 @@ minecraft {
 }
 
 dependencies {
-
-    minecraft 'net.minecraftforge:forge:1.14.4-28.2.3'
+    minecraft 'net.minecraftforge:forge:1.15.2-31.1.37'
 }
 
 jar {
