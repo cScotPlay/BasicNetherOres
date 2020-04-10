@@ -24,17 +24,17 @@ import static net.minecraftforge.fml.Logging.CORE;
 @Mod.EventBusSubscriber
 public class ConfigHandler
 {
-    public static final ForgeConfigSpec.Builder SERVER_BUILDER = new ForgeConfigSpec.Builder();
-    public static ForgeConfigSpec SERVER_CONFIG;
+    public static final ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
+    public static ForgeConfigSpec COMMON_CONFIG;
 
     static
     {
         //Loaded from class in Config folder
-        OreGenerationConfig.Init(SERVER_BUILDER);
+        OreGenerationConfig.Init(COMMON_BUILDER);
         //Loaded from class in Config folder
-        OreProtectionConfig.Init(SERVER_BUILDER);
+        OreProtectionConfig.Init(COMMON_BUILDER);
 
-        SERVER_CONFIG = SERVER_BUILDER.build();
+        COMMON_CONFIG = COMMON_BUILDER.build();
     }
 
     public static void loadConfig(ForgeConfigSpec spec, Path file)
