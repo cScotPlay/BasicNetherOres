@@ -2,6 +2,7 @@ package com.cscot.basicnetherores.world;
 
 import com.cscot.basicnetherores.config.OreGenerationConfig;
 import com.cscot.basicnetherores.lists.BlockOreList;
+import com.cscot.basicnetherores.util.helpers.WorldHelper;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
@@ -9,6 +10,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import static net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType.NETHERRACK;
@@ -19,7 +21,8 @@ public class OreGenerator
     {
         for(Biome biome : ForgeRegistries.BIOMES) {
 
-            if (biome == Biomes.NETHER) {
+            if (WorldHelper.biomeHasType(biome,
+                    BiomeDictionary.Type.NETHER)) {
 
                 if (OreGenerationConfig.emeraldGeneration.get()) {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
