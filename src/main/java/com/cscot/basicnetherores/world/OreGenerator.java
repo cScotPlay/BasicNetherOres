@@ -54,11 +54,11 @@ public class OreGenerator
                             new CountRangeConfig(OreGenerationConfig.coalPerChunk.get(), OreGenerationConfig.coalMinHeight.get(), 0, OreGenerationConfig.coalMaxHeight.get()))));
                 }
 
-                if (OreGenerationConfig.goldGeneration.get()) {
+                /*if (OreGenerationConfig.goldGeneration.get()) { TODO Remove due to new gold ore
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
                             new OreFeatureConfig(NETHERRACK, BlockOreList.nethergold_ore.getDefaultState(), OreGenerationConfig.goldVeinSize.get())).withPlacement(Placement.COUNT_RANGE.configure(
                             new CountRangeConfig(OreGenerationConfig.goldPerChunk.get(), OreGenerationConfig.goldMinHeight.get(), 0, OreGenerationConfig.goldMaxHeight.get()))));
-                }
+                }*/
 
                 if (OreGenerationConfig.silverGeneration.get()) {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(

@@ -5,7 +5,7 @@ import com.cscot.basicnetherores.config.OreGenerationConfig;
 import com.cscot.basicnetherores.config.OreProtectionConfig;
 import com.cscot.basicnetherores.lists.BlockOreList;
 import com.cscot.basicnetherores.lists.ItemList;
-import com.cscot.basicnetherores.api.PigmanEvent;
+import com.cscot.basicnetherores.api.PiglinEvent;
 import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import com.cscot.basicnetherores.util.helpers.OreTooltipHelper.*;
 import net.minecraft.block.Block;
@@ -13,10 +13,13 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.monster.ZombiePigmanEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.monster.piglin.PiglinEntity;
+import net.minecraft.entity.monster.piglin.PiglinTasks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.BlockItem;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -70,10 +73,10 @@ public class BlockOreBase extends OreBlock
             if (!OreGenerationConfig.coalGeneration.get()){
                 tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
             else tooltip.add(new TranslationTextComponent(CoalOreTip.oreTip, OreGenerationConfig.coalMinHeight.get().toString(), OreGenerationConfig.coalMaxHeight.get().toString()));}
-        else if (this == BlockOreList.nethergold_ore){
+        /*else if (this == BlockOreList.nethergold_ore){  TODO Remove Due to New Gold Ore
             if (!OreGenerationConfig.goldGeneration.get()){
                 tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
-            else tooltip.add(new TranslationTextComponent(GoldOreTip.oreTip, OreGenerationConfig.goldMinHeight.get().toString(), OreGenerationConfig.goldMaxHeight.get().toString()));}
+            else tooltip.add(new TranslationTextComponent(GoldOreTip.oreTip, OreGenerationConfig.goldMinHeight.get().toString(), OreGenerationConfig.goldMaxHeight.get().toString()));}*/
         else if (this == BlockOreList.nethersilver_ore){
             if (!OreGenerationConfig.silverGeneration.get()){
                 tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
@@ -165,21 +168,21 @@ public class BlockOreBase extends OreBlock
         return 0;
     }
 
-    public static void pigmenGuards(World worldIn, BlockPos pos, PlayerEntity thief) {
+    public static void piglinGuards(World worldIn, BlockPos pos, PlayerEntity thief) {
 
         int x = pos.getX(), y = pos.getY(), z = pos.getZ();
         int rngProt;
 
         rngProt = OreProtectionConfig.protectionRange.get();
 
-        List<ZombiePigmanEntity> list = worldIn.getEntitiesWithinAABB(ZombiePigmanEntity.class, new AxisAlignedBB(x - rngProt, y - rngProt, z - rngProt, x + rngProt, y + rngProt, z + rngProt));
+        List<PiglinEntity> list = worldIn.getEntitiesWithinAABB(PiglinEntity.class, new AxisAlignedBB(x - rngProt, y - rngProt, z - rngProt, x + rngProt, y + rngProt, z + rngProt));
 
-        PigmanEvent event = new PigmanEvent(worldIn, pos, thief, list);
+        PiglinEvent event = new PiglinEvent(worldIn, pos, thief, list);
         if (net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(event)) return;
 
-        for(ZombiePigmanEntity guard : list) {
+        for(PiglinEntity guard : list) {
 
-            guard.setRevengeTarget(thief);
+            guard.setRevengeTarget(event.getThief()); //TODO This Needs to be updated to target the player when breaking the ores
         }
     }
 }
