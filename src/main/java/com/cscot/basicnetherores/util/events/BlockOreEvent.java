@@ -28,14 +28,14 @@ public class BlockOreEvent
         if(isSilkTouching < 1 && OreProtectionConfig.silkEffect.get()) {
 
             //Checks if the Config file is set to true
-            if (OreProtectionConfig.pigmanGuard.get()) {
+            if (OreProtectionConfig.piglinGuard.get()) {
 
                 Block block = event.getState().getBlock();
 
                 //Compares the broken Block to a list generated in the Config File
                 if(BlockListHelper.protectedOres(block))
                 {
-                    BlockOreBase.pigmenGuards(event.getWorld().getWorld(), event.getPos(), player);
+                    BlockOreBase.piglinGuards(event.getWorld().getWorld(), event.getPos(), player);
                 }
             }
         }
