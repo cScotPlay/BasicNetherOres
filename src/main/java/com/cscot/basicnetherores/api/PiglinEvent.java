@@ -1,7 +1,7 @@
 package com.cscot.basicnetherores.api;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.monster.ZombiePigmanEntity;
+import net.minecraft.entity.monster.piglin.PiglinEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.eventbus.api.Cancelable;
@@ -10,12 +10,12 @@ import net.minecraftforge.eventbus.api.Event;
 import java.util.List;
 
 @Cancelable
-public class PigmanEvent extends Event
+public class PiglinEvent extends Event
 {
     private final World world;
     private final BlockPos pos;
     private final LivingEntity thief;
-    private List<ZombiePigmanEntity> guards;
+    private List<PiglinEntity> guards;
 
     /**
      * This event fires within BlockOreBase#pigmenGuards
@@ -27,7 +27,7 @@ public class PigmanEvent extends Event
      * @param pos BlockPos provided to BlockOreBase#pigmenGuards
      * @param thief LivingEntity that is being targeted
      */
-    public PigmanEvent(World world, BlockPos pos, LivingEntity thief, List<ZombiePigmanEntity> guards)
+    public PiglinEvent(World world, BlockPos pos, LivingEntity thief, List<PiglinEntity> guards)
     {
         super();
         this.world = world;
@@ -51,7 +51,7 @@ public class PigmanEvent extends Event
         return thief;
     }
 
-    public List<ZombiePigmanEntity> getGuards()
+    public List<PiglinEntity> getGuards()
     {
         return guards;
     }
