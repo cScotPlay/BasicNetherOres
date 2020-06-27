@@ -73,10 +73,6 @@ public class BlockOreBase extends OreBlock
             if (!OreGenerationConfig.coalGeneration.get()){
                 tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
             else tooltip.add(new TranslationTextComponent(CoalOreTip.oreTip, OreGenerationConfig.coalMinHeight.get().toString(), OreGenerationConfig.coalMaxHeight.get().toString()));}
-        /*else if (this == BlockOreList.nethergold_ore){  TODO Remove Due to New Gold Ore
-            if (!OreGenerationConfig.goldGeneration.get()){
-                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
-            else tooltip.add(new TranslationTextComponent(GoldOreTip.oreTip, OreGenerationConfig.goldMinHeight.get().toString(), OreGenerationConfig.goldMaxHeight.get().toString()));}*/
         else if (this == BlockOreList.nethersilver_ore){
             if (!OreGenerationConfig.silverGeneration.get()){
                 tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
@@ -182,7 +178,8 @@ public class BlockOreBase extends OreBlock
 
         for(PiglinEntity guard : list) {
 
-            guard.setRevengeTarget(event.getThief()); //TODO This Needs to be updated to target the player when breaking the ores
+            //guard.setRevengeTarget(event.getThief()); //TODO This Needs to be updated to target the player when breaking the ores Look at Line 403 PiglinTasks
+            PiglinTasks.func_234478_a_(thief, true); //TODO This seems to aggro the Piglins (Pulls function from PiglinsTasks/ Line 403.)
         }
     }
 }
