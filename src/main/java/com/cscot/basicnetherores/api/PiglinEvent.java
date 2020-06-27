@@ -18,7 +18,7 @@ public class PiglinEvent extends Event
     private List<PiglinEntity> guards;
 
     /**
-     * This event fires within BlockOreBase#pigmenGuards
+     * This event fires within BlockOreBase#piglinGuards
      *
      * This event is {@link Cancelable}.
      * If this event is canceled no aggression against the thief occurs
