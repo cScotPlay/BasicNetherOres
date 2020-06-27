@@ -36,12 +36,6 @@ public class OreGenerationConfig
     public static ForgeConfigSpec.IntValue coalMinHeight;
     public static ForgeConfigSpec.IntValue coalMaxHeight;
 
-    //Gold Settings
-    public static ForgeConfigSpec.IntValue goldVeinSize;
-    public static ForgeConfigSpec.IntValue goldPerChunk;
-    public static ForgeConfigSpec.IntValue goldMinHeight;
-    public static ForgeConfigSpec.IntValue goldMaxHeight;
-
     //Silver Settings
     public static ForgeConfigSpec.IntValue silverVeinSize;
     public static ForgeConfigSpec.IntValue silverPerChunk;
@@ -96,7 +90,6 @@ public class OreGenerationConfig
     public static ForgeConfigSpec.BooleanValue redstoneGeneration;
     public static ForgeConfigSpec.BooleanValue lapisGeneration;
     public static ForgeConfigSpec.BooleanValue coalGeneration;
-    public static ForgeConfigSpec.BooleanValue goldGeneration;
     public static ForgeConfigSpec.BooleanValue silverGeneration;
     public static ForgeConfigSpec.BooleanValue ironGeneration;
     public static ForgeConfigSpec.BooleanValue leadGeneration;
@@ -178,20 +171,6 @@ public class OreGenerationConfig
         coalMaxHeight = builder
                 .comment("Set Coal Max Spawn Height (Default = 115)")
                 .defineInRange("ore_generation.coal.coalMaxHeight", 115, 0, 125);
-
-        //Gold Ore Values
-        goldVeinSize = builder
-                .comment("Set Max Gold Vein Size (Default = 9)")
-                .defineInRange("ore_generation.gold.goldVeinSize", 9, 0, 64);
-        goldPerChunk = builder
-                .comment("Set Gold Spawn Chance (Default = 4)")
-                .defineInRange("ore_generation.gold.goldChance", 4, 0, 64);
-        goldMinHeight = builder
-                .comment("Set Gold Min Spawn Height (Default = 40)")
-                .defineInRange("ore_generation.gold.goldMinHeight", 40, 0, 120);
-        goldMaxHeight = builder
-                .comment("Set Gold Max Spawn Height (Default = 80)")
-                .defineInRange("ore_generation.gold.goldMaxHeight", 80, 0, 125);
 
         //Silver Ore Values
         silverVeinSize = builder
@@ -321,9 +300,6 @@ public class OreGenerationConfig
         coalGeneration = builder
                 .comment("Generate Coal Ore")
                 .define("ore_generation.world_generation.coal", true);
-        goldGeneration = builder
-                .comment("Generate Gold Ore")
-                .define("ore_generation.world_generation.gold", true);
         silverGeneration = builder
                 .comment("Generate Silver Ore")
                 .define("ore_generation.world_generation.silver", false);
