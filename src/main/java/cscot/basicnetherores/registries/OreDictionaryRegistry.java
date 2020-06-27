@@ -4,6 +4,7 @@ import cscot.basicnetherores.init.BlockInit;
 import cscot.basicnetherores.init.BlockOreInit;
 import cscot.basicnetherores.init.IngotInit;
 import cscot.basicnetherores.init.ItemInit;
+import cscot.basicnetherores.objects.blocks.BlockOreBase;
 import cscot.basicnetherores.util.handler.ConfigHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -33,8 +34,10 @@ public class OreDictionaryRegistry {
 
 		for(Block block : BlockInit.BLOCKS) {
 
-			OreDictionary.registerOre("block" + block.getLocalizedName().substring(0, block.getLocalizedName().length() - 6), block);
+			String tmp = block.getUnlocalizedName().split("_")[1];
+			String name = "block" + tmp.substring(0, 1).toUpperCase() + tmp.substring(1);
 
+			OreDictionary.registerOre(name, block);
 		}
 	}
 }
