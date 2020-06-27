@@ -38,7 +38,6 @@
     "block.bno.netherlapis_ore": "Nether Lapis Ore",
     "block.bno.nethercoal_ore": "Nether Coal Ore",
 
-    "block.bno.nethergold_ore": "Nether Gold Ore",
     "block.bno.netheriron_ore": "Nether Iron Ore",
 
     "tooltip.netheremerald_ore.tip": "§aFound between y{0} to y{1}",

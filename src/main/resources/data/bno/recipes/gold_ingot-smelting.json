@@ -1,9 +1,0 @@
-{
-  "type": "smelting",
-  "ingredient": {
-    "tag": "bno:ores/gold"
-  },
-  "result": "minecraft:gold_ingot",
-  "experience": 1.0,
-  "cookingtime": 200
-}
