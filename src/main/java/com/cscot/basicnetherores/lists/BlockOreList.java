@@ -18,7 +18,6 @@ public class BlockOreList {
 	public static Block netherredstone_ore = new BlockOreBase("netherredstone_ore");
 	public static Block netherlapis_ore = new BlockOreBase("netherlapis_ore");
 	public static Block nethercoal_ore = new BlockOreBase("nethercoal_ore");
-	//public static Block nethergold_ore = new BlockOreBase("nethergold_ore"); TODO Remove due to new gold Ore
 	public static Block nethersilver_ore = new BlockOreBase("nethersilver_ore");
 	public static Block netheriron_ore = new BlockOreBase("netheriron_ore");
 	public static Block netherlead_ore = new BlockOreBase("netherlead_ore");

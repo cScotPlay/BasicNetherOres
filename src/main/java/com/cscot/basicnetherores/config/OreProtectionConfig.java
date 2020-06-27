@@ -37,7 +37,7 @@ public class OreProtectionConfig
                                 "bno:netherdiamond_ore",
                                 "bno:netherlapis_ore",
                                 "bno:netherredstone_ore",
-                                "bno:nethergold_ore",
+                                "minecraft:nether_gold_ore",
                                 "bno:nethersilver_ore",
                                 "bno:netheriron_ore",
                                 "bno:netherlead_ore",

@@ -18,9 +18,6 @@ public class OreTooltipHelper
     public static class CoalOreTip {
         public static String oreTip = "tooltip.nethercoal_ore.tip";
     }
-    public static class GoldOreTip {
-        public static String oreTip = "tooltip.nethergold_ore.tip";
-    }
     public static class SilverOreTip {
         public static String oreTip = "tooltip.nethersilver_ore.tip";
     }
