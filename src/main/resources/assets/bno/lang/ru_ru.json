@@ -1,0 +1,60 @@
+{
+    "itemGroup.basicnetheroreitemgroup": "Базовые руды Нижнего мира",
+
+    "item.bno.aluminum_nugget": "Кусочек алюминия",
+    "item.bno.copper_nugget": "Кусочек меди",
+    "item.bno.lead_nugget": "Кусочек свинца",
+    "item.bno.nickel_nugget": "Кусочек никеля",
+    "item.bno.silver_nugget": "Кусочек серебра",
+    "item.bno.tin_nugget": "Кусочек олова",
+
+    "item.bno.aluminum_ingot": "Алюминиевый слиток",
+    "item.bno.copper_ingot": "Медный слиток",
+    "item.bno.lead_ingot": "Свинцовый слиток",
+    "item.bno.nickel_ingot": "Никелевый слиток",
+    "item.bno.silver_ingot": "Серебряный слиток",
+    "item.bno.tin_ingot": "Оловянный слиток",
+    "item.bno.uranium_ingot": "Урановый слиток",
+
+    "block.bno.aluminum_block": "Алюминиевый блок",
+    "block.bno.copper_block": "Медный блок",
+    "block.bno.lead_block": "Свинцовый блок",
+    "block.bno.nickel_block": "Никелевый блок",
+    "block.bno.silver_block": "Серебряный блок",
+    "block.bno.tin_block": "Оловянный блок",
+    "block.bno.uranium_block": "Урановый блок",
+
+    "block.bno.netheraluminum_ore": "Алюминиевая руда Нижнего мира",
+    "block.bno.nethercopper_ore": "Медная руда Нижнего мира",
+    "block.bno.netherlead_ore": "Свинцовая руда Нижнего мира",
+    "block.bno.nethernickel_ore": "Никелевая руда Нижнего мира",
+    "block.bno.nethersilver_ore": "Серебряная руда Нижнего мира",
+    "block.bno.nethertin_ore": "Оловянная руда Нижнего мира",
+    "block.bno.netheruranium_ore": "Урановая руда Нижнего мира",
+
+    "block.bno.netheremerald_ore": "Изумрудная руда Нижнего мира",
+    "block.bno.netherdiamond_ore": "Алмазная руда Нижнего мира",
+    "block.bno.netherredstone_ore": "Красная руда Нижнего мира",
+    "block.bno.netherlapis_ore": "Лазуритовая руда Нижнего мира",
+    "block.bno.nethercoal_ore": "Угольная руда Нижнего мира",
+
+    "block.bno.nethergold_ore": "Золотая руда Нижнего мира",
+    "block.bno.netheriron_ore": "Железная руда Нижнего мира",
+
+    "tooltip.netheremerald_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.netherdiamond_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.netherredstone_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.netherlapis_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.nethercoal_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.nethergold_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.nethersilver_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.netheriron_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.netherlead_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.nethernickel_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.nethercopper_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.netheraluminum_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.nethertin_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.netheruranium_ore.tip": "§aНаходится между y{0} и y{1}",
+    "tooltip.config.tip": "§4§oГенерация в мире отключена — включается через файл конфигурации"
+
+}
