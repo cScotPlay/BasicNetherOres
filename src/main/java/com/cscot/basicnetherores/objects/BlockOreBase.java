@@ -11,6 +11,7 @@ import com.cscot.basicnetherores.util.helpers.OreTooltipHelper.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
@@ -42,7 +43,7 @@ public class BlockOreBase extends OreBlock
 
     public BlockOreBase(String oreName)
     {
-        super(Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f));
+        super(Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).sound(SoundType.field_235598_T_));
         setRegistryName(BasicNetherOres.modid, oreName);
 
         ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(oreName)));
@@ -101,10 +102,14 @@ public class BlockOreBase extends OreBlock
             if (!OreGenerationConfig.tinGeneration.get()){
                 tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
             else tooltip.add(new TranslationTextComponent(TinOreTip.oreTip, OreGenerationConfig.tinMinHeight.get().toString(), OreGenerationConfig.tinMaxHeight.get().toString()));}
+        else if (this == BlockOreList.netherosmium_ore){
+            if (!OreGenerationConfig.osmiumGeneration.get()){
+                tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslationTextComponent(OsmiumOreTip.oreTip, OreGenerationConfig.osmiumMinHeight.get().toString(), OreGenerationConfig.osmiumMaxHeight.get().toString()));}
         else if (this == BlockOreList.netheruranium_ore){
             if (!OreGenerationConfig.uraniumGeneration.get()){
                 tooltip.add(new TranslationTextComponent("tooltip.config.tip"));}
-            else tooltip.add(new TranslationTextComponent(TinOreTip.oreTip, OreGenerationConfig.uraniumMinHeight.get().toString(), OreGenerationConfig.uraniumMaxHeight.get().toString()));}
+            else tooltip.add(new TranslationTextComponent(UraniumOreTip.oreTip, OreGenerationConfig.uraniumMinHeight.get().toString(), OreGenerationConfig.uraniumMaxHeight.get().toString()));}
     }
 
     @Override
