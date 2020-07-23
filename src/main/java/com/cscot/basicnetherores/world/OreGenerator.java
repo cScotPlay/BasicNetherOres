@@ -96,6 +96,12 @@ public class OreGenerator
                             new CountRangeConfig(OreGenerationConfig.tinPerChunk.get(), OreGenerationConfig.tinMinHeight.get(), 0, OreGenerationConfig.tinMaxHeight.get()))));
                 }
 
+                if (OreGenerationConfig.osmiumGeneration.get()) {
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
+                            new OreFeatureConfig(NETHERRACK, BlockOreList.netherosmium_ore.getDefaultState(), OreGenerationConfig.osmiumVeinSize.get())).withPlacement(Placement.COUNT_RANGE.configure(
+                            new CountRangeConfig(OreGenerationConfig.osmiumPerChunk.get(), OreGenerationConfig.osmiumMinHeight.get(), 0, OreGenerationConfig.osmiumMaxHeight.get()))));
+                }
+
                 if (OreGenerationConfig.uraniumGeneration.get()) {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(
                             new OreFeatureConfig(NETHERRACK, BlockOreList.netheruranium_ore.getDefaultState(), OreGenerationConfig.uraniumVeinSize.get())).withPlacement(Placement.COUNT_RANGE.configure(

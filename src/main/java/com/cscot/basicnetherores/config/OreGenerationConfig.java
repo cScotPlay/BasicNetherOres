@@ -78,7 +78,13 @@ public class OreGenerationConfig
     public static ForgeConfigSpec.IntValue tinMinHeight;
     public static ForgeConfigSpec.IntValue tinMaxHeight;
 
-    //Tin Settings
+    //Osmium Settings
+    public static ForgeConfigSpec.IntValue osmiumVeinSize;
+    public static ForgeConfigSpec.IntValue osmiumPerChunk;
+    public static ForgeConfigSpec.IntValue osmiumMinHeight;
+    public static ForgeConfigSpec.IntValue osmiumMaxHeight;
+
+    //Uranium Settings
     public static ForgeConfigSpec.IntValue uraniumVeinSize;
     public static ForgeConfigSpec.IntValue uraniumPerChunk;
     public static ForgeConfigSpec.IntValue uraniumMinHeight;
@@ -97,6 +103,7 @@ public class OreGenerationConfig
     public static ForgeConfigSpec.BooleanValue copperGeneration;
     public static ForgeConfigSpec.BooleanValue aluminumGeneration;
     public static ForgeConfigSpec.BooleanValue tinGeneration;
+    public static ForgeConfigSpec.BooleanValue osmiumGeneration;
     public static ForgeConfigSpec.BooleanValue uraniumGeneration;
 
 
@@ -270,6 +277,20 @@ public class OreGenerationConfig
                 .comment("Set Tin Max Spawn Height (Default = 110)")
                 .defineInRange("ore_generation.tin.tinMaxHeight", 110, 0, 125);
 
+        //Osmium Ore Values
+        osmiumVeinSize = builder
+                .comment("Set Max Osmium Vein Size (Default = 8)")
+                .defineInRange("ore_generation.osmium.osmiumVeinSize", 8, 0, 32);
+        osmiumPerChunk = builder
+                .comment("Set Osmium Spawn Chance (Default = 8)")
+                .defineInRange("ore_generation.osmium.osmiumChance", 8, 0, 64);
+        osmiumMinHeight = builder
+                .comment("Set Osmium Min Spawn Height (Default = 30)")
+                .defineInRange("ore_generation.osmium.osmiumMinHeight", 30, 0, 120);
+        osmiumMaxHeight = builder
+                .comment("Set Osmium Max Spawn Height (Default = 75)")
+                .defineInRange("ore_generation.osmium.osmiumMaxHeight", 75, 0, 125);
+
         //Uranium Ore Values
         uraniumVeinSize = builder
                 .comment("Set Max Uranium Vein Size (Default = 4)")
@@ -321,6 +342,9 @@ public class OreGenerationConfig
         tinGeneration = builder
                 .comment("Generate Tin Ore")
                 .define("ore_generation.world_generation.tin", false);
+        osmiumGeneration = builder
+                .comment("Generate Osmium Ore")
+                .define("ore_generation.world_generation.osmium", false);
         uraniumGeneration = builder
                 .comment("Generate Uranium Ore")
                 .define("ore_generation.world_generation.uranium", false);

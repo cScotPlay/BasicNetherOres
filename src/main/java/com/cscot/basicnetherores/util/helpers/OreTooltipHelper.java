@@ -37,6 +37,12 @@ public class OreTooltipHelper
         public static String oreTip = "tooltip.netheraluminum_ore.tip";
     }
     public static class TinOreTip {
-        public static String oreTip = "tooltip.nethertin_ore.tip";
+            public static String oreTip = "tooltip.nethertin_ore.tip";
+    }
+    public static class OsmiumOreTip {
+        public static String oreTip = "tooltip.netherosmium_ore.tip";
+    }
+    public static class UraniumOreTip {
+        public static String oreTip = "tooltip.netheruranium_ore.tip";
     }
 }

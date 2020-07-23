@@ -30,6 +30,7 @@
     "block.bno.nethernickel_ore": "Nether Nickel Ore",
     "block.bno.nethersilver_ore": "Nether Silver Ore",
     "block.bno.nethertin_ore": "Nether Tin Ore",
+    "block.bno.netherosmium_ore": "Nether Osmium Ore",
     "block.bno.netheruranium_ore": "Nether Uranium Ore",
 
     "block.bno.netheremerald_ore": "Nether Emerald Ore",
@@ -53,6 +54,7 @@
     "tooltip.nethercopper_ore.tip": "§aFound between y{0} to y{1}",
     "tooltip.netheraluminum_ore.tip": "§aFound between y{0} to y{1}",
     "tooltip.nethertin_ore.tip": "§aFound between y{0} to y{1}",
+    "tooltip.netherosmium_ore.tip": "§aFound between y{0} to y{1}",
     "tooltip.netheruranium_ore.tip": "§aFound between y{0} to y{1}",
     "tooltip.config.tip": "§4§oWorld Generation Disabled - Enable through Config File"
 
