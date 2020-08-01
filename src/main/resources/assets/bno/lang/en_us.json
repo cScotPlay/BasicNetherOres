@@ -7,6 +7,7 @@
     "item.bno.nickel_nugget": "Nickel Nugget",
     "item.bno.silver_nugget": "Silver Nugget",
     "item.bno.tin_nugget": "Tin Nugget",
+    "item.bno.osmium_nugget": "Osmium Nugget",
 
     "item.bno.aluminum_ingot": "Aluminum Ingot",
     "item.bno.copper_ingot": "Copper Ingot",
@@ -14,6 +15,7 @@
     "item.bno.nickel_ingot": "Nickel Ingot",
     "item.bno.silver_ingot": "Silver Ingot",
     "item.bno.tin_ingot": "Tin Ingot",
+    "item.bno.osmium_ingot": "Osmium Ingot",
     "item.bno.uranium_ingot": "Uranium Ingot",
 
     "block.bno.aluminum_block": "Aluminum Block",
@@ -22,6 +24,7 @@
     "block.bno.nickel_block": "Nickel Block",
     "block.bno.silver_block": "Silver Block",
     "block.bno.tin_block": "Tin Block",
+    "block.bno.osmium_block": "Osmium Block",
     "block.bno.uranium_block": "Uranium Block",
 
     "block.bno.netheraluminum_ore": "Nether Aluminum Ore",
