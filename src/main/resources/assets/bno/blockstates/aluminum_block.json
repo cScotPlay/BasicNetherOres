@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "bno:block/aluminum_block" }
+    }
+}

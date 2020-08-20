@@ -1,0 +1,136 @@
+# ---> Forge and Friends
+changelog.txt
+!src/main/resources/changelog.txt
+src/main/generated/*
+README.txt
+CREDITS.txt
+LICENSE.txt
+LICENSE-*
+MinecraftForge-*
+Paulscode*
+forge-*-changelog.txt
+*-fml.txt
+*-new.txt
+*-new.tx
+.gradle
+build/
+run/
+out/
+tmp/
+crash-reports
+saves/
+logs
+usercache.json
+options.txt
+*.jks
+*.cer
+*crazypants*
+
+# ---> Java/Scala
+*.class
+*.jar
+*.war
+*.ear
+*.hprof
+*.zip
+*.tar*
+.mtj.tmp/
+.scala_dependencies
+.worksheet
+
+# ---> Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# ---> Temp Files, Logs, Backups
+*~
+*.log
+*.tmp
+*.bak
+.Temp*
+.Trash*
+.cache
+.history
+textures_working/
+
+# ---> OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# ---> Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# ---> JetBrains
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# ---> Eclipse
+*.pydevproject
+.metadata
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.project
+.externalToolBuilders/
+*.launch
+.cproject
+.classpath
+.factorypath
+.buildpath
+.target
+.texlipse
+
+# ---> Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# ---> Emacs
+# -*- mode: gitignore; -*-
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+.org-id-locations
+*_archive
+*_flymake.*
+/eshell/history
+/eshell/lastdir
+/elpa/
+*.rel
+/auto/
+.cask/
+
+# ---> Just Checking
+!.gitignore
+!gradle-wrapper.jar
+
+## end ##
