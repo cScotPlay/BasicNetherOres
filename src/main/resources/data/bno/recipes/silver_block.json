@@ -1,0 +1,21 @@
+{
+    "_comment": [
+        "Silver Block Crafting Recipe"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "III",
+        "III",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "tag": "bno:ingots/silver"
+        }
+    },
+    "result": {
+        "item": "bno:silver_block",
+        "count": 1
+    }
+}
+

@@ -1,0 +1,20 @@
+{
+    "_comment": [
+        "Uranium Block Crafting Recipe"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "III",
+        "III",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "item": "bno:uranium_ingot"
+        }
+    },
+    "result": {
+        "item": "bno:uranium_block",
+        "count": 1
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "_comment": [
+        "Craft aluminum Ingot from aluminum Block"
+    ],
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "bno:aluminum_block"
+        }
+    ],
+    "result": {
+        "item": "bno:aluminum_ingot",
+        "count": 9
+    }
+}
+

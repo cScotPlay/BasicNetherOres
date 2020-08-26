@@ -1,0 +1,16 @@
+{
+    "_comment": [
+        "Craft lead Ingot from lead Block"
+    ],
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "bno:lead_ingot"
+        }
+    ],
+    "result": {
+        "item": "bno:lead_nugget",
+        "count": 9
+    }
+}
+

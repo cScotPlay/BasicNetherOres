@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "bno:nethertin_ore"
+  },
+  "result": "bno:tin_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "bno:ores/coal"
+  },
+  "result": "minecraft:coal",
+  "experience": 0.1,
+  "cookingtime": 100
+}

@@ -1,0 +1,20 @@
+{
+    "_comment": [
+        "Osmium Ingot Crafting Recipe"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "NNN",
+        "NNN",
+        "NNN"
+    ],
+    "key": {
+        "N": {
+            "tag": "forge:nuggets/osmium"
+        }
+    },
+    "result": {
+        "item": "bno:osmium_ingot"
+    }
+}
+

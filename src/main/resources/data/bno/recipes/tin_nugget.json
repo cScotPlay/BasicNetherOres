@@ -1,0 +1,16 @@
+{
+    "_comment": [
+        "Craft Tin Ingot from Tin Block"
+    ],
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "bno:tin_ingot"
+        }
+    ],
+    "result": {
+        "item": "bno:tin_nugget",
+        "count": 9
+    }
+}
+

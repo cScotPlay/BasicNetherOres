@@ -1,0 +1,21 @@
+{
+    "_comment": [
+        "Nickel Block Crafting Recipe"
+    ],
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "III",
+        "III",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "tag": "bno:ingots/nickel"
+        }
+    },
+    "result": {
+        "item": "bno:nickel_block",
+        "count": 1
+    }
+}
+
