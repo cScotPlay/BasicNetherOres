@@ -17,6 +17,8 @@ public class RegistryHandler
     private static final Logger LOGGER = LogManager.getLogger(BasicNetherOres.MOD_ID);
     public static Item.Settings itemGroup = new Item.Settings().group(BasicNetherOres.ITEMGROUP);
 
+    //TODO Clean up registery of blocks and items to sequentially load
+
     public static void onOreRegistry()
     {
         //For loop to register the Array of the ore blocks

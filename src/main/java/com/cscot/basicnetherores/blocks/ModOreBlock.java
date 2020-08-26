@@ -5,8 +5,6 @@ import com.cscot.basicnetherores.api.ItemLists;
 import com.cscot.basicnetherores.api.OreBlockLists;
 import com.cscot.basicnetherores.config.ModConfig;
 import com.cscot.basicnetherores.util.helpers.OreTooltipHelper.*;
-//import com.sun.istack.internal.Nullable;
-import jdk.internal.jline.internal.Nullable;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -17,12 +15,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.mob.PiglinBrain;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
@@ -31,6 +34,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
 import java.util.List;
 import java.util.Random;
@@ -52,7 +56,7 @@ public class ModOreBlock extends OreBlock
 
     @Override
     @Environment(EnvType.CLIENT)
-    public void appendTooltip(ItemStack stack, @Nullable BlockView worldIn, List<Text> tooltip, TooltipContext flagIn)
+    public void appendTooltip(ItemStack stack, BlockView worldIn, List<Text> tooltip, TooltipContext flagIn)
     {
         if(this == OreBlockLists.NETHEREMERALD_ORE){
             if (!ModConfig.emeraldGeneration){
@@ -130,5 +134,20 @@ public class ModOreBlock extends OreBlock
     @Override
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
         super.onStacksDropped(state, world, pos, stack);
+    }
+
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        world.syncWorldEvent(player, 2001, pos, getRawIdFromState(state));
+        int isSilkTouching = EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, player.getMainHandStack());
+
+        if (this.isIn(BlockTags.GUARDED_BY_PIGLINS) && ModConfig.piglinGuard) {
+            if (ModConfig.silkEffect) {
+                if (isSilkTouching < 1) {
+                    PiglinBrain.onGuardedBlockBroken(player, false);
+                }
+            }else PiglinBrain.onGuardedBlockBroken(player, false);
+        }
+
     }
 }
