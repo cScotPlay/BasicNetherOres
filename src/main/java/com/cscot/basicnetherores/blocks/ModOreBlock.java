@@ -144,9 +144,9 @@ public class ModOreBlock extends OreBlock
         if (this.isIn(BlockTags.GUARDED_BY_PIGLINS) && ModConfig.piglinGuard) {
             if (ModConfig.silkEffect) {
                 if (isSilkTouching < 1) {
-                    PiglinBrain.onGuardedBlockBroken(player, false);
+                    PiglinBrain.onGuardedBlockInteracted(player, false);
                 }
-            }else PiglinBrain.onGuardedBlockBroken(player, false);
+            }else PiglinBrain.onGuardedBlockInteracted(player, false);
         }
 
     }
