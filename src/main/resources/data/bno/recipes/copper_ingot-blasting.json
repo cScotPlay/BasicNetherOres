@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "bno:nethercopper_ore"
+    "tag": "c:copper_ores"
   },
   "result": "bno:copper_ingot",
   "experience": 0.7,

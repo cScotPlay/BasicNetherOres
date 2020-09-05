@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "bno:silver_block"
+            "tag": "c:silver_blocks"
         }
     ],
     "result": {

@@ -1,7 +1,7 @@
 {
   "type": "smelting",
   "ingredient": {
-    "tag": "bno:ores/diamond"
+    "tag": "c:diamond_ores"
   },
   "result": "minecraft:diamond",
   "experience": 1.0,

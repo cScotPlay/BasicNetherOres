@@ -10,7 +10,7 @@
     ],
     "key": {
         "I": {
-            "item": "bno:uranium_ingot"
+            "tag": "c:uranium_ingots"
         }
     },
     "result": {

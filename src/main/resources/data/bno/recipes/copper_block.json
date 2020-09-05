@@ -10,7 +10,7 @@
     ],
     "key": {
         "I": {
-            "tag": "bno:ingots/copper"
+            "tag": "c:copper_ingots"
         }
     },
     "result": {

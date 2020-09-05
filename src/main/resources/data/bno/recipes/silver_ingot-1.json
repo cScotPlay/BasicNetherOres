@@ -10,7 +10,7 @@
     ],
     "key": {
         "N": {
-            "item": "bno:silver_nugget"
+            "tag": "c:silver_nuggets"
         }
     },
     "result": {

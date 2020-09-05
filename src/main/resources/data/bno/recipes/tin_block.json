@@ -10,7 +10,7 @@
     ],
     "key": {
         "I": {
-            "item": "bno:tin_ingot"
+            "tag": "c:tin_ingots"
         }
     },
     "result": {

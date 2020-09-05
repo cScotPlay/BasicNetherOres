@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "tag": "forge:storage_blocks/osmium"
+            "tag": "c:osmium_blocks"
         }
     ],
     "result": {

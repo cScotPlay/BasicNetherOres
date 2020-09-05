@@ -1,7 +1,7 @@
 {
   "type": "blasting",
   "ingredient": {
-    "item": "bno:nethersilver_ore"
+    "tag": "c:silver_ores"
   },
   "result": "bno:silver_ingot",
   "experience": 0.7,

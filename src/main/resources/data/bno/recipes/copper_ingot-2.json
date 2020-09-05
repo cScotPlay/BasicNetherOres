@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "bno:copper_block"
+            "tag": "c:copper_blocks"
         }
     ],
     "result": {

@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "bno:nickel_ingot"
+            "tag": "c:nickel_ingots"
         }
     ],
     "result": {

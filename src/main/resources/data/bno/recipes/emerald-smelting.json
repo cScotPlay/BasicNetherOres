@@ -1,7 +1,7 @@
 {
   "type": "smelting",
   "ingredient": {
-    "tag": "bno:ores/emerald"
+    "tag": "c:emerald_ores"
   },
   "result": "minecraft:emerald",
   "experience": 1.0,

@@ -1,7 +1,7 @@
 {
   "type": "smelting",
   "ingredient": {
-    "item": "bno:nethernickel_ore"
+    "tag": "c:nickel_ores"
   },
   "result": "bno:nickel_ingot",
   "experience": 0.7,

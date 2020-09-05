@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/osmium"
+    "tag": "c:osmium_ores"
   },
   "result": "bno:osmium_ingot",
   "experience": 1.0,

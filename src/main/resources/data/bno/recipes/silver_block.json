@@ -10,7 +10,7 @@
     ],
     "key": {
         "I": {
-            "tag": "bno:ingots/silver"
+            "tag": "c:silver_ingots"
         }
     },
     "result": {

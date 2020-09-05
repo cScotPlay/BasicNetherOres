@@ -5,7 +5,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "bno:aluminum_block"
+            "tag": "c:aluminum_blocks"
         }
     ],
     "result": {
