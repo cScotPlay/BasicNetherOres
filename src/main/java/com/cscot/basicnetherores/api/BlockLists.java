@@ -12,7 +12,6 @@ import java.util.Map;
 
 public class BlockLists
 {
-    public static final List<Block> blocks = new ArrayList<Block>();
     public static final Map<Identifier, Block> BLOCKS = new HashMap<>();
 
     public static final Block ALUMINUM_BLOCK = add("aluminum_block", new ModBlocks("aluminum_block"));

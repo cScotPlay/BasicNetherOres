@@ -1,21 +1,16 @@
 package com.cscot.basicnetherores.api;
 
 import com.cscot.basicnetherores.BasicNetherOres;
-import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ItemLists
 {
     //All Blocks are added to this list for registration
-    //public static final List<Item> items = new ArrayList<Item>();
     public static final Map<Identifier, BlockItem> ITEMS = new HashMap<>();
     public static final Map<Identifier, Item> INGOTS = new HashMap<>();
 

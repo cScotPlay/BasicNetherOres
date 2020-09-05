@@ -5,15 +5,12 @@ import com.cscot.basicnetherores.blocks.ModOreBlock;
 import net.minecraft.block.Block;
 import net.minecraft.util.Identifier;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class OreBlockLists
 {
     //Ore Blocks are added to this list for registration
-    //public static List<Block> blockores = new ArrayList<Block>();
     public static final Map<Identifier, Block> OREBLOCKS = new HashMap<>();
 
     //This is all of the Ore Blocks that will be defined

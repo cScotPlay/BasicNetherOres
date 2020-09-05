@@ -39,8 +39,6 @@ public class BasicNetherOres implements ModInitializer {
 
 		ModConfiguredFeatures.initModFeatures();
 
-
-
 		LOGGER.info("Basic Nether Ores setup done!");
 	}
 }

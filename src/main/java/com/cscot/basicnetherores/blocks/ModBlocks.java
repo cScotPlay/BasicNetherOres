@@ -17,10 +17,5 @@ public class ModBlocks extends Block
         new Identifier(BasicNetherOres.MOD_ID, name);
 
         ItemLists.add(name, new BlockItem(this, new Item.Settings().group(BasicNetherOres.ITEMGROUP)));
-
-        //ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(name)));
-
-        //BlockList.blocks.add(this);
     }
-
 }

@@ -4,18 +4,15 @@ import com.cscot.basicnetherores.BasicNetherOres;
 import com.cscot.basicnetherores.api.BlockLists;
 import com.cscot.basicnetherores.api.ItemLists;
 import com.cscot.basicnetherores.api.OreBlockLists;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.apache.commons.lang3.Validate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class RegistryHandler
 {
     private static final Logger LOGGER = LogManager.getLogger(BasicNetherOres.MOD_ID);
-    public static Item.Settings itemGroup = new Item.Settings().group(BasicNetherOres.ITEMGROUP);
 
     //TODO Clean up registery of blocks and items to sequentially load
 
