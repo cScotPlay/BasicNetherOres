@@ -148,6 +148,5 @@ public class ModOreBlock extends OreBlock
                 }
             }else PiglinBrain.onGuardedBlockInteracted(player, false);
         }
-
     }
 }
