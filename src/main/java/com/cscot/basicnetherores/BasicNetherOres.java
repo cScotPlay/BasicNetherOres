@@ -5,6 +5,7 @@ import com.cscot.basicnetherores.util.handler.ConfigHandler;
 import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import com.cscot.basicnetherores.util.itemgroups.BNOItemGroup;
 import com.cscot.basicnetherores.world.OreGenerator;
+import com.cscot.basicnetherores.world.gen.feature.ModOreFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -53,6 +54,7 @@ public class BasicNetherOres
     //This used to be the PreInit
     private void setup(FMLCommonSetupEvent event)
     {
+        ModOreFeatures.initModFeatures();
         OreGenerator.setupOreGenerator();
         RegisteryHandler.ProtectedListInit();
 
