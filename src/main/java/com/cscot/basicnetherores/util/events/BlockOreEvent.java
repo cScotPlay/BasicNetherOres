@@ -8,6 +8,8 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IServerWorld;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -25,7 +27,7 @@ public class BlockOreEvent
     {
         PlayerEntity player = event.getPlayer();
         int isSilkTouching = EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player.getHeldItemMainhand());
-        World world = event.getWorld().getWorld();
+        World world = player.world;;
         BlockPos pos = event.getPos();
         Block block = event.getState().getBlock();
 

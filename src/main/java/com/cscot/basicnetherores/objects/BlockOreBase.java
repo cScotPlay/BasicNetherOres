@@ -25,7 +25,9 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
@@ -41,7 +43,7 @@ public class BlockOreBase extends OreBlock
 
     public BlockOreBase(String oreName)
     {
-        super(Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).sound(SoundType.field_235598_T_));
+        super(Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).sound(SoundType.NETHER_GOLD));
         setRegistryName(BasicNetherOres.modid, oreName);
 
         ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(oreName)));
@@ -139,8 +141,8 @@ public class BlockOreBase extends OreBlock
      * Spawn additional block drops such as experience or other entities
      */
     @Override
-    public void spawnAdditionalDrops(BlockState p_220062_1_, World p_220062_2_, BlockPos p_220062_3_, ItemStack p_220062_4_) {
-        super.spawnAdditionalDrops(p_220062_1_, p_220062_2_, p_220062_3_, p_220062_4_);
+    public void spawnAdditionalDrops(BlockState state, ServerWorld worldIn, BlockPos blockPos, ItemStack itemStack) {
+        super.spawnAdditionalDrops(state, worldIn, blockPos, itemStack);
     }
 
     @Override  //New from 1.13 Upadated function now has SilkTouch as a variable
