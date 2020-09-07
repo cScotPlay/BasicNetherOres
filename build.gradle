@@ -8,6 +8,12 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
     }
 }
+
+repositories {
+    maven {
+        url 'https://www.dogforce-games.com/maven/'
+    }
+}
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
@@ -23,7 +29,7 @@ archivesBaseName = "BasicNetherOres"
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 minecraft {
-    mappings channel: 'snapshot', version: '20200707-1.16.1'
+    mappings channel: 'snapshot', version: '20200820-1.16.1'
 
     runs {
         client {
@@ -61,7 +67,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.1-32.0.98'
+    minecraft 'net.minecraftforge:forge:1.16.2-33.0.37'
 }
 
 jar {
