@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(DefaultBiomeFeatures.class)
 public class ModOreFeature
 {
-    @Inject(method = "addNetherMineables(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V", at = @At("TAIL"))
+    @Inject(method = "method_24382", remap = false, at = @At("TAIL"))
     private static void addNetherMineables(GenerationSettings.Builder builder, CallbackInfo ci)
     {
         if(ModConfig.emeraldGeneration) {
