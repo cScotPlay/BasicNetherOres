@@ -25,6 +25,7 @@ options.txt
 *.jks
 *.cer
 *crazypants*
+src-Old
 
 # ---> Java/Scala
 *.class
