@@ -14,8 +14,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ModOreFeature
 {
     //method_24382
-    //@Inject(method = "method_24382", remap = false, at = @At("TAIL")) //Change to when building
-    @Inject(method = "addNetherMineables(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V", remap = false, at = @At("TAIL")) //Change to this when testing
+    @Inject(method = "method_24382", remap = false, at = @At("TAIL")) //Change to when building
+    //@Inject(method = "addNetherMineables(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V", remap = false, at = @At("TAIL")) //Change to this when testing
     private static void addNetherMineables(GenerationSettings.Builder builder, CallbackInfo ci)
     {
         if(ModConfig.emeraldGeneration) {

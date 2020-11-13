@@ -38,7 +38,7 @@ public class ConfigHandler
     }
 
     private void setup() {
-        final File configDir = new File(FabricLoader.getInstance().getConfigDirectory(), "BasicNetherOres");
+        final File configDir = new File(FabricLoader.getInstance().getConfigDir().toFile(), "BasicNetherOres");
 
         if (!configDir.exists()) {
             configDir.mkdirs();

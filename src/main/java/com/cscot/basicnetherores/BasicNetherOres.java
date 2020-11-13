@@ -24,6 +24,8 @@ public class BasicNetherOres implements ModInitializer {
 			new Identifier("basicnetherore", "item_group"),
 			() -> new ItemStack(Item.BLOCK_ITEMS.get(OreBlockLists.NETHEREMERALD_ORE)));
 
+	public static ConfigHandler BNO_CONFIGS = new ConfigHandler(ModConfig.class, MOD_ID);
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -31,7 +33,8 @@ public class BasicNetherOres implements ModInitializer {
 		// Proceed with mild caution.
 		INSTANCE = this;
 
-		new ConfigHandler(ModConfig.class, MOD_ID);
+
+		//new ConfigHandler(ModConfig.class, MOD_ID);
 		RegistryHandler.onOreRegistry();
 		RegistryHandler.onBlockRegistry();
 		RegistryHandler.onItemRegistry();
