@@ -8,10 +8,7 @@ import com.cscot.basicnetherores.lists.ItemList;
 import com.cscot.basicnetherores.api.PiglinEvent;
 import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import com.cscot.basicnetherores.util.helpers.OreTooltipHelper.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.OreBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.monster.piglin.PiglinEntity;
@@ -43,7 +40,7 @@ public class BlockOreBase extends OreBlock
 
     public BlockOreBase(String oreName)
     {
-        super(Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).sound(SoundType.NETHER_GOLD));
+        super(AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().hardnessAndResistance(3.0f, 3.0f).sound(SoundType.NETHER_GOLD));
         setRegistryName(BasicNetherOres.modid, oreName);
 
         ItemList.items.add(new BlockItem(this.getBlock(), new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(oreName)));
