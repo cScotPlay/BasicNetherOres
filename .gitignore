@@ -5,6 +5,7 @@ bin
 .metadata
 .classpath
 .project
+*.log
 
 # idea
 out
@@ -21,4 +22,5 @@ build
 eclipse
 run
 runServer
+logs
 

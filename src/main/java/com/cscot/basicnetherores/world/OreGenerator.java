@@ -22,7 +22,7 @@ public class OreGenerator
 {
     public static void setupOreGenerator()
     {
-        for (Map.Entry<RegistryKey<Biome>, Biome> biome : WorldGenRegistries.field_243657_i.getEntries()) {
+        for (Map.Entry<RegistryKey<Biome>, Biome> biome : WorldGenRegistries.BIOME.getEntries()) {
 
             if (biome.getValue().getCategory().equals(Biome.Category.NETHER))
             {
@@ -88,7 +88,7 @@ public class OreGenerator
     //Add Nether Ores Method adapted from DrunkBlood's Lucky Ore mod https://github.com/DrunkBlood/Lucky-Ore
     public static void addNetherOres(Biome biome, GenerationStage.Decoration decoration, ConfiguredFeature<?, ?> configuredFeature)
     {
-        List<List<Supplier<ConfiguredFeature<?, ?>>>> biomeFeatures = new ArrayList<>(biome.func_242440_e().func_242498_c());
+        List<List<Supplier<ConfiguredFeature<?, ?>>>> biomeFeatures = new ArrayList<>(biome.getGenerationSettings().getFeatures());
 
         while (biomeFeatures.size() <= decoration.ordinal())
         {
@@ -100,7 +100,7 @@ public class OreGenerator
 
         biomeFeatures.set(decoration.ordinal(), features);
 
-        ObfuscationReflectionHelper.setPrivateValue(BiomeGenerationSettings.class, biome.func_242440_e(), biomeFeatures,
+        ObfuscationReflectionHelper.setPrivateValue(BiomeGenerationSettings.class, biome.getGenerationSettings(), biomeFeatures,
                 "field_242484_f");
     }
 }
