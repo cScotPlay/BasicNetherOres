@@ -203,7 +203,7 @@ public class ModConfig
 
     //Copper Ore Settings
     @IConfig(config = "bno_config", category = "copperOre", key = "copperGeneration", comment = "Generate Copper Ore")
-    public static boolean copperGeneration = false;
+    public static boolean copperGeneration = true;
 
     @IConfig(config = "bno_config", category = "copperOre", key = "copperVeinSize", comment = "Set Max Copper Vein Size (Default: 8)")
     public static int copperVeinSize = 8;
