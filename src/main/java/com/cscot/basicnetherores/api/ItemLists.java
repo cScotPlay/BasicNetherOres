@@ -26,7 +26,7 @@ public class ItemLists
 
     //Nugget List
     public static Item ALUMINUM_NUGGET = addItem("aluminum_nugget", new Item((new Item.Settings()).group(BasicNetherOres.ITEMGROUP)));
-    //public static Item COPPER_NUGGET = addItem("copper_nugget", new Item((new Item.Settings()).group(BasicNetherOres.ITEMGROUP)));
+    public static Item COPPER_NUGGET = addItem("copper_nugget", new Item((new Item.Settings()).group(BasicNetherOres.ITEMGROUP)));
     public static Item LEAD_NUGGET = addItem("lead_nugget", new Item((new Item.Settings()).group(BasicNetherOres.ITEMGROUP)));
     public static Item NICKEL_NUGGET = addItem("nickel_nugget", new Item((new Item.Settings()).group(BasicNetherOres.ITEMGROUP)));
     public static Item SILVER_NUGGET = addItem("silver_nugget", new Item((new Item.Settings()).group(BasicNetherOres.ITEMGROUP)));
