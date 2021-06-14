@@ -1,21 +1,20 @@
 {
     "_comment": [
-        "Copper Ingot Crafting Recipe"
+        "Craft Copper Ingot from Copper Nuggets"
     ],
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "NNN",
-        "NNN",
-        "NNN"
+        "###",
+        "###",
+        "###"
     ],
     "key": {
-        "N": {
-            "tag": "c:copper_nuggets"
+        "#": {
+            "item": "bno:copper_nugget"
         }
     },
     "result": {
-        "item": "bno:copper_ingot",
-        "count": 1
+        "item": "minecraft:copper_ingot"
     }
 }
 

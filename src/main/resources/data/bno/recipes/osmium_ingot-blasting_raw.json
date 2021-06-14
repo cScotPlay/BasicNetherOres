@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "bno:raw_osmium"
+  },
+  "result": "bno:osmium_ingot",
+  "experience": 1.0,
+  "cookingtime": 100
+}
