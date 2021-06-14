@@ -18,6 +18,14 @@
     "item.bno.osmium_ingot": "Osmium Ingot",
     "item.bno.uranium_ingot": "Uranium Ingot",
 
+    "item.bno.raw_aluminum": "Raw Aluminum",
+    "item.bno.raw_lead": "Raw Lead",
+    "item.bno.raw_nickel": "Raw Nickel",
+    "item.bno.raw_silver": "Raw Silver",
+    "item.bno.raw_tin": "Raw Tin",
+    "item.bno.raw_osmium": "Raw Osmium",
+    "item.bno.raw_uranium": "Raw Uranium",
+
     "block.bno.aluminum_block": "Aluminum Block",
     "block.bno.copper_block": "Copper Block",
     "block.bno.lead_block": "Lead Block",
