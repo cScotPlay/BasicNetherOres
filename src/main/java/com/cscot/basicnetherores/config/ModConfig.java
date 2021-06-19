@@ -119,7 +119,7 @@ public class ModConfig
     public static int coalVeinSize = 17;
 
     @IConfig(config = "bno_config", category = "coalOre", key = "coalPerChunk", comment = "Set Coal Spawn Chance (Default: 20)")
-    public static int coalPerChunk = 20;
+    public static int coalPerChunk = 15;
 
     @IConfig(config = "bno_config", category = "coalOre", key = "coalMinHeight", comment = "Set Coal Min Spawn Height (Default: 25)")
     public static int coalMinHeight = 25;
@@ -155,7 +155,7 @@ public class ModConfig
     public static int ironVeinSize = 8;
 
     @IConfig(config = "bno_config", category = "ironOre", key = "ironPerChunk", comment = "Set Iron Spawn Chance (Default: 20)")
-    public static int ironPerChunk = 20;
+    public static int ironPerChunk = 10;
 
     @IConfig(config = "bno_config", category = "ironOre", key = "ironMinHeight", comment = "Set Iron Min Spawn Height (Default: 40)")
     public static int ironMinHeight = 40;
@@ -191,7 +191,7 @@ public class ModConfig
     public static int nickelVeinSize = 4;
 
     @IConfig(config = "bno_config", category = "nickelOre", key = "nickelPerChunk", comment = "Set Nickel Spawn Chance (Default: 8)")
-    public static int nickelPerChunk = 8;
+    public static int nickelPerChunk = 4;
 
     @IConfig(config = "bno_config", category = "nickelOre", key = "nickelMinHeight", comment = "Set Nickel Min Spawn Height (Default: 30)")
     public static int nickelMinHeight = 30;
@@ -209,7 +209,7 @@ public class ModConfig
     public static int copperVeinSize = 8;
 
     @IConfig(config = "bno_config", category = "copperOre", key = "copperPerChunk", comment = "Set Copper Spawn Chance (Default: 20)")
-    public static int copperPerChunk = 20;
+    public static int copperPerChunk = 8;
 
     @IConfig(config = "bno_config", category = "copperOre", key = "copperMinHeight", comment = "Set Copper Min Spawn Height (Default: 35)")
     public static int copperMinHeight = 35;
@@ -245,7 +245,7 @@ public class ModConfig
     public static int tinVeinSize = 8;
 
     @IConfig(config = "bno_config", category = "tinOre", key = "tinPerChunk", comment = "Set Tin Spawn Chance (Default: 20)")
-    public static int tinPerChunk = 20;
+    public static int tinPerChunk = 10;
 
     @IConfig(config = "bno_config", category = "tinOre", key = "tinMinHeight", comment = "Set Tin Min Spawn Height (Default: 40)")
     public static int tinMinHeight = 40;
