@@ -6,8 +6,7 @@ import com.cscot.basicnetherores.config.ModConfig;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.gen.decorator.Decorator;
-import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
@@ -19,155 +18,85 @@ public class ModConfiguredFeatures
     public static ConfiguredFeature<?, ?> ORE_EMERALD_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHEREMERALD_ORE.getDefaultState(),
-                    ModConfig.emeraldVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                            new RangeDecoratorConfig(
-                                    ModConfig.emeraldMinHeight,
-                                    0,
-                                    ModConfig.emeraldMaxHeight)))
+                    ModConfig.emeraldVeinSize)).uniformRange(YOffset.fixed(ModConfig.emeraldMinHeight), YOffset.fixed(ModConfig.emeraldMaxHeight))
             .spreadHorizontally().repeat(ModConfig.emeraldPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_DIAMOND_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERDIAMOND_ORE.getDefaultState(),
-                    ModConfig.diamondVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.diamondMinHeight,
-                            0,
-                            ModConfig.diamondMaxHeight)))
+                    ModConfig.diamondVeinSize)).uniformRange(YOffset.fixed(ModConfig.diamondMinHeight), YOffset.fixed(ModConfig.diamondMaxHeight))
             .spreadHorizontally().repeat(ModConfig.diamondPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_REDSTONE_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERREDSTONE_ORE.getDefaultState(),
-                    ModConfig.redstoneVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.redstoneMinHeight,
-                            0,
-                            ModConfig.redstoneMaxHeight)))
+                    ModConfig.redstoneVeinSize)).uniformRange(YOffset.fixed(ModConfig.redstoneMinHeight), YOffset.fixed(ModConfig.redstoneMaxHeight))
             .spreadHorizontally().repeat(ModConfig.redstonePerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_LAPIS_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERLAPIS_ORE.getDefaultState(),
-                    ModConfig.lapisVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.lapisMinHeight,
-                            0,
-                            ModConfig.lapisMaxHeight)))
+                    ModConfig.lapisVeinSize)).uniformRange(YOffset.fixed(ModConfig.lapisMinHeight), YOffset.fixed(ModConfig.lapisMaxHeight))
             .spreadHorizontally().repeat(ModConfig.lapisPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_COAL_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERCOAL_ORE.getDefaultState(),
-                    ModConfig.coalVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.coalMinHeight,
-                            0,
-                            ModConfig.coalMaxHeight)))
+                    ModConfig.coalVeinSize)).uniformRange(YOffset.fixed(ModConfig.coalMinHeight), YOffset.fixed(ModConfig.coalMaxHeight))
             .spreadHorizontally().repeat(ModConfig.coalPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_SILVER_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERSILVER_ORE.getDefaultState(),
-                    ModConfig.silverVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.silverMinHeight,
-                            0,
-                            ModConfig.silverMaxHeight)))
+                    ModConfig.silverVeinSize)).uniformRange(YOffset.fixed(ModConfig.silverMinHeight), YOffset.fixed(ModConfig.silverMaxHeight))
             .spreadHorizontally().repeat(ModConfig.silverPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_IRON_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERIRON_ORE.getDefaultState(),
-                    ModConfig.ironVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.ironMinHeight,
-                            0,
-                            ModConfig.ironMaxHeight)))
+                    ModConfig.ironVeinSize)).uniformRange(YOffset.fixed(ModConfig.ironMinHeight), YOffset.fixed(ModConfig.ironMaxHeight))
             .spreadHorizontally().repeat(ModConfig.ironPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_LEAD_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERLEAD_ORE.getDefaultState(),
-                    ModConfig.leadVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.leadMinHeight,
-                            0,
-                            ModConfig.leadMaxHeight)))
+                    ModConfig.leadVeinSize)).uniformRange(YOffset.fixed(ModConfig.leadMinHeight), YOffset.fixed(ModConfig.leadMaxHeight))
             .spreadHorizontally().repeat(ModConfig.leadPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_NICKEL_NETHER = Feature.ORE
         .configure(new OreFeatureConfig(
                 OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERNICKEL_ORE.getDefaultState(),
-                ModConfig.nickelVeinSize))
-        .decorate(Decorator.RANGE.configure(
-                new RangeDecoratorConfig(
-                        ModConfig.nickelMinHeight,
-                        0,
-                        ModConfig.nickelMaxHeight)))
+                ModConfig.nickelVeinSize)).uniformRange(YOffset.fixed(ModConfig.nickelMinHeight), YOffset.fixed(ModConfig.nickelMaxHeight))
         .spreadHorizontally().repeat(ModConfig.nickelPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_COPPER_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERCOPPER_ORE.getDefaultState(),
-                    ModConfig.copperVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.copperMinHeight,
-                            0,
-                            ModConfig.copperMaxHeight)))
+                    ModConfig.copperVeinSize)).uniformRange(YOffset.fixed(ModConfig.copperMinHeight), YOffset.fixed(ModConfig.copperMaxHeight))
             .spreadHorizontally().repeat(ModConfig.copperPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_ALUMINUM_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERALUMINUM_ORE.getDefaultState(),
-                    ModConfig.aluminumVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.aluminumMinHeight,
-                            0,
-                            ModConfig.aluminumMaxHeight)))
+                    ModConfig.aluminumVeinSize)).uniformRange(YOffset.fixed(ModConfig.aluminumMinHeight), YOffset.fixed(ModConfig.aluminumMaxHeight))
             .spreadHorizontally().repeat(ModConfig.aluminumPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_TIN_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERTIN_ORE.getDefaultState(),
-                    ModConfig.tinVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.tinMinHeight,
-                            0,
-                            ModConfig.tinMaxHeight)))
+                    ModConfig.tinVeinSize)).uniformRange(YOffset.fixed(ModConfig.tinMinHeight), YOffset.fixed(ModConfig.tinMaxHeight))
             .spreadHorizontally().repeat(ModConfig.tinPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_OSMIUM_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHEROSMIUM_ORE.getDefaultState(),
-                    ModConfig.osmiumVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.osmiumMinHeight,
-                            0,
-                            ModConfig.osmiumMaxHeight)))
+                    ModConfig.osmiumVeinSize)).uniformRange(YOffset.fixed(ModConfig.osmiumMinHeight), YOffset.fixed(ModConfig.osmiumMaxHeight))
             .spreadHorizontally().repeat(ModConfig.osmiumPerChunk);
 
     public static ConfiguredFeature<?, ?> ORE_URANIUM_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_NETHER, OreBlockLists.NETHERURANIUM_ORE.getDefaultState(),
-                    ModConfig.uraniumVeinSize))
-            .decorate(Decorator.RANGE.configure(
-                    new RangeDecoratorConfig(
-                            ModConfig.uraniumMinHeight,
-                            0,
-                            ModConfig.uraniumMaxHeight)))
+                    ModConfig.uraniumVeinSize)).uniformRange(YOffset.fixed(ModConfig.uraniumMinHeight), YOffset.fixed(ModConfig.uraniumMaxHeight))
             .spreadHorizontally().repeat(ModConfig.uraniumPerChunk);
 
 
