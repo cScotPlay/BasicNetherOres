@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bno:raw_lead_block"
+    }
+  ],
+  "result": {
+    "item": "bno:raw_lead",
+    "count": 9
+  }
+}
