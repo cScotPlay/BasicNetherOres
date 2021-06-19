@@ -27,26 +27,32 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 import java.util.List;
-import java.util.Random;
 
 public class ModOreBlock extends OreBlock
 {
+    private final UniformIntProvider experienceDropped;
 
-    public ModOreBlock(String oreName)
+    public ModOreBlock(String oreName, UniformIntProvider experienceDropped)
     {
         super(FabricBlockSettings.of(Material.STONE)
                 .breakByTool(FabricToolTags.PICKAXES, 2)
                 .requiresTool()
                 .strength(3.0f, 3.0f)
                 .sounds(BlockSoundGroup.NETHER_GOLD_ORE));
+        this.experienceDropped = experienceDropped;
         new Identifier(BasicNetherOres.MOD_ID, oreName);
 
         ItemLists.add(oreName, new BlockItem(this, new Item.Settings().group(BasicNetherOres.ITEMGROUP)));
+    }
+
+    public ModOreBlock(String oreName)
+    {
+        this(oreName, UniformIntProvider.create(0, 0));
     }
 
     @Override
@@ -111,24 +117,15 @@ public class ModOreBlock extends OreBlock
             else tooltip.add(new TranslatableText(UraniumOreTip.oreTip, ModConfig.uraniumMinHeight, ModConfig.uraniumMaxHeight));}
     }
 
-    @Override  //Updated getExperience
-    protected int getExperienceWhenMined(Random random) {
-        if (this == OreBlockLists.NETHERCOAL_ORE) {
-            return MathHelper.nextInt(random, 0, 2);
-        } else if (this == OreBlockLists.NETHERDIAMOND_ORE) {
-            return MathHelper.nextInt(random, 3, 7);
-        } else if (this == OreBlockLists.NETHEREMERALD_ORE) {
-            return MathHelper.nextInt(random, 3, 7);
-        } else if (this == OreBlockLists.NETHERLAPIS_ORE) {
-            return MathHelper.nextInt(random, 2, 5);
-        } else {
-            return this == OreBlockLists.NETHERREDSTONE_ORE ? MathHelper.nextInt(random, 2, 5) : 0;
-        }
-    }
-
     @Override
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
         super.onStacksDropped(state, world, pos, stack);
+        if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
+            int i = this.experienceDropped.get(world.random);
+            if (i > 0) {
+                this.dropExperience(world, pos, i);
+            }
+        }
     }
 
     @Override
@@ -136,7 +133,7 @@ public class ModOreBlock extends OreBlock
         world.syncWorldEvent(player, 2001, pos, getRawIdFromState(state));
         int isSilkTouching = EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, player.getMainHandStack());
 
-        if (this.isIn(BlockTags.GUARDED_BY_PIGLINS) && ModConfig.piglinGuard) {
+        if (state.isIn(BlockTags.GUARDED_BY_PIGLINS) && ModConfig.piglinGuard) {
             if (ModConfig.silkEffect) {
                 if (isSilkTouching < 1) {
                     PiglinBrain.onGuardedBlockInteracted(player, false);
