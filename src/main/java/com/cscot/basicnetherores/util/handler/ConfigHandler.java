@@ -50,7 +50,7 @@ public class ConfigHandler
         spec.setConfig(configData);
     }
 
-    @SubscribeEvent
+    /*@SubscribeEvent
     public static void onLoad(final ModConfig.Loading configEvent) {
         BasicNetherOres.logger.debug("Loaded {} config file {}", BasicNetherOres.modid, configEvent.getConfig().getFileName());
     }
@@ -63,6 +63,6 @@ public class ConfigHandler
             BasicNetherOres.logger.fatal(CORE, "{} config just got changed on the file system!", BasicNetherOres.modid);
             BlockListHelper.initProtectedBlocks();
         }
-    }
+    }*/
 
 }

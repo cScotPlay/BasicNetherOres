@@ -5,8 +5,8 @@ import com.cscot.basicnetherores.util.handler.ConfigHandler;
 import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import com.cscot.basicnetherores.util.itemgroups.BNOItemGroup;
 import com.cscot.basicnetherores.world.OreGenerator;
-import com.cscot.basicnetherores.world.gen.feature.ModOreFeatures;
-import net.minecraft.item.ItemGroup;
+import com.cscot.basicnetherores.data.worldgen.ModOreFeatures;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -25,7 +25,7 @@ public class BasicNetherOres
     public static BasicNetherOres instance;
     public static final String modid = "bno";
 
-    public static final ItemGroup bnoItemGroup = new BNOItemGroup();
+    public static final CreativeModeTab bnoItemGroup = new BNOItemGroup();
 
     private static final Logger LOGGER = LogManager.getLogger(modid);
 

@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "bno:raw_lead"
+  },
+  "result": "bno:lead_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

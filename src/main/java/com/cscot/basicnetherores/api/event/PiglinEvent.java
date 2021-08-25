@@ -1,9 +1,9 @@
-package com.cscot.basicnetherores.api;
+package com.cscot.basicnetherores.api.event;
 
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.monster.piglin.PiglinEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.piglin.Piglin;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.eventbus.api.Event;
 
@@ -12,10 +12,10 @@ import java.util.List;
 @Cancelable
 public class PiglinEvent extends Event
 {
-    private final World world;
+    private final Level world;
     private final BlockPos pos;
     private final LivingEntity thief;
-    private List<PiglinEntity> guards;
+    private List<Piglin> guards;
 
     /**
      * This event fires within BlockOreBase#piglinGuards
@@ -27,7 +27,7 @@ public class PiglinEvent extends Event
      * @param pos BlockPos provided to BlockOreBase#pigmenGuards
      * @param thief LivingEntity that is being targeted
      */
-    public PiglinEvent(World world, BlockPos pos, LivingEntity thief, List<PiglinEntity> guards)
+    public PiglinEvent(Level world, BlockPos pos, LivingEntity thief, List<Piglin> guards)
     {
         super();
         this.world = world;
@@ -36,7 +36,7 @@ public class PiglinEvent extends Event
         this.guards = guards;
     }
 
-    public World getWorld()
+    public Level getWorld()
     {
         return world;
     }
@@ -51,7 +51,7 @@ public class PiglinEvent extends Event
         return thief;
     }
 
-    public List<PiglinEntity> getGuards()
+    public List<Piglin> getGuards()
     {
         return guards;
     }

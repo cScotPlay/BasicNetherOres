@@ -2,15 +2,15 @@ package com.cscot.basicnetherores.world;
 
 
 import com.cscot.basicnetherores.config.OreGenerationConfig;
-import com.cscot.basicnetherores.world.gen.feature.ModOreFeatures;
+import com.cscot.basicnetherores.data.worldgen.ModOreFeatures;
 import com.google.common.collect.Lists;
-import net.minecraft.util.RegistryKey;
-import net.minecraft.util.registry.WorldGenRegistries;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeGenerationSettings;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.BiomeGenerationSettings;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,73 +22,73 @@ public class OreGenerator
 {
     public static void setupOreGenerator()
     {
-        for (Map.Entry<RegistryKey<Biome>, Biome> biome : WorldGenRegistries.BIOME.getEntries()) {
+        for (Map.Entry<ResourceKey<Biome>, Biome> biome : BuiltinRegistries.BIOME.entrySet()) {
 
-            if (biome.getValue().getCategory().equals(Biome.Category.NETHER))
+            if (biome.getValue().getBiomeCategory().equals(Biome.BiomeCategory.NETHER))
             {
                 if(OreGenerationConfig.emeraldGeneration.get()){
-                addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_EMERALD_NETHER);
+                addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_EMERALD_NETHER);
                 }
 
                 if(OreGenerationConfig.diamondGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_DIAMOND_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_DIAMOND_NETHER);
                 }
 
                 if(OreGenerationConfig.redstoneGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_REDSTONE_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_REDSTONE_NETHER);
                 }
 
                 if(OreGenerationConfig.lapisGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_LAPIS_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_LAPIS_NETHER);
                 }
 
                 if(OreGenerationConfig.coalGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_COAL_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_COAL_NETHER);
                 }
 
                 if(OreGenerationConfig.silverGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_SILVER_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_SILVER_NETHER);
                 }
 
                 if(OreGenerationConfig.ironGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_IRON_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_IRON_NETHER);
                 }
 
                 if(OreGenerationConfig.leadGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_LEAD_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_LEAD_NETHER);
                 }
 
                 if(OreGenerationConfig.nickelGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_NICKEL_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_NICKEL_NETHER);
                 }
 
                 if(OreGenerationConfig.copperGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_COPPER_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_COPPER_NETHER);
                 }
 
                 if(OreGenerationConfig.aluminumGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_ALUMINUM_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_ALUMINUM_NETHER);
                 }
 
                 if(OreGenerationConfig.tinGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_TIN_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_TIN_NETHER);
                 }
 
                 if(OreGenerationConfig.osmiumGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_OSMIUM_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_OSMIUM_NETHER);
                 }
 
                 if(OreGenerationConfig.uraniumGeneration.get()){
-                    addNetherOres(biome.getValue(), GenerationStage.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_URANIUM_NETHER);
+                    addNetherOres(biome.getValue(), GenerationStep.Decoration.UNDERGROUND_ORES, ModOreFeatures.ORE_URANIUM_NETHER);
                 }
             }
         }
     }
 
     //Add Nether Ores Method adapted from DrunkBlood's Lucky Ore mod https://github.com/DrunkBlood/Lucky-Ore
-    public static void addNetherOres(Biome biome, GenerationStage.Decoration decoration, ConfiguredFeature<?, ?> configuredFeature)
+    public static void addNetherOres(Biome biome, GenerationStep.Decoration decoration, ConfiguredFeature<?, ?> configuredFeature)
     {
-        List<List<Supplier<ConfiguredFeature<?, ?>>>> biomeFeatures = new ArrayList<>(biome.getGenerationSettings().getFeatures());
+        List<List<Supplier<ConfiguredFeature<?, ?>>>> biomeFeatures = new ArrayList<>(biome.getGenerationSettings().features());
 
         while (biomeFeatures.size() <= decoration.ordinal())
         {
@@ -101,6 +101,6 @@ public class OreGenerator
         biomeFeatures.set(decoration.ordinal(), features);
 
         ObfuscationReflectionHelper.setPrivateValue(BiomeGenerationSettings.class, biome.getGenerationSettings(), biomeFeatures,
-                "field_242484_f");
+                "features");
     }
 }

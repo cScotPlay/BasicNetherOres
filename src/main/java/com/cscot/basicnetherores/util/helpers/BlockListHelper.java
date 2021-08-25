@@ -3,7 +3,7 @@ package com.cscot.basicnetherores.util.helpers;
 
 import com.cscot.basicnetherores.config.OreProtectionConfig;
 import com.cscot.basicnetherores.util.handler.ConfigHandler;
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;
 import java.util.List;

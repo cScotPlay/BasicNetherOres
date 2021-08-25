@@ -1,12 +1,12 @@
 package com.cscot.basicnetherores.util.itemgroups;
 
-import com.cscot.basicnetherores.lists.BlockOreList;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import com.cscot.basicnetherores.api.BlockOreList;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
 //This class creates the ItemGroup(Creative Tab) for Basic Nether Ores
-public class BNOItemGroup extends ItemGroup
+public class BNOItemGroup extends CreativeModeTab
 {
     public BNOItemGroup()
     {
@@ -14,8 +14,8 @@ public class BNOItemGroup extends ItemGroup
     }
 
     @Override
-    public ItemStack createIcon()
+    public ItemStack makeIcon()
     {
-        return new ItemStack(Item.BLOCK_TO_ITEM.get(BlockOreList.netheremerald_ore));
+        return new ItemStack(Item.BY_BLOCK.get(BlockOreList.netheremerald_ore));
     }
 }

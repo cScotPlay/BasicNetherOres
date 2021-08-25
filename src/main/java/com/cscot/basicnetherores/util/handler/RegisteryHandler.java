@@ -1,14 +1,14 @@
 package com.cscot.basicnetherores.util.handler;
 
 import com.cscot.basicnetherores.BasicNetherOres;
-import com.cscot.basicnetherores.lists.BlockList;
-import com.cscot.basicnetherores.lists.BlockOreList;
-import com.cscot.basicnetherores.lists.IngotList;
-import com.cscot.basicnetherores.lists.ItemList;
+import com.cscot.basicnetherores.api.BlockList;
+import com.cscot.basicnetherores.api.BlockOreList;
+import com.cscot.basicnetherores.api.IngotList;
+import com.cscot.basicnetherores.api.ItemList;
 import com.cscot.basicnetherores.util.helpers.BlockListHelper;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Item;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -65,23 +65,31 @@ public class RegisteryHandler
             ingotRegistryEvent.getRegistry().registerAll(
 
                     //Register Ingots
-                    IngotList.aluminum_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("aluminum_ingot")),
-                    IngotList.copper_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("copper_ingot")),
-                    IngotList.lead_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("lead_ingot")),
-                    IngotList.nickel_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("nickel_ingot")),
-                    IngotList.silver_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("silver_ingot")),
-                    IngotList.tin_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("tin_ingot")),
-                    IngotList.osmium_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("osmium_ingot")),
-                    IngotList.uranium_ingot = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("uranium_ingot")),
+                    IngotList.ALUMINUM_INGOT = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("aluminum_ingot")),
+                    IngotList.LEAD_INGOT = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("lead_ingot")),
+                    IngotList.NICKEL_INGOT = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("nickel_ingot")),
+                    IngotList.SILVER_INGOT = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("silver_ingot")),
+                    IngotList.TIN_INGOT = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("tin_ingot")),
+                    IngotList.OSMIUM_INGOT = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("osmium_ingot")),
+                    IngotList.URANIUM_INGOT = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("uranium_ingot")),
 
                     //Register Nuggets
-                    IngotList.aluminum_nugget = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("aluminum_nugget")),
-                    IngotList.copper_nugget = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("copper_nugget")),
-                    IngotList.lead_nugget = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("lead_nugget")),
-                    IngotList.nickel_nugget = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("nickel_nugget")),
-                    IngotList.silver_nugget = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("silver_nugget")),
-                    IngotList.tin_nugget = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("tin_nugget")),
-                    IngotList.osmium_nugget = new Item(new Item.Properties().group(BasicNetherOres.bnoItemGroup)).setRegistryName(location("osmium_nugget"))
+                    IngotList.ALUMINUM_NUGGET = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("aluminum_nugget")),
+                    IngotList.COPPER_NUGGET = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("copper_nugget")),
+                    IngotList.LEAD_NUGGET = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("lead_nugget")),
+                    IngotList.NICKEL_NUGGET = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("nickel_nugget")),
+                    IngotList.SILVER_NUGGET = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("silver_nugget")),
+                    IngotList.TIN_NUGGET = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("tin_nugget")),
+                    IngotList.OSMIUM_NUGGET = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("osmium_nugget")),
+
+                    //Raw Ore List
+                    IngotList.RAW_ALUMINUM = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("raw_aluminum")),
+                    IngotList.RAW_LEAD = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("raw_lead")),
+                    IngotList.RAW_NICKEL = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("raw_nickel")),
+                    IngotList.RAW_SILVER = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("raw_silver")),
+                    IngotList.RAW_TIN = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("raw_tin")),
+                    IngotList.RAW_OSMIUM = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("raw_osmium")),
+                    IngotList.RAW_URANIUM = new Item(new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(location("raw_uranium"))
             );
 
             LOGGER.info("Ingots Registered");
