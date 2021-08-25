@@ -1,5 +1,0 @@
-{
-  "conditions": {
-    "recipe_enabled": "cscot.basicnetherores.util.handler.RecipeHandler"
-  }
-}
