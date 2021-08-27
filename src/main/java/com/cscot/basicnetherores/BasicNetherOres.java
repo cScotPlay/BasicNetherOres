@@ -55,7 +55,6 @@ public class BasicNetherOres
     private void setup(FMLCommonSetupEvent event)
     {
         ModOreFeatures.initModFeatures();
-        OreGenerator.setupOreGenerator();
         RegisteryHandler.ProtectedListInit();
 
         LOGGER.info("Setup Method Registered (PreInit)");
