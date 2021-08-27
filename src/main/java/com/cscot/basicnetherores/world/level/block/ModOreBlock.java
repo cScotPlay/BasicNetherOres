@@ -9,6 +9,7 @@ import com.cscot.basicnetherores.api.event.PiglinEvent;
 import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import com.cscot.basicnetherores.util.helpers.OreTooltipHelper.*;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.entity.monster.piglin.Piglin;
@@ -25,13 +26,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-
 import javax.annotation.Nullable;
 import java.util.List;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -39,8 +38,6 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class ModOreBlock extends OreBlock
 {
-    private String oreName, tagName;
-    private Block oreBlock;
     private final UniformInt xpRange;
 
     public ModOreBlock(String oreName, UniformInt experienceDropped)
@@ -59,6 +56,11 @@ public class ModOreBlock extends OreBlock
     public ModOreBlock(String oreName)
     {
         this(oreName, UniformInt.of(0, 0));
+    }
+
+    @Override
+    public int getExpDrop(BlockState state, net.minecraft.world.level.LevelReader reader, BlockPos pos, int fortune, int silktouch) {
+        return silktouch == 0 ? this.xpRange.sample(RANDOM) : 0;
     }
 
     @Override
@@ -123,32 +125,6 @@ public class ModOreBlock extends OreBlock
             else tooltip.add(new TranslatableComponent(UraniumOreTip.oreTip, OreGenerationConfig.uraniumMinHeight.get().toString(), OreGenerationConfig.uraniumMaxHeight.get().toString()));}
     }
 
-    /*@Override
-    public ToolType getHarvestTool(BlockState state) {
-        return ToolType.PICKAXE;
-    }
-
-    @Override
-    public int getHarvestLevel(BlockState state) {
-        return 2;
-    }*/
-
-
-    /*@Override  //Updated getExperience
-    protected int xpOnDrop(Random p_220281_1_) {
-        if (this == BlockOreList.nethercoal_ore) {
-            return Mth.nextInt(p_220281_1_, 0, 2);
-        } else if (this == BlockOreList.netherdiamond_ore) {
-            return Mth.nextInt(p_220281_1_, 3, 7);
-        } else if (this == BlockOreList.netheremerald_ore) {
-            return Mth.nextInt(p_220281_1_, 3, 7);
-        } else if (this == BlockOreList.netherlapis_ore) {
-            return Mth.nextInt(p_220281_1_, 2, 5);
-        } else {
-            return this == BlockOreList.netherredstone_ore ? Mth.nextInt(p_220281_1_, 2, 5) : 0;
-        }
-    }*/
-
     /**
      * Spawn additional block drops such as experience or other entities
      */
@@ -156,30 +132,6 @@ public class ModOreBlock extends OreBlock
     public void spawnAfterBreak(BlockState state, ServerLevel worldIn, BlockPos blockPos, ItemStack itemStack) {
         super.spawnAfterBreak(state, worldIn, blockPos, itemStack);
     }
-
-    /*@Override  //New from 1.13 Upadated function now has SilkTouch as a variable
-    public int getExpDrop(BlockState state, net.minecraft.world.level.LevelReader reader, BlockPos pos, int fortune, int silktouch)
-    {
-        Level world = reader instanceof Level ? (Level)reader : null;
-
-        if (silktouch == 0)
-        {
-            int i = 0;
-            if (this == BlockOreList.nethercoal_ore) {
-                i = Mth.nextInt(RANDOM, 1, 3);
-            } else if (this == BlockOreList.netherdiamond_ore) {
-                i = Mth.nextInt(RANDOM, 4, 8);
-            } else if (this == BlockOreList.netheremerald_ore) {
-                i = Mth.nextInt(RANDOM, 4, 8);
-            } else if (this == BlockOreList.netherlapis_ore) {
-                i = Mth.nextInt(RANDOM, 3, 6);
-            } else if (this == BlockOreList.netherredstone_ore) {
-                i = Mth.nextInt(RANDOM, 2, 6);
-            }
-            return i;
-        }
-        return 0;
-    }*/
 
     public static void piglinGuards(Level worldIn, BlockPos pos, Player thief) {
 
@@ -193,10 +145,22 @@ public class ModOreBlock extends OreBlock
         PiglinEvent event = new PiglinEvent(worldIn, pos, thief, list);
         if (net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(event)) return;
 
+        /**
+         * Aggro the Piglins (Pulls function from PiglinsTasks/ Line 403.)
+         */
         for(Piglin guard : list) {
 
-            //guard.setRevengeTarget(event.getThief()); //TODO This Needs to be updated to target the player when breaking the ores Look at Line 403 PiglinTasks
-            PiglinAi.angerNearbyPiglins(thief, true); //TODO This seems to aggro the Piglins (Pulls function from PiglinsTasks/ Line 403.)
+            PiglinAi.angerNearbyPiglins(thief, true);
+        }
+
+        List<ZombifiedPiglin> zombifiedPiglinList = worldIn.getEntitiesOfClass(ZombifiedPiglin.class, new AABB(x - rngProt, y - rngProt, z - rngProt, x + rngProt, y + rngProt, z + rngProt));
+
+        /**
+         * Aggro the Zombified Piglins (Pulls function from ZombifiedPiglin/ Line 152.)
+         */
+        for(ZombifiedPiglin guard : zombifiedPiglinList) {
+
+            guard.setTarget(event.getThief());
         }
     }
 }
