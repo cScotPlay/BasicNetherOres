@@ -10,8 +10,7 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.placement.FeatureDecorator;
-import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
+
 
 public class ModOreFeatures
 {
@@ -147,5 +146,4 @@ public class ModOreFeatures
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(modID, "ore_osmium_nether"), ORE_OSMIUM_NETHER);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(modID, "ore_uranium_nether"), ORE_URANIUM_NETHER);
     }
-
 }

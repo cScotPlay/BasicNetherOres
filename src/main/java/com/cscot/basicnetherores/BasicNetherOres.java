@@ -4,7 +4,6 @@ package com.cscot.basicnetherores;
 import com.cscot.basicnetherores.util.handler.ConfigHandler;
 import com.cscot.basicnetherores.util.handler.RegisteryHandler;
 import com.cscot.basicnetherores.util.itemgroups.BNOItemGroup;
-import com.cscot.basicnetherores.world.OreGenerator;
 import com.cscot.basicnetherores.data.worldgen.ModOreFeatures;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
