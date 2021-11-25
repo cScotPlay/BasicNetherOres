@@ -4,7 +4,8 @@ import com.cscot.basicnetherores.api.OreBlockLists;
 import com.cscot.basicnetherores.config.ModConfig;
 import com.cscot.basicnetherores.util.handlers.ConfigHandler;
 import com.cscot.basicnetherores.util.handlers.RegistryHandler;
-import com.cscot.basicnetherores.world.gen.feature.ModConfiguredFeatures;
+import com.cscot.basicnetherores.world.gen.feature.ModOreConfiguredFeatures;
+import com.cscot.basicnetherores.world.gen.feature.ModOrePlacedFeature;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.Item;
@@ -33,14 +34,13 @@ public class BasicNetherOres implements ModInitializer {
 		// Proceed with mild caution.
 		INSTANCE = this;
 
-
-		//new ConfigHandler(ModConfig.class, MOD_ID);
 		RegistryHandler.onOreRegistry();
 		RegistryHandler.onBlockRegistry();
 		RegistryHandler.onItemRegistry();
 		RegistryHandler.onIngotRegistry();
 
-		ModConfiguredFeatures.initModFeatures();
+		ModOreConfiguredFeatures.initModOreConfiguredFeatures();
+		ModOrePlacedFeature.initOrePlacedFeatures();
 
 		LOGGER.info("Basic Nether Ores setup done!");
 	}

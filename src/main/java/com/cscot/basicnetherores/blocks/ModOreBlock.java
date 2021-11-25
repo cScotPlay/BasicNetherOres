@@ -37,10 +37,10 @@ public class ModOreBlock extends OreBlock
 {
     private final UniformIntProvider experienceDropped;
 
-    public ModOreBlock(String oreName, UniformIntProvider experienceDropped)
+    public ModOreBlock(String oreName, UniformIntProvider experienceDropped, Integer pickaxeLevel)
     {
         super(FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES, 2)
+                .breakByTool(FabricToolTags.PICKAXES, pickaxeLevel)
                 .requiresTool()
                 .strength(3.0f, 3.0f)
                 .sounds(BlockSoundGroup.NETHER_GOLD_ORE));
@@ -50,9 +50,9 @@ public class ModOreBlock extends OreBlock
         ItemLists.add(oreName, new BlockItem(this, new Item.Settings().group(BasicNetherOres.ITEMGROUP)));
     }
 
-    public ModOreBlock(String oreName)
+    public ModOreBlock(String oreName, Integer pickaxeLevel)
     {
-        this(oreName, UniformIntProvider.create(0, 0));
+        this(oreName, UniformIntProvider.create(0, 0), pickaxeLevel);
     }
 
     @Override

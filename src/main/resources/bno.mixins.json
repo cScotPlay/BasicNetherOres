@@ -1,9 +1,9 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.cscot.basicnetherores.mixins",
+  "package": "",
   "compatibilityLevel": "JAVA_8",
-  "mixins": ["ModOreFeature"],
+  "mixins": [],
   "client": [],
   "server": [],
   "injectors": {
