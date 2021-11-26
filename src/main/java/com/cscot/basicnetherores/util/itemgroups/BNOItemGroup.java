@@ -1,6 +1,6 @@
 package com.cscot.basicnetherores.util.itemgroups;
 
-import com.cscot.basicnetherores.api.BlockOreList;
+import com.cscot.basicnetherores.world.level.block.ModBlocks;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -16,6 +16,6 @@ public class BNOItemGroup extends CreativeModeTab
     @Override
     public ItemStack makeIcon()
     {
-        return new ItemStack(Item.BY_BLOCK.get(BlockOreList.netheremerald_ore));
+        return new ItemStack(Item.BY_BLOCK.get(ModBlocks.NETHER_EMERALD_ORE.get()));
     }
 }

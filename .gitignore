@@ -23,4 +23,7 @@ eclipse
 run
 runServer
 logs
+.cache
 
+
+/src/generated/

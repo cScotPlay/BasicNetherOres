@@ -2,9 +2,12 @@ package com.cscot.basicnetherores;
 
 
 import com.cscot.basicnetherores.util.handler.ConfigHandler;
-import com.cscot.basicnetherores.util.handler.RegisteryHandler;
+import com.cscot.basicnetherores.util.helpers.BlockListHelper;
 import com.cscot.basicnetherores.util.itemgroups.BNOItemGroup;
 import com.cscot.basicnetherores.data.worldgen.ModOreFeatures;
+import com.cscot.basicnetherores.world.item.ModBlockItems;
+import com.cscot.basicnetherores.world.item.ModItems;
+import com.cscot.basicnetherores.world.level.block.ModBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -33,10 +36,12 @@ public class BasicNetherOres
     {
         instance = this;
 
+        final IEventBus FML = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus MTA = MinecraftForge.EVENT_BUS;
+
         // Register the setup method for mod loading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register the clientRegistries method for mod loading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
+        FML.addListener(this::setup);
+        FML.addListener(this::clientRegistries);
 
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -44,8 +49,11 @@ public class BasicNetherOres
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.COMMON_CONFIG);
         ConfigHandler.loadConfig(ConfigHandler.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve("bno-common.toml"));
 
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
+        MTA.register(this);
+
+        ModItems.ITEMS.register(FML);
+        ModBlockItems.ITEMS.register(FML);
+        ModBlocks.BLOCKS.register(FML);
     }
 
     public static final Logger logger = LogManager.getLogger();
@@ -54,7 +62,7 @@ public class BasicNetherOres
     private void setup(FMLCommonSetupEvent event)
     {
         ModOreFeatures.initModFeatures();
-        RegisteryHandler.ProtectedListInit();
+        ProtectedListInit();
 
         LOGGER.info("Setup Method Registered (PreInit)");
     }
@@ -63,5 +71,11 @@ public class BasicNetherOres
     private void clientRegistries(FMLClientSetupEvent event)
     {
         LOGGER.info("Client Registries Method Registered (Client Side)");
+    }
+
+    public static void ProtectedListInit()
+    {
+        //Loads the list of protected blocks
+        BlockListHelper.initProtectedBlocks();
     }
 }

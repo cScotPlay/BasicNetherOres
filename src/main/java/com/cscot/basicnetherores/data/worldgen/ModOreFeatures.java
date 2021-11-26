@@ -2,7 +2,7 @@ package com.cscot.basicnetherores.data.worldgen;
 
 import com.cscot.basicnetherores.BasicNetherOres;
 import com.cscot.basicnetherores.config.OreGenerationConfig;
-import com.cscot.basicnetherores.api.BlockOreList;
+import com.cscot.basicnetherores.world.level.block.ModBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
@@ -18,7 +18,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_EMERALD_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.netheremerald_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_EMERALD_ORE.get().defaultBlockState(),
                     OreGenerationConfig.emeraldVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.emeraldMinHeight.get()),VerticalAnchor.absolute(OreGenerationConfig.emeraldMaxHeight.get()))
             .squared()
@@ -26,7 +26,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_DIAMOND_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.netherdiamond_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_DIAMOND_ORE.get().defaultBlockState(),
                     OreGenerationConfig.diamondVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.diamondMinHeight.get()),VerticalAnchor.absolute(OreGenerationConfig.diamondMaxHeight.get()))
             .squared()
@@ -35,7 +35,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_REDSTONE_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.netherredstone_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_REDSTONE_ORE.get().defaultBlockState(),
                     OreGenerationConfig.redstoneVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.redstoneMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.redstoneMaxHeight.get()))
             .squared()
@@ -43,7 +43,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_LAPIS_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.netherlapis_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_LAPIS_ORE.get().defaultBlockState(),
                     OreGenerationConfig.lapisVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.lapisMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.lapisMaxHeight.get()))
             .squared()
@@ -51,7 +51,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_COAL_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.nethercoal_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_COAL_ORE.get().defaultBlockState(),
                     OreGenerationConfig.coalVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.coalMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.coalMaxHeight.get()))
             .squared()
@@ -59,7 +59,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_SILVER_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.nethersilver_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_SILVER_ORE.get().defaultBlockState(),
                     OreGenerationConfig.silverVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.silverMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.silverMaxHeight.get()))
             .squared()
@@ -67,14 +67,14 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_IRON_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.netheriron_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_IRON_ORE.get().defaultBlockState(),
                     OreGenerationConfig.ironVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.ironMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.ironMaxHeight.get()))
             .squared().count(OreGenerationConfig.ironPerChunk.get());
 
     public static ConfiguredFeature<?, ?> ORE_LEAD_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.netherlead_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_LEAD_ORE.get().defaultBlockState(),
                     OreGenerationConfig.leadVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.leadMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.leadMaxHeight.get()))
             .squared()
@@ -82,7 +82,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_NICKEL_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.nethernickel_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_NICKEL_ORE.get().defaultBlockState(),
                     OreGenerationConfig.nickelVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.nickelMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.nickelMaxHeight.get()))
             .squared()
@@ -90,15 +90,15 @@ public class ModOreFeatures
     
     public static ConfiguredFeature<?, ?> ORE_COPPER_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.nethercopper_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_COAL_ORE.get().defaultBlockState(),
                     OreGenerationConfig.copperVeinSize.get()))
-            .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.coalMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.copperMaxHeight.get()))
+            .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.copperMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.copperMaxHeight.get()))
             .squared()
             .count(OreGenerationConfig.copperPerChunk.get());
 
     public static ConfiguredFeature<?, ?> ORE_ALUMINUM_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.netheraluminum_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_ALUMINUM_ORE.get().defaultBlockState(),
                     OreGenerationConfig.aluminumVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.aluminumMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.aluminumMaxHeight.get()))
             .squared()
@@ -106,7 +106,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_TIN_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.nethertin_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_TIN_ORE.get().defaultBlockState(),
                     OreGenerationConfig.tinVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.tinMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.tinMaxHeight.get()))
             .squared()
@@ -114,7 +114,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_OSMIUM_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.netherosmium_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_OSMIUM_ORE.get().defaultBlockState(),
                     OreGenerationConfig.osmiumVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.osmiumMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.osmiumMaxHeight.get()))
             .squared()
@@ -122,7 +122,7 @@ public class ModOreFeatures
 
     public static ConfiguredFeature<?, ?> ORE_URANIUM_NETHER = Feature.ORE
             .configured(new OreConfiguration(
-                    OreConfiguration.Predicates.NETHERRACK, BlockOreList.netheruranium_ore.defaultBlockState(),
+                    OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_URANIUM_ORE.get().defaultBlockState(),
                     OreGenerationConfig.uraniumVeinSize.get()))
             .rangeUniform(VerticalAnchor.absolute(OreGenerationConfig.uraniumMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.uraniumMaxHeight.get()))
             .squared()

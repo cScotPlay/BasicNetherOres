@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "bno:ores/diamond"
-  },
-  "result": "minecraft:diamond",
-  "experience": 1.0,
-  "cookingtime": 100
-}

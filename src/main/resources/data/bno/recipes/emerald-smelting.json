@@ -1,9 +1,0 @@
-{
-  "type": "smelting",
-  "ingredient": {
-    "tag": "bno:ores/emerald"
-  },
-  "result": "minecraft:emerald",
-  "experience": 1.0,
-  "cookingtime": 200
-}
