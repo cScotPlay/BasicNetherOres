@@ -1,10 +1,7 @@
 package com.cscot.basicnetherores.data.tags;
 
 import com.cscot.basicnetherores.BasicNetherOres;
-import com.cscot.basicnetherores.world.level.block.ModBlocks;
-import com.cscot.basicnetherores.world.level.block.ModMetalBlock;
-import com.cscot.basicnetherores.world.level.block.ModOreBlock;
-import com.cscot.basicnetherores.world.level.block.ModRawOreBlock;
+import com.cscot.basicnetherores.world.level.block.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.resources.ResourceLocation;
@@ -97,6 +94,7 @@ public class BlockTagGenerator extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(registry.stream().filter(ORE_BLOCKS).filter(b -> b instanceof ModOreBlock).sorted(Comparator.comparing(Block::getRegistryName)).toArray(Block[]::new));
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(registry.stream().filter(ORE_BLOCKS).filter(b -> b instanceof ModMetalBlock).sorted(Comparator.comparing(Block::getRegistryName)).toArray(Block[]::new));
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(registry.stream().filter(ORE_BLOCKS).filter(b -> b instanceof ModRawOreBlock).sorted(Comparator.comparing(Block::getRegistryName)).toArray(Block[]::new));
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(registry.stream().filter(ORE_BLOCKS).filter(b -> b instanceof ModRedstoneOreBlock).sorted(Comparator.comparing(Block::getRegistryName)).toArray(Block[]::new));
 
         this.tag(BlockTags.NEEDS_IRON_TOOL).add(
                 ModBlocks.NETHER_DIAMOND_ORE.get(),

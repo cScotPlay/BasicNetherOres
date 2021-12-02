@@ -2,14 +2,11 @@ package com.cscot.basicnetherores.world.item;
 
 import com.cscot.basicnetherores.BasicNetherOres;
 import com.cscot.basicnetherores.world.level.block.ModBlocks;
-import com.cscot.basicnetherores.world.level.block.ModMetalBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockItems
 {

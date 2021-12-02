@@ -1,10 +1,12 @@
 package com.cscot.basicnetherores;
 
 
+import com.cscot.basicnetherores.data.worldgen.ModOrePlacedFeature;
 import com.cscot.basicnetherores.util.handler.ConfigHandler;
 import com.cscot.basicnetherores.util.helpers.BlockListHelper;
 import com.cscot.basicnetherores.util.itemgroups.BNOItemGroup;
-import com.cscot.basicnetherores.data.worldgen.ModOreFeatures;
+import com.cscot.basicnetherores.data.worldgen.ModOreConfiguredFeatures;
+import com.cscot.basicnetherores.world.OreGenerator;
 import com.cscot.basicnetherores.world.item.ModBlockItems;
 import com.cscot.basicnetherores.world.item.ModItems;
 import com.cscot.basicnetherores.world.level.block.ModBlocks;
@@ -43,8 +45,6 @@ public class BasicNetherOres
         FML.addListener(this::setup);
         FML.addListener(this::clientRegistries);
 
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         // Registers and Loads Config File
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.COMMON_CONFIG);
         ConfigHandler.loadConfig(ConfigHandler.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve("bno-common.toml"));
@@ -54,6 +54,8 @@ public class BasicNetherOres
         ModItems.ITEMS.register(FML);
         ModBlockItems.ITEMS.register(FML);
         ModBlocks.BLOCKS.register(FML);
+
+        MTA.register(OreGenerator.class);
     }
 
     public static final Logger logger = LogManager.getLogger();
@@ -61,7 +63,9 @@ public class BasicNetherOres
     //This used to be the PreInit
     private void setup(FMLCommonSetupEvent event)
     {
-        ModOreFeatures.initModFeatures();
+
+        ModOreConfiguredFeatures.initModFeatures();
+        ModOrePlacedFeature.initOrePlacedFeatures();
         ProtectedListInit();
 
         LOGGER.info("Setup Method Registered (PreInit)");
