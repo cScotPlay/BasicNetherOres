@@ -38,6 +38,7 @@ public class CraftingRecipeBuilder extends RecipeProvider
         shapedMetalBlocks(consumer, ModBlocks.TIN_BLOCK.get(), ModItems.TIN_INGOT.get());
         shapedMetalBlocks(consumer, ModBlocks.OSMIUM_BLOCK.get(), ModItems.OSMIUM_INGOT.get());
         shapedMetalBlocks(consumer, ModBlocks.URANIUM_BLOCK.get(), ModItems.URANIUM_INGOT.get());
+        shapedMetalBlocks(consumer, ModBlocks.ZINC_BLOCK.get(), ModItems.ZINC_INGOT.get());
 
         shapedIngot(consumer, ModItems.ALUMINUM_INGOT.get(), ModItems.ALUMINUM_NUGGET.get());
         shapedIngot(consumer, Items.COPPER_INGOT, ModItems.COPPER_NUGGET.get());
@@ -46,6 +47,7 @@ public class CraftingRecipeBuilder extends RecipeProvider
         shapedIngot(consumer, ModItems.SILVER_INGOT.get(), ModItems.SILVER_NUGGET.get());
         shapedIngot(consumer, ModItems.TIN_INGOT.get(), ModItems.TIN_NUGGET.get());
         shapedIngot(consumer, ModItems.OSMIUM_INGOT.get(), ModItems.OSMIUM_NUGGET.get());
+        shapedIngot(consumer, ModItems.ZINC_INGOT.get(), ModItems.ZINC_NUGGET.get());
 
         shapelessIngots(consumer, ModItems.ALUMINUM_INGOT.get(), ModBlocks.ALUMINUM_BLOCK.get());
         shapelessIngots(consumer, ModItems.LEAD_INGOT.get(), ModBlocks.LEAD_BLOCK.get());
@@ -54,6 +56,7 @@ public class CraftingRecipeBuilder extends RecipeProvider
         shapelessIngots(consumer, ModItems.TIN_INGOT.get(), ModBlocks.TIN_BLOCK.get());
         shapelessIngots(consumer, ModItems.OSMIUM_INGOT.get(), ModBlocks.OSMIUM_BLOCK.get());
         shapelessIngots(consumer, ModItems.URANIUM_INGOT.get(), ModBlocks.URANIUM_BLOCK.get());
+        shapelessIngots(consumer, ModItems.ZINC_INGOT.get(), ModBlocks.ZINC_BLOCK.get());
 
         shapelessNuggetsIngots(consumer, ModItems.ALUMINUM_NUGGET.get(), ModItems.ALUMINUM_INGOT.get());
         shapelessNuggetsIngots(consumer, ModItems.COPPER_NUGGET.get(), Items.COPPER_INGOT);
@@ -62,6 +65,7 @@ public class CraftingRecipeBuilder extends RecipeProvider
         shapelessNuggetsIngots(consumer, ModItems.SILVER_NUGGET.get(), ModItems.SILVER_INGOT.get());
         shapelessNuggetsIngots(consumer, ModItems.TIN_NUGGET.get(), ModItems.TIN_INGOT.get());
         shapelessNuggetsIngots(consumer, ModItems.OSMIUM_NUGGET.get(), ModItems.OSMIUM_INGOT.get());
+        shapelessNuggetsIngots(consumer, ModItems.ZINC_NUGGET.get(), ModItems.ZINC_INGOT.get());
 
         smeltingOres(consumer, Items.EMERALD, ModBlockItems.NETHER_EMERALD_ORE.get());
         smeltingOres(consumer, Items.DIAMOND, ModBlockItems.NETHER_DIAMOND_ORE.get());
@@ -77,14 +81,16 @@ public class CraftingRecipeBuilder extends RecipeProvider
         smeltingOres(consumer, ModItems.TIN_INGOT.get(), ModBlockItems.NETHER_TIN_ORE.get());
         smeltingOres(consumer, ModItems.OSMIUM_INGOT.get(), ModBlockItems.NETHER_OSMIUM_ORE.get());
         smeltingOres(consumer, ModItems.URANIUM_INGOT.get(), ModBlockItems.NETHER_URANIUM_ORE.get());
+        smeltingOres(consumer, ModItems.ZINC_INGOT.get(), ModBlockItems.NETHER_ZINC_ORE.get());
 
-        smeltingRawOre(consumer, ModItems.SILVER_INGOT.get(), ModItems.RAW_ALUMINUM.get());
+        smeltingRawOre(consumer, ModItems.SILVER_INGOT.get(), ModItems.RAW_SILVER.get());
         smeltingRawOre(consumer, ModItems.LEAD_INGOT.get(), ModItems.RAW_LEAD.get());
         smeltingRawOre(consumer, ModItems.NICKEL_INGOT.get(), ModItems.RAW_NICKEL.get());
         smeltingRawOre(consumer, ModItems.ALUMINUM_INGOT.get(), ModItems.RAW_ALUMINUM.get());
         smeltingRawOre(consumer, ModItems.TIN_INGOT.get(), ModItems.RAW_TIN.get());
         smeltingRawOre(consumer, ModItems.OSMIUM_INGOT.get(), ModItems.RAW_OSMIUM.get());
         smeltingRawOre(consumer, ModItems.URANIUM_INGOT.get(), ModItems.RAW_URANIUM.get());
+        smeltingRawOre(consumer, ModItems.ZINC_INGOT.get(), ModItems.RAW_ZINC.get());
     }
 
     private static void shapedIngot(Consumer<FinishedRecipe> consumer, Item craftedItem, Item inputItem)

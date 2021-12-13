@@ -105,6 +105,10 @@ public class ModOreBlock extends OreBlock
             if (!OreGenerationConfig.uraniumGeneration.get()){
                 tooltip.add(new TranslatableComponent("tooltip.config.tip"));}
             else tooltip.add(new TranslatableComponent(UraniumOreTip.oreTip, OreGenerationConfig.uraniumMinHeight.get().toString(), OreGenerationConfig.uraniumMaxHeight.get().toString()));}
+        else if (this == ModBlocks.NETHER_ZINC_ORE.get()){
+            if (!OreGenerationConfig.zincGeneration.get()){
+                tooltip.add(new TranslatableComponent("tooltip.config.tip"));}
+            else tooltip.add(new TranslatableComponent(ZincOreTip.oreTip, OreGenerationConfig.zincMinHeight.get().toString(), OreGenerationConfig.zincMaxHeight.get().toString()));}
     }
 
     /**

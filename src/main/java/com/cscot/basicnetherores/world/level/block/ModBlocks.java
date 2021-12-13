@@ -39,6 +39,7 @@ public class ModBlocks
     public static final RegistryObject<ModOreBlock> NETHER_TIN_ORE = BLOCKS.register("nether_tin_ore", () -> new ModOreBlock(NETHER_ORES_PROPERTIES));
     public static final RegistryObject<ModOreBlock> NETHER_OSMIUM_ORE = BLOCKS.register("nether_osmium_ore", () -> new ModOreBlock(NETHER_ORES_PROPERTIES));
     public static final RegistryObject<ModOreBlock> NETHER_URANIUM_ORE = BLOCKS.register("nether_uranium_ore", () -> new ModOreBlock(NETHER_ORES_PROPERTIES));
+    public static final RegistryObject<ModOreBlock> NETHER_ZINC_ORE = BLOCKS.register("nether_zinc_ore", () -> new ModOreBlock(NETHER_ORES_PROPERTIES));
 
     public static final RegistryObject<ModMetalBlock> ALUMINUM_BLOCK = BLOCKS.register("aluminum_block", () -> new ModMetalBlock(METAL_BLOCKS));
     public static final RegistryObject<ModMetalBlock> LEAD_BLOCK = BLOCKS.register("lead_block", () -> new ModMetalBlock(METAL_BLOCKS));
@@ -47,6 +48,7 @@ public class ModBlocks
     public static final RegistryObject<ModMetalBlock> TIN_BLOCK = BLOCKS.register("tin_block", () -> new ModMetalBlock(METAL_BLOCKS));
     public static final RegistryObject<ModMetalBlock> OSMIUM_BLOCK = BLOCKS.register("osmium_block", () -> new ModMetalBlock(METAL_BLOCKS));
     public static final RegistryObject<ModMetalBlock> URANIUM_BLOCK = BLOCKS.register("uranium_block", () -> new ModMetalBlock(METAL_BLOCKS));
+    public static final RegistryObject<ModMetalBlock> ZINC_BLOCK = BLOCKS.register("zinc_block", () -> new ModMetalBlock(METAL_BLOCKS));
 
     public static final RegistryObject<ModRawOreBlock> RAW_ALUMINUM_BLOCK = BLOCKS.register("raw_aluminum_block", () -> new ModRawOreBlock(RAW_ORE_BLOCKS));
     public static final RegistryObject<ModRawOreBlock> RAW_LEAD_BLOCK = BLOCKS.register("raw_lead_block", () -> new ModRawOreBlock(RAW_ORE_BLOCKS));
@@ -55,6 +57,7 @@ public class ModBlocks
     public static final RegistryObject<ModRawOreBlock> RAW_TIN_BLOCK = BLOCKS.register("raw_tin_block", () -> new ModRawOreBlock(RAW_ORE_BLOCKS));
     public static final RegistryObject<ModRawOreBlock> RAW_OSMIUM_BLOCK = BLOCKS.register("raw_osmium_block", () -> new ModRawOreBlock(RAW_ORE_BLOCKS));
     public static final RegistryObject<ModRawOreBlock> RAW_URANIUM_BLOCK = BLOCKS.register("raw_uranium_block", () -> new ModRawOreBlock(RAW_ORE_BLOCKS));
+    public static final RegistryObject<ModRawOreBlock> RAW_ZINC_BLOCK = BLOCKS.register("raw_zinc_block", () -> new ModRawOreBlock(RAW_ORE_BLOCKS));
 
     private static ToIntFunction<BlockState> litBlockEmission(int lightLevel) {
         return (blockState) -> {

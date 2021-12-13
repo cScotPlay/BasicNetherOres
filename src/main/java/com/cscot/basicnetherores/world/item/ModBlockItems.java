@@ -26,6 +26,7 @@ public class ModBlockItems
     public static final RegistryObject<Item> NETHER_TIN_ORE = ITEMS.register("nether_tin_ore", () -> new BlockItem(ModBlocks.NETHER_TIN_ORE.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
     public static final RegistryObject<Item> NETHER_OSMIUM_ORE = ITEMS.register("nether_osmium_ore", () -> new BlockItem(ModBlocks.NETHER_OSMIUM_ORE.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
     public static final RegistryObject<Item> NETHER_URANIUM_ORE = ITEMS.register("nether_uranium_ore", () -> new BlockItem(ModBlocks.NETHER_URANIUM_ORE.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
+    public static final RegistryObject<Item> NETHER_ZINC_ORE = ITEMS.register("nether_zinc_ore", () -> new BlockItem(ModBlocks.NETHER_ZINC_ORE.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
 
     public static final RegistryObject<Item> SILVER_BLOCK = ITEMS.register("silver_block", () -> new BlockItem(ModBlocks.SILVER_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
     public static final RegistryObject<Item> LEAD_BLOCK = ITEMS.register("lead_block", () -> new BlockItem(ModBlocks.LEAD_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
@@ -34,6 +35,7 @@ public class ModBlockItems
     public static final RegistryObject<Item> TIN_BLOCK = ITEMS.register("tin_block", () -> new BlockItem(ModBlocks.TIN_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
     public static final RegistryObject<Item> OSMIUM_BLOCK = ITEMS.register("osmium_block", () -> new BlockItem(ModBlocks.OSMIUM_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
     public static final RegistryObject<Item> URANIUM_BLOCK = ITEMS.register("uranium_block", () -> new BlockItem(ModBlocks.URANIUM_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
+    public static final RegistryObject<Item> ZINC_BLOCK = ITEMS.register("zinc_block", () -> new BlockItem(ModBlocks.ZINC_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
 
     public static final RegistryObject<Item> RAW_SILVER_BLOCK = ITEMS.register("raw_silver_block", () -> new BlockItem(ModBlocks.RAW_SILVER_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
     public static final RegistryObject<Item> RAW_LEAD_BLOCK = ITEMS.register("raw_lead_block", () -> new BlockItem(ModBlocks.RAW_LEAD_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
@@ -42,6 +44,6 @@ public class ModBlockItems
     public static final RegistryObject<Item> RAW_TIN_BLOCK = ITEMS.register("raw_tin_block", () -> new BlockItem(ModBlocks.RAW_TIN_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
     public static final RegistryObject<Item> RAW_OSMIUM_BLOCK = ITEMS.register("raw_osmium_block", () -> new BlockItem(ModBlocks.RAW_OSMIUM_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
     public static final RegistryObject<Item> RAW_URANIUM_BLOCK = ITEMS.register("raw_uranium_block", () -> new BlockItem(ModBlocks.RAW_URANIUM_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
-
+    public static final RegistryObject<Item> RAW_ZINC_BLOCK = ITEMS.register("raw_zinc_block", () -> new BlockItem(ModBlocks.RAW_ZINC_BLOCK.get(), new Item.Properties().tab(BasicNetherOres.bnoItemGroup)));
 
 }

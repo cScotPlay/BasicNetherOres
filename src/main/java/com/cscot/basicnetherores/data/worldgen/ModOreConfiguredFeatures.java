@@ -6,10 +6,6 @@ import com.cscot.basicnetherores.world.level.block.ModBlocks;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
@@ -89,6 +85,11 @@ public class ModOreConfiguredFeatures
                     OreFeatures.NETHER_ORE_REPLACEABLES, ModBlocks.NETHER_URANIUM_ORE.get().defaultBlockState(),
                     OreGenerationConfig.uraniumVeinSize.get()));
 
+    public static ConfiguredFeature<?, ?> ORE_ZINC_NETHER = Feature.ORE
+            .configured(new OreConfiguration(
+                    OreFeatures.NETHER_ORE_REPLACEABLES, ModBlocks.NETHER_ZINC_ORE.get().defaultBlockState(),
+                    OreGenerationConfig.zincVeinSize.get()));
+
 
     public static void initModFeatures ()
     {
@@ -106,5 +107,6 @@ public class ModOreConfiguredFeatures
         FeatureUtils.register(new ResourceLocation(modID, "ore_tin_nether").toString(), ORE_TIN_NETHER);
         FeatureUtils.register(new ResourceLocation(modID, "ore_osmium_nether").toString(), ORE_OSMIUM_NETHER);
         FeatureUtils.register(new ResourceLocation(modID, "ore_uranium_nether").toString(), ORE_URANIUM_NETHER);
+        FeatureUtils.register(new ResourceLocation(modID, "ore_zinc_nether").toString(), ORE_ZINC_NETHER);
     }
 }

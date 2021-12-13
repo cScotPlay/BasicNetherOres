@@ -30,6 +30,7 @@ public class BlockTagGenerator extends BlockTagsProvider
     public static final Tags.IOptionalNamedTag<Block> ORES_TIN = tagForge("ores/tin");
     public static final Tags.IOptionalNamedTag<Block> ORES_OSMIUM = tagForge("ores/osmium");
     public static final Tags.IOptionalNamedTag<Block> ORES_URANIUM = tagForge("ores/uranium");
+    public static final Tags.IOptionalNamedTag<Block> ORES_ZINC = tagForge("ores/zinc");
 
     public static final Tags.IOptionalNamedTag<Block> ALUMINUM_BLOCK = tagForge("storage_blocks/aluminum");
     public static final Tags.IOptionalNamedTag<Block> SILVER_BLOCK = tagForge("storage_blocks/silver");
@@ -39,6 +40,7 @@ public class BlockTagGenerator extends BlockTagsProvider
     public static final Tags.IOptionalNamedTag<Block> TIN_BLOCK = tagForge("storage_blocks/tin");
     public static final Tags.IOptionalNamedTag<Block> OSMIUM_BLOCK = tagForge("storage_blocks/osmium");
     public static final Tags.IOptionalNamedTag<Block> URANIUM_BLOCK = tagForge("storage_blocks/uranium");
+    public static final Tags.IOptionalNamedTag<Block> ZINC_BLOCK = tagForge("storage_blocks/zinc");
 
     public BlockTagGenerator(DataGenerator generator, ExistingFileHelper exFileHelper) {
         super(generator, BasicNetherOres.modid, exFileHelper);
@@ -67,7 +69,8 @@ public class BlockTagGenerator extends BlockTagsProvider
         tag(ORES_COPPER).add(ModBlocks.NETHER_COPPER_ORE.get());
         tag(ORES_TIN).add(ModBlocks.NETHER_TIN_ORE.get());
         tag(ORES_OSMIUM).add(ModBlocks.NETHER_OSMIUM_ORE.get());
-        tag(ORES_URANIUM).add(ModBlocks.NETHER_OSMIUM_ORE.get());
+        tag(ORES_URANIUM).add(ModBlocks.NETHER_URANIUM_ORE.get());
+        tag(ORES_ZINC).add(ModBlocks.NETHER_ZINC_ORE.get());
 
         tag(ALUMINUM_BLOCK).add(ModBlocks.ALUMINUM_BLOCK.get());
         tag(SILVER_BLOCK).add(ModBlocks.SILVER_BLOCK.get());
@@ -77,6 +80,7 @@ public class BlockTagGenerator extends BlockTagsProvider
         tag(TIN_BLOCK).add(ModBlocks.TIN_BLOCK.get());
         tag(OSMIUM_BLOCK).add(ModBlocks.OSMIUM_BLOCK.get());
         tag(URANIUM_BLOCK).add(ModBlocks.URANIUM_BLOCK.get());
+        tag(ZINC_BLOCK).add(ModBlocks.ZINC_BLOCK.get());
 
         // ***************************************************************************** //
         //  Vanilla Tags
@@ -111,7 +115,9 @@ public class BlockTagGenerator extends BlockTagsProvider
                 ModBlocks.NICKEL_BLOCK.get(),
                 ModBlocks.NETHER_URANIUM_ORE.get(),
                 ModBlocks.RAW_URANIUM_BLOCK.get(),
-                ModBlocks.URANIUM_BLOCK.get());
+                ModBlocks.URANIUM_BLOCK.get(),
+                ModBlocks.RAW_ZINC_BLOCK.get(),
+                ModBlocks.ZINC_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
                 ModBlocks.NETHER_IRON_ORE.get(),

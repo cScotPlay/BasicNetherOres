@@ -48,6 +48,7 @@ public class OreProtectionConfig
                                 "bno:nether_tin_ore",
                                 "bno:nether_osmium_ore",
                                 "bno:nether_uranium_ore",
+                                "bno:nether_zinc_ore",
                                 "minecraft:glowstone",
                                 "minecraft:nether_quartz_ore"
                         }), (obj) -> obj instanceof String ? true : false);

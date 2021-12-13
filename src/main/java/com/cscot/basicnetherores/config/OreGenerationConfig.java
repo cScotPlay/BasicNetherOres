@@ -90,6 +90,12 @@ public class OreGenerationConfig
     public static ForgeConfigSpec.IntValue uraniumMinHeight;
     public static ForgeConfigSpec.IntValue uraniumMaxHeight;
 
+    //Zinc Settings
+    public static ForgeConfigSpec.IntValue zincVeinSize;
+    public static ForgeConfigSpec.IntValue zincPerChunk;
+    public static ForgeConfigSpec.IntValue zincMinHeight;
+    public static ForgeConfigSpec.IntValue zincMaxHeight;
+
     //Ore Generation Toggle
     public static ForgeConfigSpec.BooleanValue emeraldGeneration;
     public static ForgeConfigSpec.BooleanValue diamondGeneration;
@@ -105,6 +111,7 @@ public class OreGenerationConfig
     public static ForgeConfigSpec.BooleanValue tinGeneration;
     public static ForgeConfigSpec.BooleanValue osmiumGeneration;
     public static ForgeConfigSpec.BooleanValue uraniumGeneration;
+    public static ForgeConfigSpec.BooleanValue zincGeneration;
 
 
     public static void Init(ForgeConfigSpec.Builder builder) {
@@ -304,6 +311,19 @@ public class OreGenerationConfig
         uraniumMaxHeight = builder
                 .comment("Set Uranium Max Spawn Height (Default = 125)")
                 .defineInRange("ore_generation.uranium.uraniumMaxHeight", 125, 0, 125);
+        //Uranium Ore Values
+        zincVeinSize = builder
+                .comment("Set Max Zinc Vein Size (Default = 12)")
+                .defineInRange("ore_generation.zinc.zincVeinSize", 12, 0, 32);
+        zincPerChunk = builder
+                .comment("Set Zinc Spawn Chance (Default = 8)")
+                .defineInRange("ore_generation.zinc.zincChance", 8, 0, 64);
+        zincMinHeight = builder
+                .comment("Set Zinc Min Spawn Height (Default = 55)")
+                .defineInRange("ore_generation.zinc.zincMinHeight", 55, 0, 120);
+        zincMaxHeight = builder
+                .comment("Set Zinc Max Spawn Height (Default = 100)")
+                .defineInRange("ore_generation.zinc.zincMaxHeight", 100, 0, 125);
 
         //World Ore Generation
         emeraldGeneration = builder
@@ -348,5 +368,8 @@ public class OreGenerationConfig
         uraniumGeneration = builder
                 .comment("Generate Uranium Ore")
                 .define("ore_generation.world_generation.uranium", false);
+        zincGeneration = builder
+                .comment("Generate Zinc Ore")
+                .define("ore_generation.world_generation.zinc", false);
     }
 }

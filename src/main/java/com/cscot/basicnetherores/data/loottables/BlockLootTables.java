@@ -35,6 +35,7 @@ public class BlockLootTables extends BlockLoot
         dropSelf(ModBlocks.SILVER_BLOCK.get());
         dropSelf(ModBlocks.TIN_BLOCK.get());
         dropSelf(ModBlocks.URANIUM_BLOCK.get());
+        dropSelf(ModBlocks.ZINC_BLOCK.get());
 
         dropSelf(ModBlocks.RAW_ALUMINUM_BLOCK.get());
         dropSelf(ModBlocks.RAW_LEAD_BLOCK.get());
@@ -43,6 +44,7 @@ public class BlockLootTables extends BlockLoot
         dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
         dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
         dropSelf(ModBlocks.RAW_URANIUM_BLOCK.get());
+        dropSelf(ModBlocks.RAW_ZINC_BLOCK.get());
 
         add(ModBlocks.NETHER_EMERALD_ORE.get(), (emerald) -> createOreDrop(emerald, Items.EMERALD));
         add(ModBlocks.NETHER_DIAMOND_ORE.get(), (diamond) -> createOreDrop(diamond, Items.DIAMOND));
@@ -59,6 +61,7 @@ public class BlockLootTables extends BlockLoot
         add(ModBlocks.NETHER_TIN_ORE.get(), (tin) -> createOreDrop(tin, ModItems.RAW_TIN.get()));
         add(ModBlocks.NETHER_OSMIUM_ORE.get(), (osmium) -> createOreDrop(osmium, ModItems.RAW_OSMIUM.get()));
         add(ModBlocks.NETHER_URANIUM_ORE.get(), (uranium) -> createOreDrop(uranium, ModItems.RAW_URANIUM.get()));
+        add(ModBlocks.NETHER_ZINC_ORE.get(), (zinc) -> createOreDrop(zinc, ModItems.RAW_ZINC.get()));
     }
 
     @Override

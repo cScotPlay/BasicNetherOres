@@ -84,6 +84,10 @@ public class OreGenerator
             if(OreGenerationConfig.uraniumGeneration.get()){
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_URANIUM_NETHER);
             }
+
+            if(OreGenerationConfig.zincGeneration.get()){
+                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_ZINC_NETHER);
+            }
         }
     }
 }

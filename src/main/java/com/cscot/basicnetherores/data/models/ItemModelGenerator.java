@@ -41,6 +41,7 @@ public class ItemModelGenerator extends ItemModelProvider {
         generated("tin_ingot", new ResourceLocation(modid, "item/tin_ingot"));
         generated("osmium_ingot", new ResourceLocation(modid, "item/osmium_ingot"));
         generated("uranium_ingot", new ResourceLocation(modid, "item/uranium_ingot"));
+        generated("zinc_ingot", new ResourceLocation(modid, "item/zinc_ingot"));
 
         generated("aluminum_nugget", new ResourceLocation(modid, "item/aluminum_nugget"));
         generated("copper_nugget", new ResourceLocation(modid, "item/copper_nugget"));
@@ -49,6 +50,7 @@ public class ItemModelGenerator extends ItemModelProvider {
         generated("silver_nugget", new ResourceLocation(modid, "item/silver_nugget"));
         generated("tin_nugget", new ResourceLocation(modid, "item/tin_nugget"));
         generated("osmium_nugget", new ResourceLocation(modid, "item/osmium_nugget"));
+        generated("zinc_nugget", new ResourceLocation(modid, "item/zinc_nugget"));
 
         generated("raw_aluminum", new ResourceLocation(modid, "item/raw_aluminum"));
         generated("raw_lead", new ResourceLocation(modid, "item/raw_lead"));
@@ -57,6 +59,7 @@ public class ItemModelGenerator extends ItemModelProvider {
         generated("raw_tin", new ResourceLocation(modid, "item/raw_tin"));
         generated("raw_osmium", new ResourceLocation(modid, "item/raw_osmium"));
         generated("raw_uranium", new ResourceLocation(modid, "item/raw_uranium"));
+        generated("raw_zinc", new ResourceLocation(modid, "item/raw_zinc"));
 
     }
 

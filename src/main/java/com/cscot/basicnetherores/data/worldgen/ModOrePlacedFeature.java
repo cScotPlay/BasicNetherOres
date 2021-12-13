@@ -2,11 +2,7 @@ package com.cscot.basicnetherores.data.worldgen;
 
 import com.cscot.basicnetherores.BasicNetherOres;
 import com.cscot.basicnetherores.config.OreGenerationConfig;
-import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.*;
@@ -31,6 +27,7 @@ public class ModOrePlacedFeature
     public static final PlacedFeature ORE_TIN_NETHER = ModOreConfiguredFeatures.ORE_TIN_NETHER.placed(commonOrePlacement(OreGenerationConfig.tinPerChunk.get(), HeightRangePlacement.uniform(VerticalAnchor.absolute(OreGenerationConfig.tinMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.tinMaxHeight.get()))));
     public static final PlacedFeature ORE_OSMIUM_NETHER = ModOreConfiguredFeatures.ORE_OSMIUM_NETHER.placed(commonOrePlacement(OreGenerationConfig.osmiumPerChunk.get(), HeightRangePlacement.uniform(VerticalAnchor.absolute(OreGenerationConfig.osmiumMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.osmiumMaxHeight.get()))));
     public static final PlacedFeature ORE_URANIUM_NETHER = ModOreConfiguredFeatures.ORE_URANIUM_NETHER.placed(commonOrePlacement(OreGenerationConfig.uraniumPerChunk.get(), HeightRangePlacement.uniform(VerticalAnchor.absolute(OreGenerationConfig.uraniumMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.uraniumMaxHeight.get()))));
+    public static final PlacedFeature ORE_ZINC_NETHER = ModOreConfiguredFeatures.ORE_ZINC_NETHER.placed(commonOrePlacement(OreGenerationConfig.zincPerChunk.get(), HeightRangePlacement.uniform(VerticalAnchor.absolute(OreGenerationConfig.zincMinHeight.get()), VerticalAnchor.absolute(OreGenerationConfig.zincMaxHeight.get()))));
 
     public static void initOrePlacedFeatures()
     {
@@ -49,6 +46,7 @@ public class ModOrePlacedFeature
         PlacementUtils.register( new ResourceLocation(MODID, "ore_tin_nether").toString(), ORE_TIN_NETHER);
         PlacementUtils.register( new ResourceLocation(MODID, "ore_osmium_nether").toString(), ORE_OSMIUM_NETHER);
         PlacementUtils.register( new ResourceLocation(MODID, "ore_uranium_nether").toString(), ORE_URANIUM_NETHER);
+        PlacementUtils.register( new ResourceLocation(MODID, "ore_zinc_nether").toString(), ORE_ZINC_NETHER);
 
     }
 
