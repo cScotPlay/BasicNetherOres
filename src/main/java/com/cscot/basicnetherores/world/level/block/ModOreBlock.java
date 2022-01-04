@@ -1,9 +1,11 @@
 package com.cscot.basicnetherores.world.level.block;
 
+import com.cscot.basicnetherores.client.renderer.IHelpRender;
 import com.cscot.basicnetherores.config.OreGenerationConfig;
 import com.cscot.basicnetherores.config.OreProtectionConfig;
 import com.cscot.basicnetherores.api.event.PiglinEvent;
 import com.cscot.basicnetherores.util.helpers.OreTooltipHelper.*;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.item.TooltipFlag;
@@ -27,13 +29,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ModOreBlock extends OreBlock
+public class ModOreBlock extends OreBlock implements IHelpRender
 {
     private final UniformInt xpRange;
 
     public ModOreBlock(Properties properties, UniformInt experienceDropped)
     {
-        super(properties);
+        super(properties.noOcclusion());
         this.xpRange = experienceDropped;
 
         //ItemList.items.add(new BlockItem(this, new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(oreName)));
@@ -148,5 +150,11 @@ public class ModOreBlock extends OreBlock
 
             guard.setTarget(event.getThief());
         }
+    }
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public RenderType getRenderType() {
+        return RenderType.translucent();
     }
 }
