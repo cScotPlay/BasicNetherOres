@@ -40,9 +40,9 @@ public class ModOreBlock extends OreBlock
     public ModOreBlock(String oreName, UniformIntProvider experienceDropped, Integer pickaxeLevel)
     {
         super(FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES, pickaxeLevel)
                 .requiresTool()
                 .strength(3.0f, 3.0f)
+                .nonOpaque()
                 .sounds(BlockSoundGroup.NETHER_GOLD_ORE));
         this.experienceDropped = experienceDropped;
         new Identifier(BasicNetherOres.MOD_ID, oreName);
@@ -59,62 +59,66 @@ public class ModOreBlock extends OreBlock
     @Environment(EnvType.CLIENT)
     public void appendTooltip(ItemStack stack, BlockView worldIn, List<Text> tooltip, TooltipContext flagIn)
     {
-        if(this == OreBlockLists.NETHEREMERALD_ORE){
+        if(this == OreBlockLists.NETHER_EMERALD_ORE){
             if (!ModConfig.emeraldGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(EmeraldOreTip.oreTip, ModConfig.emeraldMinHeight, ModConfig.emeraldMaxHeight));}
-        else if (this == OreBlockLists.NETHERDIAMOND_ORE){
+        else if (this == OreBlockLists.NETHER_DIAMOND_ORE){
             if (!ModConfig.diamondGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(DiamondOreTip.oreTip, ModConfig.diamondMinHeight, ModConfig.diamondMaxHeight));}
-        else if (this == OreBlockLists.NETHERREDSTONE_ORE){
+        else if (this == OreBlockLists.NETHER_REDSTONE_ORE){
             if (!ModConfig.redstoneGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(RedstoneOreTip.oreTip, ModConfig.redstoneMinHeight, ModConfig.redstoneMaxHeight));}
-        else if (this == OreBlockLists.NETHERLAPIS_ORE){
+        else if (this == OreBlockLists.NETHER_LAPIS_ORE){
             if (!ModConfig.lapisGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(LapisOreTip.oreTip, ModConfig.lapisMinHeight, ModConfig.lapisMaxHeight));}
-        else if (this == OreBlockLists.NETHERCOAL_ORE){
+        else if (this == OreBlockLists.NETHER_COAL_ORE){
             if (!ModConfig.coalGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(CoalOreTip.oreTip, ModConfig.coalMinHeight, ModConfig.coalMaxHeight));}
-        else if (this == OreBlockLists.NETHERSILVER_ORE){
+        else if (this == OreBlockLists.NETHER_SILVER_ORE){
             if (!ModConfig.silverGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(SilverOreTip.oreTip, ModConfig.silverMinHeight, ModConfig.silverMaxHeight));}
-        else if (this == OreBlockLists.NETHERIRON_ORE){
+        else if (this == OreBlockLists.NETHER_IRON_ORE){
             if (!ModConfig.ironGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(IronOreTip.oreTip, ModConfig.ironMinHeight, ModConfig.ironMaxHeight));}
-        else if (this == OreBlockLists.NETHERLEAD_ORE){
+        else if (this == OreBlockLists.NETHER_LEAD_ORE){
             if (!ModConfig.leadGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(LeadOreTip.oreTip, ModConfig.leadMinHeight, ModConfig.leadMaxHeight));}
-        else if (this == OreBlockLists.NETHERNICKEL_ORE){
+        else if (this == OreBlockLists.NETHER_NICKEL_ORE){
             if (!ModConfig.nickelGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(NickelOreTip.oreTip, ModConfig.nickelMinHeight, ModConfig.nickelMaxHeight));}
-        else if (this == OreBlockLists.NETHERCOPPER_ORE){
+        else if (this == OreBlockLists.NETHER_COPPER_ORE){
             if (!ModConfig.copperGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(CopperOreTip.oreTip, ModConfig.copperMinHeight, ModConfig.copperMaxHeight));}
-        else if (this == OreBlockLists.NETHERALUMINUM_ORE){
+        else if (this == OreBlockLists.NETHER_ALUMINUM_ORE){
             if (!ModConfig.aluminumGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(AluminumOreTip.oreTip, ModConfig.aluminumMinHeight, ModConfig.aluminumMaxHeight));}
-        else if (this == OreBlockLists.NETHERTIN_ORE){
+        else if (this == OreBlockLists.NETHER_TIN_ORE){
             if (!ModConfig.tinGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(TinOreTip.oreTip, ModConfig.tinMinHeight, ModConfig.tinMaxHeight));}
-        else if (this == OreBlockLists.NETHEROSMIUM_ORE){
+        else if (this == OreBlockLists.NETHER_OSMIUM_ORE){
             if (!ModConfig.osmiumGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(OsmiumOreTip.oreTip, ModConfig.osmiumMinHeight, ModConfig.osmiumMaxHeight));}
-        else if (this == OreBlockLists.NETHERURANIUM_ORE){
+        else if (this == OreBlockLists.NETHER_URANIUM_ORE){
             if (!ModConfig.uraniumGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(UraniumOreTip.oreTip, ModConfig.uraniumMinHeight, ModConfig.uraniumMaxHeight));}
+        else if (this == OreBlockLists.NETHER_ZINC_ORE){
+            if (!ModConfig.zincGeneration){
+                tooltip.add(new TranslatableText("tooltip.config.tip"));}
+            else tooltip.add(new TranslatableText(ZincOreTip.oreTip, ModConfig.zincMinHeight, ModConfig.zincMaxHeight));}
     }
 
     @Override

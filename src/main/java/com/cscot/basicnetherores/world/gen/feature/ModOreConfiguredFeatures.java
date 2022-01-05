@@ -15,73 +15,78 @@ public class ModOreConfiguredFeatures
 
     public static ConfiguredFeature<?, ?> ORE_EMERALD_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHEREMERALD_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_EMERALD_ORE.getDefaultState(),
                     ModConfig.emeraldVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_DIAMOND_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERDIAMOND_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_DIAMOND_ORE.getDefaultState(),
                     ModConfig.diamondVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_REDSTONE_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERREDSTONE_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_REDSTONE_ORE.getDefaultState(),
                     ModConfig.redstoneVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_LAPIS_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERLAPIS_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_LAPIS_ORE.getDefaultState(),
                     ModConfig.lapisVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_COAL_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERCOAL_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_COAL_ORE.getDefaultState(),
                     ModConfig.coalVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_SILVER_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERSILVER_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_SILVER_ORE.getDefaultState(),
                     ModConfig.silverVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_IRON_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERIRON_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_IRON_ORE.getDefaultState(),
                     ModConfig.ironVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_LEAD_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERLEAD_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_LEAD_ORE.getDefaultState(),
                     ModConfig.leadVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_NICKEL_NETHER = Feature.ORE
         .configure(new OreFeatureConfig(
-                OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERNICKEL_ORE.getDefaultState(),
+                OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_NICKEL_ORE.getDefaultState(),
                 ModConfig.nickelVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_COPPER_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERCOPPER_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_COPPER_ORE.getDefaultState(),
                     ModConfig.copperVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_ALUMINUM_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERALUMINUM_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_ALUMINUM_ORE.getDefaultState(),
                     ModConfig.aluminumVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_TIN_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERTIN_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_TIN_ORE.getDefaultState(),
                     ModConfig.tinVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_OSMIUM_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHEROSMIUM_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_OSMIUM_ORE.getDefaultState(),
                     ModConfig.osmiumVeinSize));
 
     public static ConfiguredFeature<?, ?> ORE_URANIUM_NETHER = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHERURANIUM_ORE.getDefaultState(),
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_URANIUM_ORE.getDefaultState(),
                     ModConfig.uraniumVeinSize));
+
+    public static ConfiguredFeature<?, ?> ORE_ZINC_NETHER = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreConfiguredFeatures.BASE_STONE_NETHER, OreBlockLists.NETHER_ZINC_ORE.getDefaultState(),
+                    ModConfig.zincVeinSize));
 
 
     public static void initModOreConfiguredFeatures()
@@ -127,5 +132,8 @@ public class ModOreConfiguredFeatures
 
         RegistryKey<ConfiguredFeature<?, ?>> oreUraniumNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(modID, "ore_uranium_nether"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreUraniumNether.getValue(), ORE_URANIUM_NETHER);
+
+        RegistryKey<ConfiguredFeature<?, ?>> oreZincNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(modID, "ore_zinc_nether"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreZincNether.getValue(), ORE_ZINC_NETHER);
     }
 }

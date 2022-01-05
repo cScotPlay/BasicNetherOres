@@ -23,6 +23,7 @@ public class BlockLists
     public static final Block TIN_BLOCK = add("tin_block", new ModMetalBlocks("tin_block"));
     public static final Block OSMIUM_BLOCK = add("osmium_block", new ModMetalBlocks("osmium_block"));
     public static final Block URANIUM_BLOCK = add("uranium_block", new ModMetalBlocks("uranium_block"));
+    public static final Block ZINC_BLOCK = add("zinc_block", new ModMetalBlocks("zinc_block"));
 
     //Raw Ore Blocks//
     public static final Block RAW_ALUMINUM_BLOCK = add("raw_aluminum_block", new ModRawOreBlocks("raw_aluminum_block"));
@@ -32,6 +33,7 @@ public class BlockLists
     public static final Block RAW_TIN_BLOCK = add("raw_tin_block", new ModRawOreBlocks("raw_tin_block"));
     public static final Block RAW_OSMIUM_BLOCK = add("raw_osmium_block", new ModRawOreBlocks("raw_osmium_block"));
     public static final Block RAW_URANIUM_BLOCK = add("raw_uranium_block", new ModRawOreBlocks("raw_uranium_block"));
+    public static final Block RAW_ZINC_BLOCK = add("raw_zinc_block", new ModRawOreBlocks("raw_zinc_block"));
 
     private static <block extends Block> block add(String name, block block) {
         BLOCKS.put(new Identifier(BasicNetherOres.MOD_ID, name), block);

@@ -39,10 +39,10 @@ public class ModRedstoneOreBlock extends RedstoneOreBlock
     public ModRedstoneOreBlock(String oreName) {
 
         super(FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES, 2)
                 .requiresTool()
                 .ticksRandomly()
                 .luminance(createLightLevelFromLitBlockState())
+                .nonOpaque()
                 .strength(3.0f, 3.0f)
                 .sounds(BlockSoundGroup.NETHER_GOLD_ORE));
 
@@ -56,7 +56,7 @@ public class ModRedstoneOreBlock extends RedstoneOreBlock
     @Environment(EnvType.CLIENT)
     public void appendTooltip(ItemStack stack, BlockView worldIn, List<Text> tooltip, TooltipContext flagIn)
     {
-        if (this == OreBlockLists.NETHERREDSTONE_ORE){
+        if (this == OreBlockLists.NETHER_REDSTONE_ORE){
             if (!ModConfig.redstoneGeneration){
                 tooltip.add(new TranslatableText("tooltip.config.tip"));}
             else tooltip.add(new TranslatableText(OreTooltipHelper.RedstoneOreTip.oreTip, ModConfig.redstoneMinHeight, ModConfig.redstoneMaxHeight));}

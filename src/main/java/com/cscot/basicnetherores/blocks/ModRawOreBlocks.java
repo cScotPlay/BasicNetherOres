@@ -15,7 +15,6 @@ public class ModRawOreBlocks extends Block
 {
     public ModRawOreBlocks(String rawBlockName) {
         super(FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES, 2)
                 .requiresTool()
                 .strength(5.0f, 6.0f)
                 .sounds(BlockSoundGroup.STONE));

@@ -16,7 +16,6 @@ public class ModMetalBlocks extends Block
     public ModMetalBlocks(String name)
     {
         super(FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES, 1)
                 .requiresTool()
                 .strength(5.0f, 6.0f)
                 .sounds(BlockSoundGroup.METAL));

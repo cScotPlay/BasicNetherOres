@@ -37,7 +37,8 @@ public class ModOrePlacedFeature
     public static final PlacedFeature ORE_TIN_NETHER = ModOreConfiguredFeatures.ORE_TIN_NETHER.withPlacement(modifiersWithCount(ModConfig.tinPerChunk, HeightRangePlacementModifier.uniform(YOffset.fixed(ModConfig.tinMinHeight),YOffset.fixed(ModConfig.tinMaxHeight))));
     public static final PlacedFeature ORE_OSMIUM_NETHER = ModOreConfiguredFeatures.ORE_OSMIUM_NETHER.withPlacement(modifiersWithCount(ModConfig.osmiumPerChunk, HeightRangePlacementModifier.uniform(YOffset.fixed(ModConfig.osmiumMinHeight),YOffset.fixed(ModConfig.osmiumMaxHeight))));
     public static final PlacedFeature ORE_URANIUM_NETHER = ModOreConfiguredFeatures.ORE_URANIUM_NETHER.withPlacement(modifiersWithCount(ModConfig.uraniumPerChunk, HeightRangePlacementModifier.uniform(YOffset.fixed(ModConfig.uraniumMinHeight),YOffset.fixed(ModConfig.uraniumMaxHeight))));
-    
+    public static final PlacedFeature ORE_ZINC_NETHER = ModOreConfiguredFeatures.ORE_ZINC_NETHER.withPlacement(modifiersWithCount(ModConfig.zincPerChunk, HeightRangePlacementModifier.uniform(YOffset.fixed(ModConfig.zincMinHeight),YOffset.fixed(ModConfig.zincMaxHeight))));
+
     public static void initOrePlacedFeatures()
     {
         RegistryKey<PlacedFeature> oreEmeraldNether = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MODID, "ore_emerald_nether"));
@@ -81,6 +82,9 @@ public class ModOrePlacedFeature
 
         RegistryKey<PlacedFeature> oreUraniumNether = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MODID, "ore_uranium_nether"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreUraniumNether.getValue(), ORE_URANIUM_NETHER);
+
+        RegistryKey<PlacedFeature> oreZincNether = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MODID, "ore_zinc_nether"));
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, oreZincNether.getValue(), ORE_ZINC_NETHER);
 
         if(ModConfig.emeraldGeneration) {
             BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreEmeraldNether);
@@ -136,6 +140,10 @@ public class ModOrePlacedFeature
 
         if(ModConfig.uraniumGeneration) {
             BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreUraniumNether);
+        }
+
+        if(ModConfig.zincGeneration) {
+            BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreZincNether);
         }
     }
 

@@ -17,23 +17,24 @@ public class ModConfig
     @IConfig(config = "bno_config", category = "oreProtection", key = "protectionRange", comment = "Set range that Piglins will aggro when mining ores(Default: 16)")
     public static int protectionRange = 16;
 
-    @IConfig(config = "bno_config", category = "oreProtection", key = "protectedBlocks", comment = "Add Blocks to be protected by Piglins (Example: minecraft:glowstone, bno:netheremerald_ore, ect. )")
+    @IConfig(config = "bno_config", category = "oreProtection", key = "protectedBlocks", comment = "***This is dealt with in the vanilla MC Tags ***Add Blocks to be protected by Piglins (Example: minecraft:glowstone, bno:netheremerald_ore, ect. )")
     public static List<String> protectedBlocks = Arrays.asList(
-            "bno:netheremerald_ore",
-            "bno:netherdiamond_ore",
-            "bno:netherlapis_ore",
-            "bno:netherredstone_ore",
+            "bno:nether_emerald_ore",
+            "bno:nether_diamond_ore",
+            "bno:nether_lapis_ore",
+            "bno:nether_redstone_ore",
             "minecraft:nether_gold_ore",
-            "bno:nethersilver_ore",
-            "bno:netheriron_ore",
-            "bno:netherlead_ore",
-            "bno:nethernickel_ore",
-            "bno:nethercoal_ore",
-            "bno:nethercopper_ore",
-            "bno:netheraluminum_ore",
-            "bno:nethertin_ore",
-            "bno:netherosmium_ore",
-            "bno:netheruranium_ore",
+            "bno:nether_silver_ore",
+            "bno:nether_iron_ore",
+            "bno:nether_lead_ore",
+            "bno:nether_nickel_ore",
+            "bno:nether_coal_ore",
+            "bno:nether_copper_ore",
+            "bno:nether_aluminum_ore",
+            "bno:nether_tin_ore",
+            "bno:nether_osmium_ore",
+            "bno:nether_uranium_ore",
+            "bno:nether_zinc_ore",
             "minecraft:glowstone",
             "minecraft:nether_quartz_ore");
 
@@ -288,4 +289,20 @@ public class ModConfig
 
     @IConfig(config = "bno_config", category = "uraniumOre", key = "uraniumMaxHeight", comment = "Set Uranium Max Spawn Height (Default: 125)")
     public static int uraniumMaxHeight = 125;
+
+    //Zinc Ore Settings
+    @IConfig(config = "bno_config", category = "zincOre", key = "zincGeneration", comment = "Generate Zinc Ore")
+    public static boolean zincGeneration = false;
+
+    @IConfig(config = "bno_config", category = "zincOre", key = "zincVeinSize", comment = "Set Max Zinc Vein Size (Default: 12)")
+    public static int zincVeinSize = 12;
+
+    @IConfig(config = "bno_config", category = "zincOre", key = "zincPerChunk", comment = "Set Zinc Spawn Chance (Default: 8)")
+    public static int zincPerChunk = 8;
+
+    @IConfig(config = "bno_config", category = "zincOre", key = "zincMinHeight", comment = "Set Zinc Min Spawn Height (Default: 55)")
+    public static int zincMinHeight = 55;
+
+    @IConfig(config = "bno_config", category = "zincOre", key = "zincMaxHeight", comment = "Set Zinc Max Spawn Height (Default: 100)")
+    public static int zincMaxHeight = 100;
 }
