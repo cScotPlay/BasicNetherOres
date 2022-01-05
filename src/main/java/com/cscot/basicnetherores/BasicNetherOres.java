@@ -8,6 +8,7 @@ import com.cscot.basicnetherores.world.gen.feature.ModOreConfiguredFeatures;
 import com.cscot.basicnetherores.world.gen.feature.ModOrePlacedFeature;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -23,7 +24,7 @@ public class BasicNetherOres implements ModInitializer {
 
 	public static ItemGroup ITEMGROUP = FabricItemGroupBuilder.build(
 			new Identifier("basicnetherore", "item_group"),
-			() -> new ItemStack(Item.BLOCK_ITEMS.get(OreBlockLists.NETHEREMERALD_ORE)));
+			() -> new ItemStack(Item.BLOCK_ITEMS.get(OreBlockLists.NETHER_EMERALD_ORE)));
 
 	public static ConfigHandler BNO_CONFIGS = new ConfigHandler(ModConfig.class, MOD_ID);
 
