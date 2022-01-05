@@ -24,9 +24,6 @@
     ],
     "client": [
       "com.cscot.basicnetherores.client.ClientHandler"
-    ],
-    "fabric-datagen": [
-      "com.cscot.basicnetherores.data.DataGeneratorEntrypoint"
     ]
   },
 
