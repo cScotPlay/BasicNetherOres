@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "bno:nether_emerald_ore"
+  },
+  "result": "minecraft:emerald",
+  "experience": 0.7,
+  "cookingtime": 100
+}

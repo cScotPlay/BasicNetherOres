@@ -1,0 +1,7 @@
+{
+  "parent": "bno:block/cube_overlay_all",
+  "textures": {
+    "all": "minecraft:block/netherrack",
+    "overlay": "bno:block/nether_redstone_ore"
+  }
+}

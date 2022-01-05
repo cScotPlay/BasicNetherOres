@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "aluminum_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bno:aluminum_nugget"
+    }
+  },
+  "result": {
+    "item": "bno:aluminum_ingot"
+  }
+}

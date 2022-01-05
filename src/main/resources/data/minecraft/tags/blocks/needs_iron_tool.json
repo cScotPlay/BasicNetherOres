@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "bno:nether_diamond_ore",
+    "bno:nether_emerald_ore",
+    "bno:nether_redstone_ore",
+    "bno:nether_silver_ore",
+    "bno:raw_silver_block",
+    "bno:silver_block",
+    "bno:nether_lead_ore",
+    "bno:raw_lead_block",
+    "bno:lead_block",
+    "bno:nether_nickel_ore",
+    "bno:raw_nickel_block",
+    "bno:nickel_block",
+    "bno:nether_uranium_ore",
+    "bno:raw_uranium_block",
+    "bno:uranium_block",
+    "bno:raw_zinc_block",
+    "bno:zinc_block"
+  ]
+}

@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "": { "model": "bno:block/tin_block" }
+  "variants": {
+    "": {
+      "model": "bno:block/tin_block"
     }
+  }
 }

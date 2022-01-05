@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "uranium_block",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bno:uranium_ingot"
+    }
+  },
+  "result": {
+    "item": "bno:uranium_block"
+  }
+}

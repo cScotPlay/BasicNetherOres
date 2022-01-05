@@ -8,6 +8,7 @@
     "item.bno.silver_nugget": "Silver Nugget",
     "item.bno.tin_nugget": "Tin Nugget",
     "item.bno.osmium_nugget": "Osmium Nugget",
+    "item.bno.zinc_nugget": "Zinc Nugget",
 
     "item.bno.aluminum_ingot": "Aluminum Ingot",
     "item.bno.lead_ingot": "Lead Ingot",
@@ -16,6 +17,7 @@
     "item.bno.tin_ingot": "Tin Ingot",
     "item.bno.osmium_ingot": "Osmium Ingot",
     "item.bno.uranium_ingot": "Uranium Ingot",
+    "item.bno.zinc_ingot": "Zinc Ingot",
 
     "item.bno.raw_aluminum": "Raw Aluminum",
     "item.bno.raw_lead": "Raw Lead",
@@ -24,6 +26,7 @@
     "item.bno.raw_tin": "Raw Tin",
     "item.bno.raw_osmium": "Raw Osmium",
     "item.bno.raw_uranium": "Raw Uranium",
+    "item.bno.raw_zinc": "Raw Zinc",
 
     "block.bno.aluminum_block": "Aluminum Block",
     "block.bno.lead_block": "Lead Block",
@@ -32,6 +35,7 @@
     "block.bno.tin_block": "Tin Block",
     "block.bno.osmium_block": "Osmium Block",
     "block.bno.uranium_block": "Uranium Block",
+    "block.bno.zinc_block": "Zinc Block",
 
     "block.bno.raw_aluminum_block": "Raw Aluminum Block",
     "block.bno.raw_lead_block": "Raw Lead Block",
@@ -40,22 +44,24 @@
     "block.bno.raw_tin_block": "Raw Tin Block",
     "block.bno.raw_osmium_block": "Raw Osmium Block",
     "block.bno.raw_uranium_block": "Raw Uranium Block",
+    "block.bno.raw_zinc_block": "Raw Zinc Block",
 
-    "block.bno.netheraluminum_ore": "Nether Aluminum Ore",
-    "block.bno.nethercopper_ore": "Nether Copper Ore",
-    "block.bno.netherlead_ore": "Nether Lead Ore",
-    "block.bno.nethernickel_ore": "Nether Nickel Ore",
-    "block.bno.nethersilver_ore": "Nether Silver Ore",
-    "block.bno.nethertin_ore": "Nether Tin Ore",
-    "block.bno.netherosmium_ore": "Nether Osmium Ore",
-    "block.bno.netheruranium_ore": "Nether Uranium Ore",
+    "block.bno.nether_aluminum_ore": "Nether Aluminum Ore",
+    "block.bno.nether_copper_ore": "Nether Copper Ore",
+    "block.bno.nether_lead_ore": "Nether Lead Ore",
+    "block.bno.nether_nickel_ore": "Nether Nickel Ore",
+    "block.bno.nether_silver_ore": "Nether Silver Ore",
+    "block.bno.nether_tin_ore": "Nether Tin Ore",
+    "block.bno.nether_osmium_ore": "Nether Osmium Ore",
+    "block.bno.nether_uranium_ore": "Nether Uranium Ore",
+    "block.bno.nether_zinc_ore": "Nether Zinc Ore",
 
-    "block.bno.netheremerald_ore": "Nether Emerald Ore",
-    "block.bno.netherdiamond_ore": "Nether Diamond Ore",
-    "block.bno.netherredstone_ore": "Nether Redstone Ore",
-    "block.bno.netherlapis_ore": "Nether Lapis Ore",
-    "block.bno.nethercoal_ore": "Nether Coal Ore",
-    "block.bno.netheriron_ore": "Nether Iron Ore",
+    "block.bno.nether_emerald_ore": "Nether Emerald Ore",
+    "block.bno.nether_diamond_ore": "Nether Diamond Ore",
+    "block.bno.nether_redstone_ore": "Nether Redstone Ore",
+    "block.bno.nether_lapis_ore": "Nether Lapis Ore",
+    "block.bno.nether_coal_ore": "Nether Coal Ore",
+    "block.bno.nether_iron_ore": "Nether Iron Ore",
 
     "tooltip.netheremerald_ore.tip": "§fFound between y%s to y%s",
     "tooltip.netherdiamond_ore.tip": "§fFound between y%s to y%s",
@@ -72,6 +78,7 @@
     "tooltip.nethertin_ore.tip": "§fFound between y%s to y%s",
     "tooltip.netherosmium_ore.tip": "§fFound between y%s to y%s",
     "tooltip.netheruranium_ore.tip": "§fFound between y%s to y%s",
+    "tooltip.netherzinc_ore.tip": "§fFound between y%s to y%s",
     "tooltip.config.tip": "§4§oWorld Generation Disabled - Enable through Config File"
 
 }

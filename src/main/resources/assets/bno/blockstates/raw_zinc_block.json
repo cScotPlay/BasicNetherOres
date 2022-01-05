@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bno:block/raw_zinc_block"
+    }
+  }
+}

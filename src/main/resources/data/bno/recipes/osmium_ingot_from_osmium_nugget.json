@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "osmium_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bno:osmium_nugget"
+    }
+  },
+  "result": {
+    "item": "bno:osmium_ingot"
+  }
+}

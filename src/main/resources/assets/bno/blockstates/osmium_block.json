@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "": { "model": "bno:block/osmium_block" }
+  "variants": {
+    "": {
+      "model": "bno:block/osmium_block"
     }
+  }
 }

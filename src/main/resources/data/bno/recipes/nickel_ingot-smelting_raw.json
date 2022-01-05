@@ -1,9 +1,0 @@
-{
-  "type": "smelting",
-  "ingredient": {
-    "item": "bno:raw_nickel"
-  },
-  "result": "bno:nickel_ingot",
-  "experience": 0.7,
-  "cookingtime": 200
-}

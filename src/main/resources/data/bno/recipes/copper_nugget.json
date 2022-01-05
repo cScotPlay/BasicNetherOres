@@ -1,16 +1,12 @@
 {
-    "_comment": [
-        "Craft Copper Ingot from Copper Block"
-    ],
-    "type": "minecraft:crafting_shapeless",
-    "group": "copper_ingot",
-    "ingredients": [
-        {
-            "item": "minecraft:copper_ingot"
-        }
-    ],
-    "result": {
-        "item": "bno:copper_nugget",
-        "count": 9
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
     }
+  ],
+  "result": {
+    "item": "bno:copper_nugget",
+    "count": 9
+  }
 }

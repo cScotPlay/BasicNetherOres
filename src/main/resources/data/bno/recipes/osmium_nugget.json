@@ -1,16 +1,12 @@
 {
-    "_comment": [
-        "Craft Osmium Nugget from Osmium Ingot"
-    ],
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-        {
-            "tag": "c:osmium_ingots"
-        }
-    ],
-    "result": {
-        "item": "bno:osmium_nugget",
-        "count": 9
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bno:osmium_ingot"
     }
+  ],
+  "result": {
+    "item": "bno:osmium_nugget",
+    "count": 9
+  }
 }
-

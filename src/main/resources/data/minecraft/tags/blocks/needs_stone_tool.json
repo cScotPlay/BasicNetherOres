@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "bno:nether_iron_ore",
+    "bno:nether_lapis_ore",
+    "bno:nether_copper_ore",
+    "bno:nether_aluminum_ore",
+    "bno:raw_aluminum_block",
+    "bno:aluminum_block",
+    "bno:nether_tin_ore",
+    "bno:raw_tin_block",
+    "bno:tin_block",
+    "bno:nether_osmium_ore",
+    "bno:raw_osmium_block",
+    "bno:osmium_block"
+  ]
+}

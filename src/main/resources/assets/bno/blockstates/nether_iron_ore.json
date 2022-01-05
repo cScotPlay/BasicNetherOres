@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bno:block/nether_iron_ore"
+    }
+  }
+}

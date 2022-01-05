@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "": { "model": "bno:block/lead_block" }
+  "variants": {
+    "": {
+      "model": "bno:block/lead_block"
     }
+  }
 }

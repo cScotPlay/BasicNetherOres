@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "bno:nether_nickel_ore"
+  },
+  "result": "bno:nickel_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

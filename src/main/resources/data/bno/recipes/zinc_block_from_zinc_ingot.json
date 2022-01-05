@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "zinc_block",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bno:zinc_ingot"
+    }
+  },
+  "result": {
+    "item": "bno:zinc_block"
+  }
+}

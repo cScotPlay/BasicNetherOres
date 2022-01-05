@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "silver_block",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bno:silver_ingot"
+    }
+  },
+  "result": {
+    "item": "bno:silver_block"
+  }
+}
