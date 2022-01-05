@@ -27,7 +27,7 @@ public class BlockStateGenerator extends BlockStateProvider
                 simpleOreBlock(block);
 
             if (block instanceof ModRedstoneOreBlock)
-                simpleBlock(block);
+                simpleOreBlock(block);
 
             if (block instanceof ModMetalBlock)
                 simpleBlock(block);

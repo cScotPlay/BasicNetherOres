@@ -1,9 +1,11 @@
 package com.cscot.basicnetherores.world.level.block;
 
 import com.cscot.basicnetherores.api.event.PiglinEvent;
+import com.cscot.basicnetherores.client.renderer.IHelpRender;
 import com.cscot.basicnetherores.config.OreGenerationConfig;
 import com.cscot.basicnetherores.config.OreProtectionConfig;
 import com.cscot.basicnetherores.util.helpers.OreTooltipHelper;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -26,12 +28,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ModRedstoneOreBlock extends RedStoneOreBlock
+public class ModRedstoneOreBlock extends RedStoneOreBlock implements IHelpRender
 {
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
 
     public ModRedstoneOreBlock(Properties properties) {
-        super(properties);
+        super(properties.noOcclusion());
         this.registerDefaultState(this.defaultBlockState().setValue(LIT, Boolean.valueOf(false)));
     }
 
@@ -80,5 +82,11 @@ public class ModRedstoneOreBlock extends RedStoneOreBlock
     @Override
     public int getExpDrop(BlockState state, net.minecraft.world.level.LevelReader world, BlockPos pos, int fortune, int silktouch) {
         return silktouch == 0 ? 1 + RANDOM.nextInt(5) : 0;
+    }
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public RenderType getRenderType() {
+        return RenderType.translucent();
     }
 }
