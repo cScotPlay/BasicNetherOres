@@ -14,13 +14,19 @@
     "issues": "https://github.com/cScotPlay/BasicNetherOres/issues"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT License",
   "icon": "assets/bno/bno-logo.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "com.cscot.basicnetherores.BasicNetherOres"
+    ],
+    "client": [
+      "com.cscot.basicnetherores.client.ClientHandler"
+    ],
+    "fabric-datagen": [
+      "com.cscot.basicnetherores.data.DataGeneratorEntrypoint"
     ]
   },
 
@@ -29,7 +35,7 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.12.5",
+    "fabricloader": ">=0.12.12",
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
