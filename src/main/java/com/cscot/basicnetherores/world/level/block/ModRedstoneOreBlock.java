@@ -87,6 +87,6 @@ public class ModRedstoneOreBlock extends RedStoneOreBlock implements IHelpRender
     @Override
     @OnlyIn(Dist.CLIENT)
     public RenderType getRenderType() {
-        return RenderType.translucent();
+        return RenderType.cutout();
     }
 }

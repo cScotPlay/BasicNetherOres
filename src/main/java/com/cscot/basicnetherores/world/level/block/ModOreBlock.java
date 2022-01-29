@@ -155,6 +155,6 @@ public class ModOreBlock extends OreBlock implements IHelpRender
     @Override
     @OnlyIn(Dist.CLIENT)
     public RenderType getRenderType() {
-        return RenderType.translucent();
+        return RenderType.cutout();
     }
 }
