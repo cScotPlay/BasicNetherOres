@@ -10,6 +10,7 @@ public class ClientHandler implements ClientModInitializer
     @Override
     public void onInitializeClient()
     {
+        ShippedResourcePacks.extractFiles("Basic Nether Ores 16x");
         registerRenderTypes();
     }
 
