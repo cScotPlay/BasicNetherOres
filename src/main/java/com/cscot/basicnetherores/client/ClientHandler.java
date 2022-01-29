@@ -12,12 +12,12 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.RegistryObject;
 
-@OnlyIn(Dist.CLIENT)
-@Mod.EventBusSubscriber(modid = BasicNetherOres.modid, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
+//@OnlyIn(Dist.CLIENT)
+//@Mod.EventBusSubscriber(modid = BasicNetherOres.modid, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClientHandler
 {
-    @SubscribeEvent
-    public static void clientSetup(FMLClientSetupEvent event) {
+    //@SubscribeEvent
+    public static void /*clientSetup*/ registerBlockRender(FMLClientSetupEvent event) {
 
         for (RegistryObject<Block> reg : ModBlocks.BLOCKS.getEntries()) {
             Block block = reg.get();

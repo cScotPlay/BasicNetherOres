@@ -11,8 +11,10 @@ import com.cscot.basicnetherores.world.item.ModBlockItems;
 import com.cscot.basicnetherores.world.item.ModItems;
 import com.cscot.basicnetherores.world.level.block.ModBlocks;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -56,6 +58,9 @@ public class BasicNetherOres
         ModBlocks.BLOCKS.register(FML);
 
         MTA.register(OreGenerator.class);
+
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT,
+                () -> () -> BasicNetherOresClient.clientSetup(FML, MTA));
     }
 
     public static final Logger logger = LogManager.getLogger();
