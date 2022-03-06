@@ -4,17 +4,16 @@ import com.cscot.basicnetherores.BasicNetherOres;
 import com.cscot.basicnetherores.api.BlockLists;
 import com.cscot.basicnetherores.blocks.ModMetalBlocks;
 import com.cscot.basicnetherores.blocks.ModOreBlock;
-import com.google.common.collect.ImmutableMap;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockStateDefinitionProvider;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.model.*;
+import net.minecraft.data.client.Model;
+import net.minecraft.data.client.TextureKey;
 import net.minecraft.util.Identifier;
 
 import java.util.Optional;
-import java.util.function.Consumer;
 
 public class BlockStateGenerator extends FabricBlockStateDefinitionProvider
 {
