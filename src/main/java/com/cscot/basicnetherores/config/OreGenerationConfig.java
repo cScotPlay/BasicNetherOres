@@ -355,7 +355,7 @@ public class OreGenerationConfig
                 .define("ore_generation.world_generation.nickel", false);
         copperGeneration = builder
                 .comment("Generate Copper Ore")
-                .define("ore_generation.world_generation.copper", false);
+                .define("ore_generation.world_generation.copper", true);
         aluminumGeneration = builder
                 .comment("Generate Aluminum Ore")
                 .define("ore_generation.world_generation.aluminum", false);
