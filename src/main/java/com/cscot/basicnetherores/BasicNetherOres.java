@@ -40,7 +40,7 @@ public class BasicNetherOres implements ModInitializer {
 		RegistryHandler.onItemRegistry();
 		RegistryHandler.onIngotRegistry();
 
-		ModOreConfiguredFeatures.initModOreConfiguredFeatures();
+		//ModOreConfiguredFeatures.initModOreConfiguredFeatures();
 		ModOrePlacedFeature.initOrePlacedFeatures();
 
 		LOGGER.info("Basic Nether Ores setup done!");
