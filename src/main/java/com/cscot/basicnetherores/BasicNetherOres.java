@@ -1,11 +1,9 @@
 package com.cscot.basicnetherores;
 
 
-import com.cscot.basicnetherores.data.worldgen.ModOrePlacedFeature;
 import com.cscot.basicnetherores.util.handler.ConfigHandler;
 import com.cscot.basicnetherores.util.helpers.BlockListHelper;
 import com.cscot.basicnetherores.util.itemgroups.BNOItemGroup;
-import com.cscot.basicnetherores.data.worldgen.ModOreConfiguredFeatures;
 import com.cscot.basicnetherores.world.OreGenerator;
 import com.cscot.basicnetherores.world.item.ModBlockItems;
 import com.cscot.basicnetherores.world.item.ModItems;
@@ -68,9 +66,6 @@ public class BasicNetherOres
     //This used to be the PreInit
     private void setup(FMLCommonSetupEvent event)
     {
-
-        ModOreConfiguredFeatures.initModFeatures();
-        ModOrePlacedFeature.initOrePlacedFeatures();
         ProtectedListInit();
 
         LOGGER.info("Setup Method Registered (PreInit)");

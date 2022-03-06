@@ -1,21 +1,14 @@
 package com.cscot.basicnetherores.world;
 
 
-import com.cscot.basicnetherores.BasicNetherOres;
 import com.cscot.basicnetherores.config.OreGenerationConfig;
-import com.cscot.basicnetherores.data.worldgen.ModOrePlacedFeature;
-import com.cscot.basicnetherores.data.worldgen.ModOrePlacedFeature;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.data.BuiltinRegistries;
+import com.cscot.basicnetherores.data.worldgen.ModOrePlacement;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-
-import java.util.Map;
 
 
 //@Mod.EventBusSubscriber(modid = BasicNetherOres.modid, bus = Mod.EventBusSubscriber.Bus.FORGE)
@@ -30,63 +23,63 @@ public class OreGenerator
         if (biome == Biome.BiomeCategory.NETHER)
         {
             if(OreGenerationConfig.emeraldGeneration.get()){
-                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacedFeature.ORE_EMERALD_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacement.ORE_EMERALD_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.diamondGeneration.get()){
-                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacedFeature.ORE_DIAMOND_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacement.ORE_DIAMOND_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.redstoneGeneration.get()){
-                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacedFeature.ORE_REDSTONE_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacement.ORE_REDSTONE_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.lapisGeneration.get()){
-                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacedFeature.ORE_LAPIS_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacement.ORE_LAPIS_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.coalGeneration.get()){
-                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacedFeature.ORE_COAL_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacement.ORE_COAL_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.silverGeneration.get()){
-                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacedFeature.ORE_SILVER_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacement.ORE_SILVER_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.ironGeneration.get()){
-                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacedFeature.ORE_IRON_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModOrePlacement.ORE_IRON_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.leadGeneration.get()){
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_LEAD_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModOrePlacement.ORE_LEAD_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.nickelGeneration.get()){
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_NICKEL_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModOrePlacement.ORE_NICKEL_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.copperGeneration.get()){
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_COPPER_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModOrePlacement.ORE_COPPER_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.aluminumGeneration.get()){
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_ALUMINUM_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModOrePlacement.ORE_ALUMINUM_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.tinGeneration.get()){
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_TIN_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModOrePlacement.ORE_TIN_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.osmiumGeneration.get()){
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_OSMIUM_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModOrePlacement.ORE_OSMIUM_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.uraniumGeneration.get()){
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_URANIUM_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModOrePlacement.ORE_URANIUM_PLACED_FEATURE);
             }
 
             if(OreGenerationConfig.zincGeneration.get()){
-                event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_DECORATION).add(() -> ModOrePlacedFeature.ORE_ZINC_NETHER);
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModOrePlacement.ORE_ZINC_PLACED_FEATURE);
             }
         }
     }
