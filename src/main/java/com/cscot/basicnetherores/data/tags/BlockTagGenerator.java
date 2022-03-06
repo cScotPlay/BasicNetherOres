@@ -6,10 +6,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import java.util.Comparator;
@@ -22,25 +20,33 @@ public class BlockTagGenerator extends BlockTagsProvider
 {
     protected final Predicate<Block> ORE_BLOCKS = registry -> BasicNetherOres.modid.equals(registry.getRegistryName().getNamespace());
 
-    public static final Tags.IOptionalNamedTag<Block> ORES_ALUMINUM = tagForge("ores/aluminum");
-    public static final Tags.IOptionalNamedTag<Block> ORES_SILVER = tagForge("ores/silver");
-    public static final Tags.IOptionalNamedTag<Block> ORES_LEAD = tagForge("ores/lead");
-    public static final Tags.IOptionalNamedTag<Block> ORES_NICKEL = tagForge("ores/nickel");
-    public static final Tags.IOptionalNamedTag<Block> ORES_COPPER = tagForge("ores/copper");
-    public static final Tags.IOptionalNamedTag<Block> ORES_TIN = tagForge("ores/tin");
-    public static final Tags.IOptionalNamedTag<Block> ORES_OSMIUM = tagForge("ores/osmium");
-    public static final Tags.IOptionalNamedTag<Block> ORES_URANIUM = tagForge("ores/uranium");
-    public static final Tags.IOptionalNamedTag<Block> ORES_ZINC = tagForge("ores/zinc");
+    public static final TagKey<Block> ORES_ALUMINUM = tagForge("ores/aluminum");
+    public static final TagKey<Block> ORES_SILVER = tagForge("ores/silver");
+    public static final TagKey<Block> ORES_LEAD = tagForge("ores/lead");
+    public static final TagKey<Block> ORES_NICKEL = tagForge("ores/nickel");
+    public static final TagKey<Block> ORES_COPPER = tagForge("ores/copper");
+    public static final TagKey<Block> ORES_TIN = tagForge("ores/tin");
+    public static final TagKey<Block> ORES_OSMIUM = tagForge("ores/osmium");
+    public static final TagKey<Block> ORES_URANIUM = tagForge("ores/uranium");
+    public static final TagKey<Block> ORES_ZINC = tagForge("ores/zinc");
 
-    public static final Tags.IOptionalNamedTag<Block> ALUMINUM_BLOCK = tagForge("storage_blocks/aluminum");
-    public static final Tags.IOptionalNamedTag<Block> SILVER_BLOCK = tagForge("storage_blocks/silver");
-    public static final Tags.IOptionalNamedTag<Block> LEAD_BLOCK = tagForge("storage_blocks/lead");
-    public static final Tags.IOptionalNamedTag<Block> NICKEL_BLOCK = tagForge("storage_blocks/nickel");
-    public static final Tags.IOptionalNamedTag<Block> COPPER_BLOCK = tagForge("storage_blocks/copper");
-    public static final Tags.IOptionalNamedTag<Block> TIN_BLOCK = tagForge("storage_blocks/tin");
-    public static final Tags.IOptionalNamedTag<Block> OSMIUM_BLOCK = tagForge("storage_blocks/osmium");
-    public static final Tags.IOptionalNamedTag<Block> URANIUM_BLOCK = tagForge("storage_blocks/uranium");
-    public static final Tags.IOptionalNamedTag<Block> ZINC_BLOCK = tagForge("storage_blocks/zinc");
+    public static final TagKey<Block> ALUMINUM_BLOCK = tagForge("storage_blocks/aluminum");
+    public static final TagKey<Block> SILVER_BLOCK = tagForge("storage_blocks/silver");
+    public static final TagKey<Block> LEAD_BLOCK = tagForge("storage_blocks/lead");
+    public static final TagKey<Block> NICKEL_BLOCK = tagForge("storage_blocks/nickel");
+    public static final TagKey<Block> TIN_BLOCK = tagForge("storage_blocks/tin");
+    public static final TagKey<Block> OSMIUM_BLOCK = tagForge("storage_blocks/osmium");
+    public static final TagKey<Block> URANIUM_BLOCK = tagForge("storage_blocks/uranium");
+    public static final TagKey<Block> ZINC_BLOCK = tagForge("storage_blocks/zinc");
+
+    public static final TagKey<Block> RAW_ALUMINUM_BLOCK = tagForge("storage_blocks/raw_aluminum");
+    public static final TagKey<Block> RAW_SILVER_BLOCK = tagForge("storage_blocks/raw_silver");
+    public static final TagKey<Block> RAW_LEAD_BLOCK = tagForge("storage_blocks/raw_lead");
+    public static final TagKey<Block> RAW_NICKEL_BLOCK = tagForge("storage_blocks/raw_nickel");
+    public static final TagKey<Block> RAW_TIN_BLOCK = tagForge("storage_blocks/raw_tin");
+    public static final TagKey<Block> RAW_OSMIUM_BLOCK = tagForge("storage_blocks/raw_osmium");
+    public static final TagKey<Block> RAW_URANIUM_BLOCK = tagForge("storage_blocks/raw_uranium");
+    public static final TagKey<Block> RAW_ZINC_BLOCK = tagForge("storage_blocks/raw_zinc");
 
     public BlockTagGenerator(DataGenerator generator, ExistingFileHelper exFileHelper) {
         super(generator, BasicNetherOres.modid, exFileHelper);
@@ -54,6 +60,7 @@ public class BlockTagGenerator extends BlockTagsProvider
         // ***************************************************************************** //
         tag(ORES).add(registry.stream().filter(ORE_BLOCKS).filter(b -> b instanceof ModOreBlock).sorted(Comparator.comparing(Block::getRegistryName)).toArray(Block[]::new));
         tag(STORAGE_BLOCKS).add(registry.stream().filter(ORE_BLOCKS).filter(b -> b instanceof ModMetalBlock).sorted(Comparator.comparing(Block::getRegistryName)).toArray(Block[]::new));
+        tag(STORAGE_BLOCKS).add(registry.stream().filter(ORE_BLOCKS).filter(b -> b instanceof ModRawOreBlock).sorted(Comparator.comparing(Block::getRegistryName)).toArray(Block[]::new));
 
         tag(ORES_COAL).add(ModBlocks.NETHER_COAL_ORE.get());
         tag(ORES_DIAMOND).add(ModBlocks.NETHER_DIAMOND_ORE.get());
@@ -76,11 +83,19 @@ public class BlockTagGenerator extends BlockTagsProvider
         tag(SILVER_BLOCK).add(ModBlocks.SILVER_BLOCK.get());
         tag(LEAD_BLOCK).add(ModBlocks.LEAD_BLOCK.get());
         tag(NICKEL_BLOCK).add(ModBlocks.NICKEL_BLOCK.get());
-        tag(COPPER_BLOCK).add(Blocks.COPPER_BLOCK);
         tag(TIN_BLOCK).add(ModBlocks.TIN_BLOCK.get());
         tag(OSMIUM_BLOCK).add(ModBlocks.OSMIUM_BLOCK.get());
         tag(URANIUM_BLOCK).add(ModBlocks.URANIUM_BLOCK.get());
         tag(ZINC_BLOCK).add(ModBlocks.ZINC_BLOCK.get());
+
+        tag(RAW_ALUMINUM_BLOCK).add(ModBlocks.RAW_ALUMINUM_BLOCK.get());
+        tag(RAW_SILVER_BLOCK).add(ModBlocks.RAW_SILVER_BLOCK.get());
+        tag(RAW_LEAD_BLOCK).add(ModBlocks.RAW_LEAD_BLOCK.get());
+        tag(RAW_NICKEL_BLOCK).add(ModBlocks.RAW_NICKEL_BLOCK.get());
+        tag(RAW_TIN_BLOCK).add(ModBlocks.RAW_TIN_BLOCK.get());
+        tag(RAW_OSMIUM_BLOCK).add(ModBlocks.RAW_OSMIUM_BLOCK.get());
+        tag(RAW_URANIUM_BLOCK).add(ModBlocks.RAW_URANIUM_BLOCK.get());
+        tag(RAW_ZINC_BLOCK).add(ModBlocks.RAW_ZINC_BLOCK.get());
 
         // ***************************************************************************** //
         //  Vanilla Tags
@@ -134,8 +149,8 @@ public class BlockTagGenerator extends BlockTagsProvider
                 ModBlocks.OSMIUM_BLOCK.get());
     }
 
-    private static Tags.IOptionalNamedTag<Block> tagForge(String name)
+    private static TagKey<Block> tagForge(String name)
     {
-        return BlockTags.createOptional(new ResourceLocation("forge", name));
+        return BlockTags.create(new ResourceLocation("forge", name));
     }
 }
