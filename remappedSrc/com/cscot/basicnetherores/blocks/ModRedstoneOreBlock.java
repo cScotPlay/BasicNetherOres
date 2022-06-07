@@ -23,6 +23,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
@@ -56,8 +57,8 @@ public class ModRedstoneOreBlock extends RedstoneOreBlock
     {
         if (this == OreBlockLists.NETHER_REDSTONE_ORE){
             if (!ModConfig.redstoneGeneration){
-                tooltip.add(Text.translatable("tooltip.config.tip"));}
-            else tooltip.add(Text.translatable(OreTooltipHelper.RedstoneOreTip.oreTip, ModConfig.redstoneMinHeight, ModConfig.redstoneMaxHeight));}
+                tooltip.add(new TranslatableText("tooltip.config.tip"));}
+            else tooltip.add(new TranslatableText(OreTooltipHelper.RedstoneOreTip.oreTip, ModConfig.redstoneMinHeight, ModConfig.redstoneMaxHeight));}
     }
 
     @Override
