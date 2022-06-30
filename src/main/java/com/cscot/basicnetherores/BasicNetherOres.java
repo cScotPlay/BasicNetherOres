@@ -1,12 +1,13 @@
 package com.cscot.basicnetherores;
 
 
+import com.cscot.basicnetherores.data.worldgen.WorldDataGenerator;
 import com.cscot.basicnetherores.util.handler.ConfigHandler;
 import com.cscot.basicnetherores.util.helpers.BlockListHelper;
 import com.cscot.basicnetherores.util.itemgroups.BNOItemGroup;
-import com.cscot.basicnetherores.world.OreGenerator;
 import com.cscot.basicnetherores.world.item.ModBlockItems;
 import com.cscot.basicnetherores.world.item.ModItems;
+import com.cscot.basicnetherores.world.level.ModBiomeCodecs;
 import com.cscot.basicnetherores.world.level.block.ModBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.api.distmarker.Dist;
@@ -55,10 +56,12 @@ public class BasicNetherOres
         ModBlockItems.ITEMS.register(FML);
         ModBlocks.BLOCKS.register(FML);
 
-        MTA.register(OreGenerator.class);
+        ModBiomeCodecs.BIOME_MODIFIER_SERIALIZERS.register(FML);
 
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT,
                 () -> () -> BasicNetherOresClient.clientSetup(FML, MTA));
+
+        FML.addListener(WorldDataGenerator::generateWorldData);
     }
 
     public static final Logger logger = LogManager.getLogger();

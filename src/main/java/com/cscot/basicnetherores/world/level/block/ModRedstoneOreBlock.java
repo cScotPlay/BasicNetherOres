@@ -8,7 +8,6 @@ import com.cscot.basicnetherores.util.helpers.OreTooltipHelper;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
@@ -42,9 +41,9 @@ public class ModRedstoneOreBlock extends RedStoneOreBlock implements IHelpRender
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         if (this == ModBlocks.NETHER_REDSTONE_ORE.get()) {
             if (!OreGenerationConfig.redstoneGeneration.get()) {
-                tooltip.add(new TranslatableComponent("tooltip.config.tip"));
+                tooltip.add(Component.translatable("tooltip.config.tip"));
             } else
-                tooltip.add(new TranslatableComponent(OreTooltipHelper.RedstoneOreTip.oreTip, OreGenerationConfig.redstoneMinHeight.get().toString(), OreGenerationConfig.redstoneMaxHeight.get().toString()));
+                tooltip.add(Component.translatable(OreTooltipHelper.RedstoneOreTip.oreTip, OreGenerationConfig.redstoneMinHeight.get().toString(), OreGenerationConfig.redstoneMaxHeight.get().toString()));
         }
     }
 
@@ -80,8 +79,8 @@ public class ModRedstoneOreBlock extends RedStoneOreBlock implements IHelpRender
     }
 
     @Override
-    public int getExpDrop(BlockState state, net.minecraft.world.level.LevelReader world, BlockPos pos, int fortune, int silktouch) {
-        return silktouch == 0 ? 1 + RANDOM.nextInt(5) : 0;
+    public int getExpDrop(BlockState state, net.minecraft.world.level.LevelReader level, net.minecraft.util.RandomSource randomSource, BlockPos pos, int fortuneLevel, int silktouch) {
+        return silktouch == 0 ? 1 + randomSource.nextInt(5) : 0;
     }
 
     @Override
