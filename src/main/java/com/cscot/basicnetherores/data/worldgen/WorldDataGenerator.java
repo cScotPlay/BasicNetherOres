@@ -3,7 +3,7 @@ package com.cscot.basicnetherores.data.worldgen;
 import com.cscot.basicnetherores.data.worldgen.biomemodifier.BiomeModifierGenerator;
 import com.cscot.basicnetherores.data.worldgen.configuredfeatures.ConfiguredFeatureGenerator;
 import com.cscot.basicnetherores.data.worldgen.placedfeatures.PlacedFeatureGenerator;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.data.event.GatherDataEvent;
 
 public class WorldDataGenerator
 {

@@ -11,7 +11,7 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.event.world.BlockEvent.*;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,7 +23,7 @@ public class BlockOreEvent
     /** Reference to the Player who broke the block. If no player is available, use a EntityFakePlayer */
 
     @SubscribeEvent (priority = EventPriority.HIGH, receiveCanceled = false)
-    public static void BreakEvent(BreakEvent event)
+    public static void BreakEvent(BlockEvent.BreakEvent event)
     {
         Player player = event.getPlayer();
         int isSilkTouching = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, player.getMainHandItem());

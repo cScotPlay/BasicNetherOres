@@ -8,9 +8,9 @@ import com.cscot.basicnetherores.data.recipes.CraftingRecipeBuilder;
 import com.cscot.basicnetherores.data.tags.BlockTagGenerator;
 import com.cscot.basicnetherores.data.tags.ItemTagGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = BasicNetherOres.modid, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators
