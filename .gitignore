@@ -5,14 +5,14 @@ bin
 .metadata
 .classpath
 .project
-*.log
 
 # idea
 out
 *.ipr
 *.iws
 *.iml
-.idea
+.idea/*
+!.idea/scopes
 
 # gradle
 build
@@ -21,9 +21,5 @@ build
 # other
 eclipse
 run
-runServer
-logs
-.cache
 
-
-/src/generated/
+src/generated/resources
