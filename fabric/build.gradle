@@ -7,13 +7,41 @@ plugins {
 base {
     archivesName = "${mod_name}-fabric-${minecraft_version}"
 }
+repositories{
+    maven {
+        name = "WTHIT"
+        url "https://maven.bai.lol" }
+    maven {
+        name = "ModMenu"
+        url 'https://maven.terraformersmc.com/releases/' }
+
+    maven {
+        name = "JEI"
+        url "https://dvs1.progwml6.com/files/maven/"
+    }
+}
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+
     implementation project(":common")
+
+    modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${project.wthit_version}"
+    modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${project.wthit_version}"
+
+    modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+    modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+    // compile against the JEI API but do not include it at runtime
+    modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}")
+    // at runtime, use the full JEI jar for Fabric
+    modRuntimeOnly("mezz.jei:jei-${minecraft_version}-fabric:${jei_version}")
+    runtimeOnly 'blue.endless:jankson:1.1.2'
+    modImplementation("maven.modrinth:paragon:fabric-3.0.2-1.20x")
 }
 
 loom {
@@ -67,6 +95,11 @@ tasks.withType(Javadoc).configureEach {
 }
 tasks.named("sourcesJar", Jar) {
     from(project(":common").sourceSets.main.allSource)
+}
+
+sourceSets.main.resources {
+    srcDirs += 'src/main/generated'
+    srcDirs += '../common/src/generated/resources'
 }
 
 processResources {

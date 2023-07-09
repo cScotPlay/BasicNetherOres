@@ -1,18 +1,17 @@
-modLoader = "javafml" #mandatory
-loaderVersion = "[47,)" #mandatory This is typically bumped every Minecraft version by Forge. See https://files.minecraftforge.net/ for a list of versions.
-license = "C0-1.0" # Review your options at https://choosealicense.com/.
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
-[[mods]] #mandatory
-modId = "bno" #mandatory
-version = "${file.jarVersion}" #mandatory
-displayName = "${mod_name}" #mandatory
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional (see https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/)
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional (displayed in the mod UI)
-logoFile = "multiloader.png" #optional (needs to be in the root of your mod jar (root of your 'resources' folder))
-credits = "Thanks for this example mod goes to Java" #optional
-authors = "${mod_author}" #optional
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "MIT License"
+issueTrackerURL="https://github.com/cScotPlay/BasicNetherOres/issues"
+[[mods]]
+modId = "bno"
+version = "${file.jarVersion}"
+displayName = "${mod_name}"
+displayURL="https://minecraft.curseforge.com/projects/basic-nether-ores"
+logoFile = "bno-logo.png"
+credits = "Thanks to An Sar for the help in working through this.  Thanks to McJty for putting together the tutorial videos that helped me to accomplish this."
+authors = "${mod_author}"
 description = '''
-This is a long form description of the mod. You can write whatever you want here
+Basic Nether Ores adds Overworld and Modded Ores to the Nether.
 ''' #mandatory (Supports multiline text)
 [[dependencies.bno]] #optional
 modId = "forge" #mandatory

@@ -22,4 +22,5 @@ build
 eclipse
 run
 
-src/generated/resources
+/common/src/generated/resources/.cache/
+/common/src/generated/resources/

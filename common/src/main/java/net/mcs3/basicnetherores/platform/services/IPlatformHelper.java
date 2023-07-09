@@ -1,6 +1,18 @@
 package net.mcs3.basicnetherores.platform.services;
 
+import net.mcs3.basicnetherores.platform.Services;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+
 public interface IPlatformHelper {
+
+    default boolean isFabric() {
+        return !isForge();
+    }
+
+    default boolean isForge() {
+        return !isFabric();
+    }
 
     /**
      * Gets the name of the current platform
@@ -33,4 +45,10 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    Item.Properties defaultItemBuilder();
+    CreativeModeTab.Builder creativeTab();
+
+
+    IPlatformHelper INSTANCE = Services.loadService(IPlatformHelper.class, null);
 }

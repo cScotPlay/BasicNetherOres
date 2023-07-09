@@ -3,16 +3,17 @@
     "id": "bno",
     "version": "${version}",
     "name": "${mod_name}",
-    "description": "This is an example description! Tell everyone what your mod is about!",
+    "description": "Basic Nether Ores adds Overworld and Modded Ores to the Nether.",
     "authors": [
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "https://minecraft.curseforge.com/projects/basic-nether-ores",
+        "sources": "https://github.com/cScotPlay/BasicNetherOres",
+        "issues": "https://github.com/cScotPlay/BasicNetherOres/issues"
     },
-    "license": "CC0-1.0",
-    "icon": "assets/modid/icon.png",
+    "license": "MIT License",
+    "icon": "bno-logo.png",
     "environment": "*",
     "entrypoints": {
         "main": [
@@ -20,13 +21,10 @@
         ],
         "client": [
             "net.mcs3.basicnetherores.FabricBasicNetherOresClient"
-        ],
-        "fabric-datagen": [
-            "net.mcs3.basicnetherores.data.DataGenerators"
         ]
     },
     "mixins": [
-        "basicnetherores.fabric.mixins.json"
+        "bno.fabric.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=0.14",

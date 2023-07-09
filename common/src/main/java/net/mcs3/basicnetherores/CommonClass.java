@@ -1,5 +1,9 @@
 package net.mcs3.basicnetherores;
 
+import com.kyanite.paragon.api.ConfigManager;
+import net.mcs3.basicnetherores.config.BNOConfigs;
+import net.mcs3.basicnetherores.init.BNOConfiguredFeatures;
+import net.mcs3.basicnetherores.init.BNOPlacedFeatures;
 import net.mcs3.basicnetherores.platform.Services;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
@@ -15,8 +19,8 @@ public class CommonClass {
     // code that gets invoked by the entry point of the loader specific projects.
     public static void init() {
 
-        Constants.LOG.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
-        Constants.LOG.info("The ID for diamonds is {}", BuiltInRegistries.ITEM.getKey(Items.DIAMOND));
+        Constants.LOGGER.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
+        Constants.LOGGER.info("The ID for diamonds is {}", BuiltInRegistries.ITEM.getKey(Items.DIAMOND));
 
         // It is common for all supported loaders to provide a similar feature that can not be used directly in the
         // common code. A popular way to get around this is using Java's built-in service loader feature to create
@@ -25,7 +29,11 @@ public class CommonClass {
         // the platform specific approach.
         if (Services.PLATFORM.isModLoaded("bno")) {
 
-            Constants.LOG.info("Hello to Basic Nether Ores");
+            Constants.LOGGER.info("Hello to Basic Nether Ores");
         }
+        BNOConfiguredFeatures.initialize();
+        BNOPlacedFeatures.initialize();
+
+        ConfigManager.register(Constants.MOD_ID, new BNOConfigs());
     }
 }

@@ -51,29 +51,60 @@ minecraft {
                 }
             }
         }
-//        data {
-//            workingDirectory project.file('run')
-//            ideaModule "${rootProject.name}.${project.name}.main"
+        data {
+            workingDirectory project.file('run')
+            ideaModule "${rootProject.name}.${project.name}.main"
 //            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-//            taskName 'Data'
-//            property 'mixin.env.remapRefMap', 'true'
-//            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-//            mods {
-//                modDataRun {
-//                    source sourceSets.main
-//                    source project(":common").sourceSets.main
-//                }
-//            }
-//        }
+//            args '--mod', mod_id, '--all', '--output', file('../common/src/generated/resources/'), '--existing', file('src/main/resources/')
+            args "--mod", mod_id
+            args "--all"
+            args "--output", project(":common").file("src/generated/resources")
+            args "--validate"
+            args "--existing", project(":common").file("src/main/resources")
+            taskName 'Data'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                modDataRun {
+                    source sourceSets.main
+                    source project(":common").sourceSets.main
+                }
+            }
+        }
     }
 }
 
 sourceSets.main.resources.srcDir 'src/generated/resources'
+sourceSets.main.resources.srcDir '../common/src/generated/resources'
+
+repositories {
+    maven {
+        name = "JEI"
+        url "https://dvs1.progwml6.com/files/maven/"
+    }
+
+    maven { url "https://maven.bai.lol" }
+    maven { url 'https://maven.blamejared.com' }
+
+}
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
+
+    compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
+    compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
+    // at runtime, use the full JEI jar for Forge
+    runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+
+
+    compileOnly fg.deobf("mcp.mobius.waila:wthit-api:forge-${wthit_version}")
+    runtimeOnly fg.deobf("mcp.mobius.waila:wthit:forge-${wthit_version}")
+    runtimeOnly fg.deobf("lol.bai:badpackets:forge-0.4.1")
+    runtimeOnly 'blue.endless:jankson:1.1.2'
+    implementation fg.deobf("maven.modrinth:paragon:forge-3.0.2-1.20x")
+
 }
 
 tasks.withType(JavaCompile).configureEach {

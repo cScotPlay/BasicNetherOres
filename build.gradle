@@ -5,6 +5,18 @@ plugins {
     id("org.spongepowered.mixin") version "0.7-SNAPSHOT" apply(false)
 }
 
+allprojects {
+    repositories {
+        maven {
+            name = "Modrinth"
+            url = "https://api.modrinth.com/maven"
+            content {
+                includeGroup "maven.modrinth"
+            }
+        }
+    }
+}
+
 subprojects {
     apply plugin: 'java'
 
