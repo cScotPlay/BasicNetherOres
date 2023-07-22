@@ -5,6 +5,7 @@ import net.mcs3.basicnetherores.init.BNOBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -21,79 +22,48 @@ import static net.mcs3.basicnetherores.util.helper.OreTextHelper.*;
 
 public class ModOreBlock extends DropExperienceBlock {
 
-    private final UniformInt xpRange;
+    private final IntProvider xpRange;
 
-    public ModOreBlock(Properties properties, UniformInt experienceDropped)
-    {
+    public ModOreBlock(Properties properties, IntProvider experienceDropped) {
         super(properties.noOcclusion());
         this.xpRange = experienceDropped;
-
-        //ItemList.items.add(new BlockItem(this, new Item.Properties().tab(BasicNetherOres.bnoItemGroup)).setRegistryName(RegisteryHandler.RegistryEvents.location(oreName)));
     }
 
-    public ModOreBlock(Properties properties)
-    {
+    public ModOreBlock(Properties properties) {
         this(properties, UniformInt.of(0, 0));
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter worldIn, List<Component> tooltip, TooltipFlag flagIn)
-    {
-        if(this == BNOBlocks.NETHER_EMERALD_ORE){
-            tooltip.add(Component.translatable(EmeraldOreTip.oreTip, emeraldMinHeight.toString(), emeraldMaxHeight.toString()));
+    public void appendHoverText(ItemStack stack, @Nullable BlockGetter worldIn, List<Component> tooltip, TooltipFlag flagIn) {
+        if (this == BNOBlocks.NETHER_EMERALD_ORE) {
+            tooltip.add(Component.translatable(emeraldOreTip, emeraldMinHeight.toString(), emeraldMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_DIAMOND_ORE) {
+            tooltip.add(Component.translatable(diamondOreTip, diamondMinHeight.toString(), diamondMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_LAPIS_ORE) {
+            tooltip.add(Component.translatable(lapisOreTip, lapisMinHeight.toString(), lapisMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_COAL_ORE) {
+            tooltip.add(Component.translatable(coalOreTip, coalMinHeight.toString(), coalMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_SILVER_ORE) {
+            tooltip.add(Component.translatable(silverOreTip, silverMinHeight.toString(), silverMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_IRON_ORE) {
+            tooltip.add(Component.translatable(ironOreTip, ironMinHeight.toString(), ironMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_LEAD_ORE) {
+            tooltip.add(Component.translatable(leadOreTip, leadMinHeight.toString(), leadMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_NICKEL_ORE) {
+            tooltip.add(Component.translatable(nickelOreTip, nickelMinHeight.toString(), nickelMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_COPPER_ORE) {
+            tooltip.add(Component.translatable(copperOreTip, copperMinHeight.toString(), copperMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_ALUMINUM_ORE) {
+            tooltip.add(Component.translatable(aluminumOreTip, aluminumMinHeight.toString(), aluminumMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_TIN_ORE) {
+            tooltip.add(Component.translatable(tinOreTip, tinMinHeight.toString(), tinMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_OSMIUM_ORE) {
+            tooltip.add(Component.translatable(osmiumOreTip, osmiumMinHeight.toString(), osmiumMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_URANIUM_ORE) {
+            tooltip.add(Component.translatable(uraniumOreTip, uraniumMinHeight.toString(), uraniumMaxHeight.toString()));
+        } else if (this == BNOBlocks.NETHER_ZINC_ORE) {
+            tooltip.add(Component.translatable(zincOreTip, zincMinHeight.toString(), zincMaxHeight.toString()));
         }
-//        else if (this == ModBlocks.NETHER_DIAMOND_ORE.get()){
-//            if (!OreGenerationConfig.diamondGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(DiamondOreTip.oreTip, OreGenerationConfig.diamondMinHeight.get().toString(), OreGenerationConfig.diamondMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_LAPIS_ORE.get()){
-//            if (!OreGenerationConfig.lapisGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(LapisOreTip.oreTip, OreGenerationConfig.lapisMinHeight.get().toString(), OreGenerationConfig.lapisMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_COAL_ORE.get()){
-//            if (!OreGenerationConfig.coalGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(CoalOreTip.oreTip, OreGenerationConfig.coalMinHeight.get().toString(), OreGenerationConfig.coalMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_SILVER_ORE.get()){
-//            if (!OreGenerationConfig.silverGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(SilverOreTip.oreTip, OreGenerationConfig.silverMinHeight.get().toString(), OreGenerationConfig.silverMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_IRON_ORE.get()){
-//            if (!OreGenerationConfig.ironGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(IronOreTip.oreTip, OreGenerationConfig.ironMinHeight.get().toString(), OreGenerationConfig.ironMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_LEAD_ORE.get()){
-//            if (!OreGenerationConfig.leadGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(LeadOreTip.oreTip, OreGenerationConfig.leadMinHeight.get().toString(), OreGenerationConfig.leadMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_NICKEL_ORE.get()){
-//            if (!OreGenerationConfig.nickelGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(NickelOreTip.oreTip, OreGenerationConfig.nickelMinHeight.get().toString(), OreGenerationConfig.nickelMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_COPPER_ORE.get()){
-//            if (!OreGenerationConfig.copperGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(CopperOreTip.oreTip, OreGenerationConfig.copperMinHeight.get().toString(), OreGenerationConfig.copperMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_ALUMINUM_ORE.get()){
-//            if (!OreGenerationConfig.aluminumGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(AluminumOreTip.oreTip, OreGenerationConfig.aluminumMinHeight.get().toString(), OreGenerationConfig.aluminumMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_TIN_ORE.get()){
-//            if (!OreGenerationConfig.tinGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(TinOreTip.oreTip, OreGenerationConfig.tinMinHeight.get().toString(), OreGenerationConfig.tinMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_OSMIUM_ORE.get()){
-//            if (!OreGenerationConfig.osmiumGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(OsmiumOreTip.oreTip, OreGenerationConfig.osmiumMinHeight.get().toString(), OreGenerationConfig.osmiumMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_URANIUM_ORE.get()){
-//            if (!OreGenerationConfig.uraniumGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(UraniumOreTip.oreTip, OreGenerationConfig.uraniumMinHeight.get().toString(), OreGenerationConfig.uraniumMaxHeight.get().toString()));}
-//        else if (this == ModBlocks.NETHER_ZINC_ORE.get()){
-//            if (!OreGenerationConfig.zincGeneration.get()){
-//                tooltip.add(Component.translatable("tooltip.config.tip"));}
-//            else tooltip.add(Component.translatable(ZincOreTip.oreTip, OreGenerationConfig.zincMinHeight.get().toString(), OreGenerationConfig.zincMaxHeight.get().toString()));}
     }
 
     /**
@@ -134,10 +104,4 @@ public class ModOreBlock extends DropExperienceBlock {
 //            guard.setTarget(event.getThief());
 //        }
     }
-
-//    @Override
-//    @OnlyIn(Dist.CLIENT)
-//    public RenderType getRenderType() {
-//        return RenderType.cutout();
-//    }
 }

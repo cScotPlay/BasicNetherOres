@@ -1,6 +1,7 @@
 package net.mcs3.basicnetherores.data.tags;
 
 import net.mcs3.basicnetherores.Constants;
+import net.mcs3.basicnetherores.init.BNOItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -92,8 +93,81 @@ public class ItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
+        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
 
+        copy(Tags.Blocks.ORES_COAL, Tags.Items.ORES_COAL);
+        copy(Tags.Blocks.ORES_DIAMOND, Tags.Items.ORES_DIAMOND);
         copy(Tags.Blocks.ORES_EMERALD, Tags.Items.ORES_EMERALD);
+        copy(Tags.Blocks.ORES_IRON, Tags.Items.ORES_IRON);
+        copy(Tags.Blocks.ORES_LAPIS, Tags.Items.ORES_LAPIS);
+        copy(Tags.Blocks.ORES_REDSTONE, Tags.Items.ORES_REDSTONE);
+
+        copy(BlockTagGenerator.ORES_ALUMINUM, ORES_ALUMINUM);
+        copy(BlockTagGenerator.ORES_SILVER, ORES_SILVER);
+        copy(BlockTagGenerator.ORES_LEAD, ORES_LEAD);
+        copy(BlockTagGenerator.ORES_NICKEL, ORES_NICKEL);
+        copy(BlockTagGenerator.ORES_COPPER, ORES_COPPER);
+        copy(BlockTagGenerator.ORES_TIN, ORES_TIN);
+        copy(BlockTagGenerator.ORES_OSMIUM, ORES_OSMIUM);
+        copy(BlockTagGenerator.ORES_URANIUM, ORES_URANIUM);
+        copy(BlockTagGenerator.ORES_ZINC, ORES_ZINC);
+
+        copy(BlockTagGenerator.ALUMINUM_BLOCK, ALUMINUM_BLOCK);
+        copy(BlockTagGenerator.SILVER_BLOCK, SILVER_BLOCK);
+        copy(BlockTagGenerator.LEAD_BLOCK, LEAD_BLOCK);
+        copy(BlockTagGenerator.NICKEL_BLOCK, NICKEL_BLOCK);
+        copy(BlockTagGenerator.TIN_BLOCK, TIN_BLOCK);
+        copy(BlockTagGenerator.OSMIUM_BLOCK, OSMIUM_BLOCK);
+        copy(BlockTagGenerator.URANIUM_BLOCK, URANIUM_BLOCK);
+        copy(BlockTagGenerator.ZINC_BLOCK, ZINC_BLOCK);
+
+        copy(BlockTagGenerator.RAW_ALUMINUM_BLOCK, RAW_ALUMINUM_BLOCK);
+        copy(BlockTagGenerator.RAW_SILVER_BLOCK, RAW_SILVER_BLOCK);
+        copy(BlockTagGenerator.RAW_LEAD_BLOCK, RAW_LEAD_BLOCK);
+        copy(BlockTagGenerator.RAW_NICKEL_BLOCK, RAW_NICKEL_BLOCK);
+        copy(BlockTagGenerator.RAW_TIN_BLOCK, RAW_TIN_BLOCK);
+        copy(BlockTagGenerator.RAW_OSMIUM_BLOCK, RAW_OSMIUM_BLOCK);
+        copy(BlockTagGenerator.RAW_URANIUM_BLOCK, RAW_URANIUM_BLOCK);
+        copy(BlockTagGenerator.RAW_ZINC_BLOCK, RAW_ZINC_BLOCK);
+
+//        tag(Tags.Items.INGOTS).addTags(INGOT_ALUMINUM, INGOT_SILVER, INGOT_LEAD, INGOT_NICKEL, INGOT_TIN, INGOT_OSMIUM, INGOT_URANIUM, INGOT_ZINC);
+//        tag(INGOT_ALUMINUM).add(BNOItems.ALUMINUM_INGOT);
+//        tag(INGOT_SILVER).add(BNOItems.SILVER_INGOT);
+//        tag(INGOT_LEAD).add(BNOItems.LEAD_INGOT);
+//        tag(INGOT_NICKEL).add(BNOItems.NICKEL_INGOT);
+//        tag(INGOT_TIN).add(BNOItems.TIN_INGOT);
+//        tag(INGOT_OSMIUM).add(BNOItems.OSMIUM_INGOT);
+//        tag(INGOT_URANIUM).add(BNOItems.URANIUM_INGOT);
+//        tag(INGOT_ZINC).add(BNOItems.ZINC_INGOT);
+//
+//        tag(Tags.Items.NUGGETS).addTags(NUGGET_ALUMINUM, NUGGET_SILVER, NUGGET_LEAD, NUGGET_NICKEL, NUGGET_COPPER, NUGGET_TIN, NUGGET_OSMIUM, NUGGET_ZINC);
+//        tag(NUGGET_ALUMINUM).add(BNOItems.ALUMINUM_NUGGET);
+//        tag(NUGGET_SILVER).add(BNOItems.SILVER_NUGGET);
+//        tag(NUGGET_LEAD).add(BNOItems.LEAD_NUGGET);
+//        tag(NUGGET_NICKEL).add(BNOItems.NICKEL_NUGGET);
+//        tag(NUGGET_COPPER).add(BNOItems.COPPER_NUGGET);
+//        tag(NUGGET_TIN).add(BNOItems.TIN_NUGGET);
+//        tag(NUGGET_OSMIUM).add(BNOItems.OSMIUM_NUGGET);
+//        tag(NUGGET_ZINC).add(BNOItems.ZINC_NUGGET);
+
+        tag(Tags.Items.RAW_MATERIALS).addTags(RAW_ALUMINUM, RAW_SILVER, RAW_LEAD, RAW_NICKEL, RAW_TIN, RAW_OSMIUM, RAW_ZINC);
+        tag(RAW_ALUMINUM).add(BNOItems.RAW_ALUMINUM);
+        tag(RAW_SILVER).add(BNOItems.RAW_SILVER);
+        tag(RAW_LEAD).add(BNOItems.RAW_LEAD);
+        tag(RAW_NICKEL).add(BNOItems.RAW_NICKEL);
+        tag(RAW_TIN).add(BNOItems.RAW_TIN);
+        tag(RAW_OSMIUM).add(BNOItems.RAW_OSMIUM);
+        tag(RAW_URANIUM).add(BNOItems.RAW_URANIUM);
+        tag(RAW_ZINC).add(BNOItems.RAW_ZINC);
+//
+//        tag(RAW_ALUMINUM_ORE).add(BNOItems.RAW_ALUMINUM);
+//        tag(RAW_SILVER_ORE).add(BNOItems.RAW_SILVER);
+//        tag(RAW_LEAD_ORE).add(BNOItems.RAW_LEAD);
+//        tag(RAW_NICKEL_ORE).add(BNOItems.RAW_NICKEL);
+//        tag(RAW_TIN_ORE).add(BNOItems.RAW_TIN);
+//        tag(RAW_OSMIUM_ORE).add(BNOItems.RAW_OSMIUM);
+//        tag(RAW_URANIUM_ORE).add(BNOItems.RAW_URANIUM);
+//        tag(RAW_ZINC_ORE).add(BNOItems.RAW_ZINC);
 
     }
 /*

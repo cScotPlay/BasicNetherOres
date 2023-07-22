@@ -1,6 +1,7 @@
 package net.mcs3.basicnetherores.data.loottables;
 
 import net.mcs3.basicnetherores.init.BNOBlocks;
+import net.mcs3.basicnetherores.init.BNOItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
@@ -74,6 +75,38 @@ public class BlockLootTables extends BlockLootSubProvider
     protected void generate() {
 
         createOreLoot(BNOBlocks.NETHER_EMERALD_ORE, Items.EMERALD);
+        createOreLoot(BNOBlocks.NETHER_DIAMOND_ORE, Items.DIAMOND);
+        createRedstoneOreDrops(BNOBlocks.NETHER_REDSTONE_ORE);
+        createLapisOreDrops(BNOBlocks.NETHER_LAPIS_ORE);
+        createOreLoot(BNOBlocks.NETHER_COAL_ORE, Items.COAL);
+        createOreLoot(BNOBlocks.NETHER_SILVER_ORE, BNOItems.RAW_SILVER);
+        createOreLoot(BNOBlocks.NETHER_IRON_ORE, Items.RAW_IRON);
+        createOreLoot(BNOBlocks.NETHER_LEAD_ORE, BNOItems.RAW_LEAD);
+        createOreLoot(BNOBlocks.NETHER_NICKEL_ORE, BNOItems.RAW_NICKEL);
+        createCopperOreDrops(BNOBlocks.NETHER_COPPER_ORE);
+        createOreLoot(BNOBlocks.NETHER_ALUMINUM_ORE, BNOItems.RAW_ALUMINUM);
+        createOreLoot(BNOBlocks.NETHER_TIN_ORE, BNOItems.RAW_TIN);
+        createOreLoot(BNOBlocks.NETHER_OSMIUM_ORE, BNOItems.RAW_OSMIUM);
+        createOreLoot(BNOBlocks.NETHER_URANIUM_ORE, BNOItems.RAW_URANIUM);
+        createOreLoot(BNOBlocks.NETHER_ZINC_ORE, BNOItems.RAW_ZINC);
+
+        createSelfDrop(BNOBlocks.ALUMINUM_BLOCK);
+        createSelfDrop(BNOBlocks.LEAD_BLOCK);
+        createSelfDrop(BNOBlocks.NICKEL_BLOCK);
+        createSelfDrop(BNOBlocks.OSMIUM_BLOCK);
+        createSelfDrop(BNOBlocks.SILVER_BLOCK);
+        createSelfDrop(BNOBlocks.TIN_BLOCK);
+        createSelfDrop(BNOBlocks.URANIUM_BLOCK);
+        createSelfDrop(BNOBlocks.ZINC_BLOCK);
+
+        createSelfDrop(BNOBlocks.RAW_ALUMINUM_BLOCK);
+        createSelfDrop(BNOBlocks.RAW_LEAD_BLOCK);
+        createSelfDrop(BNOBlocks.RAW_NICKEL_BLOCK);
+        createSelfDrop(BNOBlocks.RAW_OSMIUM_BLOCK);
+        createSelfDrop(BNOBlocks.RAW_SILVER_BLOCK);
+        createSelfDrop(BNOBlocks.RAW_TIN_BLOCK);
+        createSelfDrop(BNOBlocks.RAW_URANIUM_BLOCK);
+        createSelfDrop(BNOBlocks.RAW_ZINC_BLOCK);
 
 
 
@@ -89,6 +122,11 @@ public class BlockLootTables extends BlockLootSubProvider
         this.add(block, (b) -> {
             return this.createOreDrop(b, item);
         });
+        knownBlocks.add(block);
+    }
+
+    private void createSelfDrop(Block block) {
+        dropSelf(block);
         knownBlocks.add(block);
     }
 }

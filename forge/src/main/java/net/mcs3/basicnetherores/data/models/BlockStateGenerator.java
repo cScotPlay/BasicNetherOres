@@ -22,6 +22,40 @@ public class BlockStateGenerator extends BlockStateProvider
     protected void registerStatesAndModels()
     {
         this.simpleOreBlock(BNOBlocks.NETHER_EMERALD_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_DIAMOND_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_REDSTONE_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_LAPIS_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_COAL_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_SILVER_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_IRON_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_LEAD_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_NICKEL_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_COPPER_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_ALUMINUM_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_TIN_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_OSMIUM_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_URANIUM_ORE);
+        this.simpleOreBlock(BNOBlocks.NETHER_ZINC_ORE);
+
+        this.simpleBlock(BNOBlocks.ALUMINUM_BLOCK);
+        this.simpleBlock(BNOBlocks.LEAD_BLOCK);
+        this.simpleBlock(BNOBlocks.NICKEL_BLOCK);
+        this.simpleBlock(BNOBlocks.SILVER_BLOCK);
+        this.simpleBlock(BNOBlocks.TIN_BLOCK);
+        this.simpleBlock(BNOBlocks.OSMIUM_BLOCK);
+        this.simpleBlock(BNOBlocks.URANIUM_BLOCK);
+        this.simpleBlock(BNOBlocks.ZINC_BLOCK);
+
+        this.simpleBlock(BNOBlocks.RAW_ALUMINUM_BLOCK);
+        this.simpleBlock(BNOBlocks.RAW_LEAD_BLOCK);
+        this.simpleBlock(BNOBlocks.RAW_NICKEL_BLOCK);
+        this.simpleBlock(BNOBlocks.RAW_SILVER_BLOCK);
+        this.simpleBlock(BNOBlocks.RAW_TIN_BLOCK);
+        this.simpleBlock(BNOBlocks.RAW_OSMIUM_BLOCK);
+        this.simpleBlock(BNOBlocks.RAW_URANIUM_BLOCK);
+        this.simpleBlock(BNOBlocks.RAW_ZINC_BLOCK);
+
+
 //        for (RegistryObject<Block> registryObject : ModBlocks.BLOCKS.getEntries()) {
 //            Block block = registryObject.get();
 //

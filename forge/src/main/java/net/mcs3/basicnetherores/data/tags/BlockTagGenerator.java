@@ -58,16 +58,165 @@ public class BlockTagGenerator extends BlockTagsProvider
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
+        // ***************************************************************************** //
+        //  Forge Tags
+        // ***************************************************************************** //
         tag(ORES).add(
-//                BNOBlocks.NETHER_DIAMOND_ORE,
-                BNOBlocks.NETHER_EMERALD_ORE);
+                BNOBlocks.NETHER_DIAMOND_ORE,
+                BNOBlocks.NETHER_EMERALD_ORE,
+                BNOBlocks.NETHER_REDSTONE_ORE,
+                BNOBlocks.NETHER_SILVER_ORE,
+                BNOBlocks.NETHER_LEAD_ORE,
+                BNOBlocks.NETHER_NICKEL_ORE,
+                BNOBlocks.NETHER_URANIUM_ORE,
+                BNOBlocks.NETHER_IRON_ORE,
+                BNOBlocks.NETHER_LAPIS_ORE,
+                BNOBlocks.NETHER_COPPER_ORE,
+                BNOBlocks.NETHER_ALUMINUM_ORE,
+                BNOBlocks.NETHER_TIN_ORE,
+                BNOBlocks.NETHER_COAL_ORE,
+                BNOBlocks.NETHER_ZINC_ORE,
+                BNOBlocks.NETHER_OSMIUM_ORE);
 
+        tag(STORAGE_BLOCKS).add(
+                BNOBlocks.RAW_SILVER_BLOCK,
+                BNOBlocks.SILVER_BLOCK,
+                BNOBlocks.RAW_LEAD_BLOCK,
+                BNOBlocks.LEAD_BLOCK,
+                BNOBlocks.RAW_NICKEL_BLOCK,
+                BNOBlocks.NICKEL_BLOCK,
+                BNOBlocks.RAW_URANIUM_BLOCK,
+                BNOBlocks.URANIUM_BLOCK,
+                BNOBlocks.RAW_ZINC_BLOCK,
+                BNOBlocks.ZINC_BLOCK,
+                BNOBlocks.RAW_ALUMINUM_BLOCK,
+                BNOBlocks.ALUMINUM_BLOCK,
+                BNOBlocks.RAW_TIN_BLOCK,
+                BNOBlocks.TIN_BLOCK,
+                BNOBlocks.RAW_OSMIUM_BLOCK,
+                BNOBlocks.OSMIUM_BLOCK
+        );
+
+
+        tag(ORES_COAL).add(BNOBlocks.NETHER_COAL_ORE);
+        tag(ORES_DIAMOND).add(BNOBlocks.NETHER_DIAMOND_ORE);
         tag(ORES_EMERALD).add(BNOBlocks.NETHER_EMERALD_ORE);
+        tag(ORES_IRON).add(BNOBlocks.NETHER_IRON_ORE);
+        tag(ORES_LAPIS).add(BNOBlocks.NETHER_LAPIS_ORE);
+        tag(ORES_REDSTONE).add(BNOBlocks.NETHER_REDSTONE_ORE);
 
+        tag(ORES_ALUMINUM).add(BNOBlocks.NETHER_ALUMINUM_ORE);
+        tag(ORES_SILVER).add(BNOBlocks.NETHER_SILVER_ORE);
+        tag(ORES_LEAD).add(BNOBlocks.NETHER_LEAD_ORE);
+        tag(ORES_NICKEL).add(BNOBlocks.NETHER_NICKEL_ORE);
+        tag(ORES_COPPER).add(BNOBlocks.NETHER_COPPER_ORE);
+        tag(ORES_TIN).add(BNOBlocks.NETHER_TIN_ORE);
+        tag(ORES_OSMIUM).add(BNOBlocks.NETHER_OSMIUM_ORE);
+        tag(ORES_URANIUM).add(BNOBlocks.NETHER_URANIUM_ORE);
+        tag(ORES_ZINC).add(BNOBlocks.NETHER_ZINC_ORE);
+
+        tag(ALUMINUM_BLOCK).add(BNOBlocks.ALUMINUM_BLOCK);
+        tag(SILVER_BLOCK).add(BNOBlocks.SILVER_BLOCK);
+        tag(LEAD_BLOCK).add(BNOBlocks.LEAD_BLOCK);
+        tag(NICKEL_BLOCK).add(BNOBlocks.NICKEL_BLOCK);
+        tag(TIN_BLOCK).add(BNOBlocks.TIN_BLOCK);
+        tag(OSMIUM_BLOCK).add(BNOBlocks.OSMIUM_BLOCK);
+        tag(URANIUM_BLOCK).add(BNOBlocks.URANIUM_BLOCK);
+        tag(ZINC_BLOCK).add(BNOBlocks.ZINC_BLOCK);
+
+        tag(RAW_ALUMINUM_BLOCK).add(BNOBlocks.RAW_ALUMINUM_BLOCK);
+        tag(RAW_SILVER_BLOCK).add(BNOBlocks.RAW_SILVER_BLOCK);
+        tag(RAW_LEAD_BLOCK).add(BNOBlocks.RAW_LEAD_BLOCK);
+        tag(RAW_NICKEL_BLOCK).add(BNOBlocks.RAW_NICKEL_BLOCK);
+        tag(RAW_TIN_BLOCK).add(BNOBlocks.RAW_TIN_BLOCK);
+        tag(RAW_OSMIUM_BLOCK).add(BNOBlocks.RAW_OSMIUM_BLOCK);
+        tag(RAW_URANIUM_BLOCK).add(BNOBlocks.RAW_URANIUM_BLOCK);
+        tag(RAW_ZINC_BLOCK).add(BNOBlocks.RAW_ZINC_BLOCK);
+
+
+        // ***************************************************************************** //
+        //  Vanilla Tags
+        // ***************************************************************************** //
+        this.tag(BlockTags.IRON_ORES).add(BNOBlocks.NETHER_IRON_ORE);
+        this.tag(BlockTags.DIAMOND_ORES).add(BNOBlocks.NETHER_DIAMOND_ORE);
+        this.tag(BlockTags.REDSTONE_ORES).add(BNOBlocks.NETHER_REDSTONE_ORE);
+        this.tag(BlockTags.COAL_ORES).add(BNOBlocks.NETHER_COAL_ORE);
         this.tag(BlockTags.EMERALD_ORES).add(BNOBlocks.NETHER_EMERALD_ORE);
+        this.tag(BlockTags.COPPER_ORES).add(BNOBlocks.NETHER_COPPER_ORE);
+        this.tag(BlockTags.LAPIS_ORES).add(BNOBlocks.NETHER_LAPIS_ORE);
 
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BNOBlocks.NETHER_EMERALD_ORE);
-//        ,
+        ///// MINEABLE WITH PICKAXE ///////
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                BNOBlocks.NETHER_DIAMOND_ORE,
+                BNOBlocks.NETHER_EMERALD_ORE,
+                BNOBlocks.NETHER_REDSTONE_ORE,
+                BNOBlocks.NETHER_COAL_ORE,
+                BNOBlocks.NETHER_IRON_ORE,
+                BNOBlocks.NETHER_LAPIS_ORE,
+                BNOBlocks.NETHER_COPPER_ORE,
+                BNOBlocks.NETHER_SILVER_ORE,
+                BNOBlocks.RAW_SILVER_BLOCK,
+                BNOBlocks.SILVER_BLOCK,
+                BNOBlocks.NETHER_LEAD_ORE,
+                BNOBlocks.RAW_LEAD_BLOCK,
+                BNOBlocks.LEAD_BLOCK,
+                BNOBlocks.NETHER_NICKEL_ORE,
+                BNOBlocks.RAW_NICKEL_BLOCK,
+                BNOBlocks.NICKEL_BLOCK,
+                BNOBlocks.NETHER_URANIUM_ORE,
+                BNOBlocks.RAW_URANIUM_BLOCK,
+                BNOBlocks.URANIUM_BLOCK,
+                BNOBlocks.NETHER_ZINC_ORE,
+                BNOBlocks.RAW_ZINC_BLOCK,
+                BNOBlocks.ZINC_BLOCK,
+                BNOBlocks.NETHER_ALUMINUM_ORE,
+                BNOBlocks.RAW_ALUMINUM_BLOCK,
+                BNOBlocks.ALUMINUM_BLOCK,
+                BNOBlocks.NETHER_TIN_ORE,
+                BNOBlocks.RAW_TIN_BLOCK,
+                BNOBlocks.TIN_BLOCK,
+                BNOBlocks.NETHER_OSMIUM_ORE,
+                BNOBlocks.RAW_OSMIUM_BLOCK,
+                BNOBlocks.OSMIUM_BLOCK);
+
+        this.tag(BlockTags.NEEDS_IRON_TOOL).add(
+                BNOBlocks.NETHER_DIAMOND_ORE,
+                BNOBlocks.NETHER_EMERALD_ORE,
+                BNOBlocks.NETHER_REDSTONE_ORE,
+                BNOBlocks.NETHER_SILVER_ORE,
+                BNOBlocks.RAW_SILVER_BLOCK,
+                BNOBlocks.SILVER_BLOCK,
+                BNOBlocks.NETHER_LEAD_ORE,
+                BNOBlocks.RAW_LEAD_BLOCK,
+                BNOBlocks.LEAD_BLOCK,
+                BNOBlocks.NETHER_NICKEL_ORE,
+                BNOBlocks.RAW_NICKEL_BLOCK,
+                BNOBlocks.NICKEL_BLOCK,
+                BNOBlocks.NETHER_URANIUM_ORE,
+                BNOBlocks.RAW_URANIUM_BLOCK,
+                BNOBlocks.URANIUM_BLOCK,
+                BNOBlocks.NETHER_ZINC_ORE,
+                BNOBlocks.RAW_ZINC_BLOCK,
+                BNOBlocks.ZINC_BLOCK);
+
+        this.tag(BlockTags.NEEDS_STONE_TOOL).add(
+                BNOBlocks.NETHER_IRON_ORE,
+                BNOBlocks.NETHER_LAPIS_ORE,
+                BNOBlocks.NETHER_COPPER_ORE,
+                BNOBlocks.NETHER_ALUMINUM_ORE,
+                BNOBlocks.RAW_ALUMINUM_BLOCK,
+                BNOBlocks.ALUMINUM_BLOCK,
+                BNOBlocks.NETHER_TIN_ORE,
+                BNOBlocks.RAW_TIN_BLOCK,
+                BNOBlocks.TIN_BLOCK,
+                BNOBlocks.NETHER_OSMIUM_ORE,
+                BNOBlocks.RAW_OSMIUM_BLOCK,
+                BNOBlocks.OSMIUM_BLOCK);
+
+
+
+//        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+//                BNOBlocks.NETHER_EMERALD_ORE,
 //                BNOBlocks.NETHER_REDSTONE_ORE,
 //                BNOBlocks.NETHER_SILVER_ORE,
 //                BNOBlocks.NETHER_LEAD_ORE,

@@ -8,8 +8,19 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
+import static net.mcs3.basicnetherores.util.helper.ResourceLocationHelper.prefix;
+
 public class BNOItems {
     public static final Map<ResourceLocation, Item> ITEMS = new LinkedHashMap<>();
+
+    public static final Item RAW_ALUMINUM = make(prefix("raw_aluminum"), new Item(defaultBuilder()));
+    public static final Item RAW_LEAD = make(prefix("raw_lead"), new Item(defaultBuilder()));
+    public static final Item RAW_NICKEL = make(prefix("raw_nickel"), new Item(defaultBuilder()));
+    public static final Item RAW_SILVER = make(prefix("raw_silver"), new Item(defaultBuilder()));
+    public static final Item RAW_TIN = make(prefix("raw_tin"), new Item(defaultBuilder()));
+    public static final Item RAW_OSMIUM = make(prefix("raw_osmium"), new Item(defaultBuilder()));
+    public static final Item RAW_URANIUM = make(prefix("raw_uranium"), new Item(defaultBuilder()));
+    public static final Item RAW_ZINC = make(prefix("raw_zinc"), new Item(defaultBuilder()));
 
     public static Item.Properties defaultBuilder() {
         return IPlatformHelper.INSTANCE.defaultItemBuilder();

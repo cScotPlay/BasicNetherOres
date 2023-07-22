@@ -1,6 +1,7 @@
 package net.mcs3.basicnetherores;
 
 import net.mcs3.basicnetherores.init.BNOBlocks;
+import net.mcs3.basicnetherores.init.BNOItems;
 import net.mcs3.basicnetherores.worldgen.item.ModCreativeModeTabs;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
@@ -52,6 +53,7 @@ public class ForgeBasicNetherOres {
     private void registryInit() {
         bind(Registries.BLOCK, BNOBlocks::registerBlocks);
         bind(Registries.ITEM, BNOBlocks::registerItemBlocks);
+        bind(Registries.ITEM, BNOItems::registerItems);
 
     }
 
