@@ -1,6 +1,5 @@
 package net.mcs3.basicnetherores.worldgen.item;
 
-import net.mcs3.basicnetherores.Constants;
 import net.mcs3.basicnetherores.init.BNOBlocks;
 import net.mcs3.basicnetherores.init.BNOItems;
 import net.mcs3.basicnetherores.platform.services.IPlatformHelper;
@@ -8,10 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
 
 import static net.mcs3.basicnetherores.util.helper.ResourceLocationHelper.prefix;
 
@@ -49,6 +45,24 @@ public class ModCreativeModeTabs {
                 output.accept(BNOBlocks.URANIUM_BLOCK.asItem());
                 output.accept(BNOBlocks.ZINC_BLOCK.asItem());
 
+                output.accept(BNOItems.ALUMINUM_INGOT);
+                output.accept(BNOItems.LEAD_INGOT);
+                output.accept(BNOItems.NICKEL_INGOT);
+                output.accept(BNOItems.SILVER_INGOT);
+                output.accept(BNOItems.TIN_INGOT);
+                output.accept(BNOItems.OSMIUM_INGOT);
+                output.accept(BNOItems.URANIUM_INGOT);
+                output.accept(BNOItems.ZINC_INGOT);
+
+                output.accept(BNOItems.ALUMINUM_NUGGET);
+                output.accept(BNOItems.COPPER_NUGGET);
+                output.accept(BNOItems.LEAD_NUGGET);
+                output.accept(BNOItems.NICKEL_NUGGET);
+                output.accept(BNOItems.SILVER_NUGGET);
+                output.accept(BNOItems.OSMIUM_NUGGET);
+                output.accept(BNOItems.TIN_NUGGET);
+                output.accept(BNOItems.ZINC_NUGGET);
+
                 output.accept(BNOBlocks.RAW_ALUMINUM_BLOCK.asItem());
                 output.accept(BNOBlocks.RAW_LEAD_BLOCK.asItem());
                 output.accept(BNOBlocks.RAW_NICKEL_BLOCK.asItem());
@@ -66,22 +80,6 @@ public class ModCreativeModeTabs {
                 output.accept(BNOItems.RAW_OSMIUM);
                 output.accept(BNOItems.RAW_URANIUM);
                 output.accept(BNOItems.RAW_ZINC);
-
-
             })
             .build();
-
-//    public static final RegistryInterface<CreativeModeTab> TABS = XPlatform.INSTANCE.registryInterface(BuiltInRegistries.CREATIVE_MODE_TAB);
-//    public static final List<RegistryHolder<? extends ItemLike>> ENTRIES = new ArrayList<>();
-//
-//    public static final RegistryHolder<CreativeModeTab> TAB = TABS.register("items", () -> XPlatform.INSTANCE.creativeTab()
-//            .icon(() -> new ItemStack((Items.BUCKET.asItem()))
-//            .title(Component.translatable(Constants.MOD_ID + "itemgroup"))
-//            .displayItems((params, output) -> {
-//                for (RegistryHolder<? extends ItemLike> entry : ENTRIES)
-//                {
-//                    output.accept(entry.get());
-//                }
-//            })
-//            .build());
 }

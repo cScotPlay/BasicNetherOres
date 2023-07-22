@@ -90,6 +90,8 @@ public class ItemTagGenerator extends ItemTagsProvider {
         super(output, lookupProvider, blockTagProvider, Constants.MOD_ID, existingFileHelper);
     }
 
+    //TODO UPDATE ALL TAGS WITH VANILLA EQUIVALENTS
+
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
@@ -130,25 +132,25 @@ public class ItemTagGenerator extends ItemTagsProvider {
         copy(BlockTagGenerator.RAW_URANIUM_BLOCK, RAW_URANIUM_BLOCK);
         copy(BlockTagGenerator.RAW_ZINC_BLOCK, RAW_ZINC_BLOCK);
 
-//        tag(Tags.Items.INGOTS).addTags(INGOT_ALUMINUM, INGOT_SILVER, INGOT_LEAD, INGOT_NICKEL, INGOT_TIN, INGOT_OSMIUM, INGOT_URANIUM, INGOT_ZINC);
-//        tag(INGOT_ALUMINUM).add(BNOItems.ALUMINUM_INGOT);
-//        tag(INGOT_SILVER).add(BNOItems.SILVER_INGOT);
-//        tag(INGOT_LEAD).add(BNOItems.LEAD_INGOT);
-//        tag(INGOT_NICKEL).add(BNOItems.NICKEL_INGOT);
-//        tag(INGOT_TIN).add(BNOItems.TIN_INGOT);
-//        tag(INGOT_OSMIUM).add(BNOItems.OSMIUM_INGOT);
-//        tag(INGOT_URANIUM).add(BNOItems.URANIUM_INGOT);
-//        tag(INGOT_ZINC).add(BNOItems.ZINC_INGOT);
-//
-//        tag(Tags.Items.NUGGETS).addTags(NUGGET_ALUMINUM, NUGGET_SILVER, NUGGET_LEAD, NUGGET_NICKEL, NUGGET_COPPER, NUGGET_TIN, NUGGET_OSMIUM, NUGGET_ZINC);
-//        tag(NUGGET_ALUMINUM).add(BNOItems.ALUMINUM_NUGGET);
-//        tag(NUGGET_SILVER).add(BNOItems.SILVER_NUGGET);
-//        tag(NUGGET_LEAD).add(BNOItems.LEAD_NUGGET);
-//        tag(NUGGET_NICKEL).add(BNOItems.NICKEL_NUGGET);
-//        tag(NUGGET_COPPER).add(BNOItems.COPPER_NUGGET);
-//        tag(NUGGET_TIN).add(BNOItems.TIN_NUGGET);
-//        tag(NUGGET_OSMIUM).add(BNOItems.OSMIUM_NUGGET);
-//        tag(NUGGET_ZINC).add(BNOItems.ZINC_NUGGET);
+        tag(Tags.Items.INGOTS).addTags(INGOT_ALUMINUM, INGOT_SILVER, INGOT_LEAD, INGOT_NICKEL, INGOT_TIN, INGOT_OSMIUM, INGOT_URANIUM, INGOT_ZINC);
+        tag(INGOT_ALUMINUM).add(BNOItems.ALUMINUM_INGOT);
+        tag(INGOT_SILVER).add(BNOItems.SILVER_INGOT);
+        tag(INGOT_LEAD).add(BNOItems.LEAD_INGOT);
+        tag(INGOT_NICKEL).add(BNOItems.NICKEL_INGOT);
+        tag(INGOT_TIN).add(BNOItems.TIN_INGOT);
+        tag(INGOT_OSMIUM).add(BNOItems.OSMIUM_INGOT);
+        tag(INGOT_URANIUM).add(BNOItems.URANIUM_INGOT);
+        tag(INGOT_ZINC).add(BNOItems.ZINC_INGOT);
+
+        tag(Tags.Items.NUGGETS).addTags(NUGGET_ALUMINUM, NUGGET_SILVER, NUGGET_LEAD, NUGGET_NICKEL, NUGGET_COPPER, NUGGET_TIN, NUGGET_OSMIUM, NUGGET_ZINC);
+        tag(NUGGET_ALUMINUM).add(BNOItems.ALUMINUM_NUGGET);
+        tag(NUGGET_SILVER).add(BNOItems.SILVER_NUGGET);
+        tag(NUGGET_LEAD).add(BNOItems.LEAD_NUGGET);
+        tag(NUGGET_NICKEL).add(BNOItems.NICKEL_NUGGET);
+        tag(NUGGET_COPPER).add(BNOItems.COPPER_NUGGET);
+        tag(NUGGET_TIN).add(BNOItems.TIN_NUGGET);
+        tag(NUGGET_OSMIUM).add(BNOItems.OSMIUM_NUGGET);
+        tag(NUGGET_ZINC).add(BNOItems.ZINC_NUGGET);
 
         tag(Tags.Items.RAW_MATERIALS).addTags(RAW_ALUMINUM, RAW_SILVER, RAW_LEAD, RAW_NICKEL, RAW_TIN, RAW_OSMIUM, RAW_ZINC);
         tag(RAW_ALUMINUM).add(BNOItems.RAW_ALUMINUM);

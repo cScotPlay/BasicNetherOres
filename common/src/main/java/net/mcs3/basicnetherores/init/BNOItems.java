@@ -13,6 +13,24 @@ import static net.mcs3.basicnetherores.util.helper.ResourceLocationHelper.prefix
 public class BNOItems {
     public static final Map<ResourceLocation, Item> ITEMS = new LinkedHashMap<>();
 
+    public static final Item ALUMINUM_INGOT = make(prefix("aluminum_ingot"), new Item(defaultBuilder()));
+    public static final Item LEAD_INGOT = make(prefix("lead_ingot"), new Item(defaultBuilder()));
+    public static final Item NICKEL_INGOT = make(prefix("nickel_ingot"), new Item(defaultBuilder()));
+    public static final Item SILVER_INGOT = make(prefix("silver_ingot"), new Item(defaultBuilder()));
+    public static final Item TIN_INGOT = make(prefix("tin_ingot"), new Item(defaultBuilder()));
+    public static final Item OSMIUM_INGOT = make(prefix("osmium_ingot"), new Item(defaultBuilder()));
+    public static final Item URANIUM_INGOT = make(prefix("uranium_ingot"), new Item(defaultBuilder()));
+    public static final Item ZINC_INGOT = make(prefix("zinc_ingot"), new Item(defaultBuilder()));
+
+    public static final Item ALUMINUM_NUGGET = make(prefix("aluminum_nugget"), new Item(defaultBuilder()));
+    public static final Item COPPER_NUGGET = make(prefix("copper_nugget"), new Item(defaultBuilder()));
+    public static final Item LEAD_NUGGET = make(prefix("lead_nugget"), new Item(defaultBuilder()));
+    public static final Item NICKEL_NUGGET = make(prefix("nickel_nugget"), new Item(defaultBuilder()));
+    public static final Item SILVER_NUGGET = make(prefix("silver_nugget"), new Item(defaultBuilder()));
+    public static final Item OSMIUM_NUGGET = make(prefix("osmium_nugget"), new Item(defaultBuilder()));
+    public static final Item TIN_NUGGET = make(prefix("tin_nugget"), new Item(defaultBuilder()));
+    public static final Item ZINC_NUGGET = make(prefix("zinc_nugget"), new Item(defaultBuilder()));
+
     public static final Item RAW_ALUMINUM = make(prefix("raw_aluminum"), new Item(defaultBuilder()));
     public static final Item RAW_LEAD = make(prefix("raw_lead"), new Item(defaultBuilder()));
     public static final Item RAW_NICKEL = make(prefix("raw_nickel"), new Item(defaultBuilder()));

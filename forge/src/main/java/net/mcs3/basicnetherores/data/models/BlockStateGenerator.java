@@ -54,23 +54,6 @@ public class BlockStateGenerator extends BlockStateProvider
         this.simpleBlock(BNOBlocks.RAW_OSMIUM_BLOCK);
         this.simpleBlock(BNOBlocks.RAW_URANIUM_BLOCK);
         this.simpleBlock(BNOBlocks.RAW_ZINC_BLOCK);
-
-
-//        for (RegistryObject<Block> registryObject : ModBlocks.BLOCKS.getEntries()) {
-//            Block block = registryObject.get();
-//
-//            if (block instanceof ModOreBlock)
-//                simpleOreBlock(block);
-//
-//            if (block instanceof ModRedstoneOreBlock)
-//                simpleOreBlock(block);
-//
-//            if (block instanceof ModMetalBlock)
-//                simpleBlock(block);
-//
-//            if (block instanceof ModRawOreBlock)
-//                simpleBlock(block);
-//        }
     }
 
     public void simpleOreBlock(Block block)

@@ -9,7 +9,6 @@ import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-
 import static net.mcs3.basicnetherores.util.helper.ResourceLocationHelper.prefix;
 
 public class ItemModelGenerator extends ItemModelProvider {
@@ -20,9 +19,6 @@ public class ItemModelGenerator extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-//        for (RegistryObject<Block> registryObject : BNOBlocks.BLOCKS.getEntries()) {
-//            Block block = registryObject.get();
-//            String blockName = block.asItem().toString();
 
         generateExistingParent(BNOBlocks.NETHER_EMERALD_ORE);
         generateExistingParent(BNOBlocks.NETHER_DIAMOND_ORE);
@@ -58,6 +54,24 @@ public class ItemModelGenerator extends ItemModelProvider {
         generateExistingParent(BNOBlocks.RAW_URANIUM_BLOCK);
         generateExistingParent(BNOBlocks.RAW_ZINC_BLOCK);
 
+        generated("aluminum_ingot", new ResourceLocation(modid, "item/aluminum_ingot"));
+        generated("lead_ingot", new ResourceLocation(modid, "item/lead_ingot"));
+        generated("nickel_ingot", new ResourceLocation(modid, "item/nickel_ingot"));
+        generated("silver_ingot", new ResourceLocation(modid, "item/silver_ingot"));
+        generated("tin_ingot", new ResourceLocation(modid, "item/tin_ingot"));
+        generated("osmium_ingot", new ResourceLocation(modid, "item/osmium_ingot"));
+        generated("uranium_ingot", new ResourceLocation(modid, "item/uranium_ingot"));
+        generated("zinc_ingot", new ResourceLocation(modid, "item/zinc_ingot"));
+
+        generated("aluminum_nugget", new ResourceLocation(modid, "item/aluminum_nugget"));
+        generated("copper_nugget", new ResourceLocation(modid, "item/copper_nugget"));
+        generated("lead_nugget", new ResourceLocation(modid, "item/lead_nugget"));
+        generated("nickel_nugget", new ResourceLocation(modid, "item/nickel_nugget"));
+        generated("silver_nugget", new ResourceLocation(modid, "item/silver_nugget"));
+        generated("tin_nugget", new ResourceLocation(modid, "item/tin_nugget"));
+        generated("osmium_nugget", new ResourceLocation(modid, "item/osmium_nugget"));
+        generated("zinc_nugget", new ResourceLocation(modid, "item/zinc_nugget"));
+
         generated("raw_aluminum", new ResourceLocation(modid, "item/raw_aluminum"));
         generated("raw_lead", new ResourceLocation(modid, "item/raw_lead"));
         generated("raw_nickel", new ResourceLocation(modid, "item/raw_nickel"));
@@ -66,55 +80,12 @@ public class ItemModelGenerator extends ItemModelProvider {
         generated("raw_osmium", new ResourceLocation(modid, "item/raw_osmium"));
         generated("raw_uranium", new ResourceLocation(modid, "item/raw_uranium"));
         generated("raw_zinc", new ResourceLocation(modid, "item/raw_zinc"));
-//
-//            if (block instanceof ModOreBlock)
-//                withExistingParent(blockName, new ResourceLocation(modid, "block/" + blockName));
-//
-//            if (block instanceof ModRedstoneOreBlock)
-//                withExistingParent(blockName, new ResourceLocation(modid, "block/" + blockName));
-//
-//            if (block instanceof ModMetalBlock)
-//                withExistingParent(blockName, new ResourceLocation(modid, "block/" + blockName));
-//
-//            if (block instanceof ModRawOreBlock)
-//                withExistingParent(blockName, new ResourceLocation(modid, "block/" + blockName));
-
-//        }
-
-//        generated("aluminum_ingot", new ResourceLocation(modid, "item/aluminum_ingot"));
-//        generated("lead_ingot", new ResourceLocation(modid, "item/lead_ingot"));
-//        generated("nickel_ingot", new ResourceLocation(modid, "item/nickel_ingot"));
-//        generated("silver_ingot", new ResourceLocation(modid, "item/silver_ingot"));
-//        generated("tin_ingot", new ResourceLocation(modid, "item/tin_ingot"));
-//        generated("osmium_ingot", new ResourceLocation(modid, "item/osmium_ingot"));
-//        generated("uranium_ingot", new ResourceLocation(modid, "item/uranium_ingot"));
-//        generated("zinc_ingot", new ResourceLocation(modid, "item/zinc_ingot"));
-//
-//        generated("aluminum_nugget", new ResourceLocation(modid, "item/aluminum_nugget"));
-//        generated("copper_nugget", new ResourceLocation(modid, "item/copper_nugget"));
-//        generated("lead_nugget", new ResourceLocation(modid, "item/lead_nugget"));
-//        generated("nickel_nugget", new ResourceLocation(modid, "item/nickel_nugget"));
-//        generated("silver_nugget", new ResourceLocation(modid, "item/silver_nugget"));
-//        generated("tin_nugget", new ResourceLocation(modid, "item/tin_nugget"));
-//        generated("osmium_nugget", new ResourceLocation(modid, "item/osmium_nugget"));
-//        generated("zinc_nugget", new ResourceLocation(modid, "item/zinc_nugget"));
-//
-//        generated("raw_aluminum", new ResourceLocation(modid, "item/raw_aluminum"));
-//        generated("raw_lead", new ResourceLocation(modid, "item/raw_lead"));
-//        generated("raw_nickel", new ResourceLocation(modid, "item/raw_nickel"));
-//        generated("raw_silver", new ResourceLocation(modid, "item/raw_silver"));
-//        generated("raw_tin", new ResourceLocation(modid, "item/raw_tin"));
-//        generated("raw_osmium", new ResourceLocation(modid, "item/raw_osmium"));
-//        generated("raw_uranium", new ResourceLocation(modid, "item/raw_uranium"));
-//        generated("raw_zinc", new ResourceLocation(modid, "item/raw_zinc"));
-
     }
 
     private void generateExistingParent(Block block) {
         String blockName = block.asItem().toString();
         withExistingParent(blockName, prefix("block/" + blockName));
     }
-
 
     private ItemModelBuilder generated(String name, ResourceLocation... layers) {
         ItemModelBuilder builder = withExistingParent(name, "item/generated");
