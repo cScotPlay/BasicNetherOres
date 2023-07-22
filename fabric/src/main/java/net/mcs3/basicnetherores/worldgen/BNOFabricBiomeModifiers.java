@@ -2,7 +2,6 @@ package net.mcs3.basicnetherores.worldgen;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
-import net.mcs3.basicnetherores.config.BNOConfigs;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;

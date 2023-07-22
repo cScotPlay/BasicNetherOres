@@ -1,7 +1,6 @@
 package net.mcs3.basicnetherores;
 
-import com.kyanite.paragon.api.ConfigManager;
-import net.mcs3.basicnetherores.config.BNOConfigs;
+
 import net.mcs3.basicnetherores.init.BNOConfiguredFeatures;
 import net.mcs3.basicnetherores.init.BNOPlacedFeatures;
 import net.mcs3.basicnetherores.platform.Services;
@@ -33,7 +32,5 @@ public class CommonClass {
         }
         BNOConfiguredFeatures.initialize();
         BNOPlacedFeatures.initialize();
-
-        ConfigManager.register(Constants.MOD_ID, new BNOConfigs());
     }
 }

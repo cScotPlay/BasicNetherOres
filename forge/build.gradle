@@ -103,7 +103,6 @@ dependencies {
     runtimeOnly fg.deobf("mcp.mobius.waila:wthit:forge-${wthit_version}")
     runtimeOnly fg.deobf("lol.bai:badpackets:forge-0.4.1")
     runtimeOnly 'blue.endless:jankson:1.1.2'
-    implementation fg.deobf("maven.modrinth:paragon:forge-3.0.2-1.20x")
 
 }
 

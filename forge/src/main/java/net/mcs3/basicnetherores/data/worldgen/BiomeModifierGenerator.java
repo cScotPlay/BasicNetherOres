@@ -2,8 +2,6 @@ package net.mcs3.basicnetherores.data.worldgen;
 
 
 
-import net.mcs3.basicnetherores.config.BNOConfigs;
-import net.mcs3.basicnetherores.init.BNOPlacedFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -18,7 +16,6 @@ import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static net.mcs3.basicnetherores.util.helper.ResourceLocationHelper.prefix;
 import static net.mcs3.basicnetherores.init.BNOPlacedFeatures.*;
 
 public class BiomeModifierGenerator {
@@ -28,8 +25,7 @@ public class BiomeModifierGenerator {
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         HolderSet<Biome> netherBiomes = biomeGetter.getOrThrow(BiomeTags.IS_NETHER);
 
-        if(BNOConfigs.GENERATE_EMERALD.get()){
-        registerOreModifier(context, placedFeatures, ORE_EMERALD_PLACED_FEATURE, netherBiomes);}
+        registerOreModifier(context, placedFeatures, ORE_EMERALD_PLACED_FEATURE, netherBiomes);
     }
 
     private static void registerOreModifier(BootstapContext<BiomeModifier> context, HolderGetter<PlacedFeature> placedFeatures, ResourceKey<PlacedFeature> key, HolderSet<Biome> biomes) {

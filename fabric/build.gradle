@@ -41,7 +41,6 @@ dependencies {
     // at runtime, use the full JEI jar for Fabric
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-fabric:${jei_version}")
     runtimeOnly 'blue.endless:jankson:1.1.2'
-    modImplementation("maven.modrinth:paragon:fabric-3.0.2-1.20x")
 }
 
 loom {
@@ -64,26 +63,26 @@ loom {
             ideConfigGenerated(true)
             runDir("run")
         }
-        datagen {
-            client()
-
-            setConfigName("Data Generation")
-            ideConfigGenerated(true)
-            runDir = "build/datagen"
-
-            vmArg("-Dfabric-api.datagen")
-            vmArg("-Dfabric-api.datagen.output-dir=${file("src/main/generated")}")
-        }
-        datagen {
-            client()
-
-            setConfigName("Common Data Generation")
-            ideConfigGenerated(true)
-            runDir = "build/datagen"
-
-            vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${file("../Common/src/generated/resources")}"
-        }
+//        datagen {
+//            client()
+//
+//            setConfigName("Data Generation")
+//            ideConfigGenerated(true)
+//            runDir = "build/datagen"
+//
+//            vmArg("-Dfabric-api.datagen")
+//            vmArg("-Dfabric-api.datagen.output-dir=${file("src/main/generated")}")
+//        }
+//        datagen {
+//            client()
+//
+//            setConfigName("Common Data Generation")
+//            ideConfigGenerated(true)
+//            runDir = "build/datagen"
+//
+//            vmArg "-Dfabric-api.datagen"
+//            vmArg "-Dfabric-api.datagen.output-dir=${file("../Common/src/generated/resources")}"
+//        }
     }
 }
 
