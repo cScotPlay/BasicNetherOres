@@ -5,6 +5,7 @@ import net.mcs3.basicnetherores.Constants;
 import net.mcs3.basicnetherores.data.loottables.LootTableGenerator;
 import net.mcs3.basicnetherores.data.models.BlockStateGenerator;
 import net.mcs3.basicnetherores.data.models.ItemModelGenerator;
+import net.mcs3.basicnetherores.data.recipes.CraftingRecipeBuilder;
 import net.mcs3.basicnetherores.data.tags.BlockTagGenerator;
 import net.mcs3.basicnetherores.data.tags.ItemTagGenerator;
 import net.mcs3.basicnetherores.data.worldgen.WorldDataGenerator;
@@ -30,7 +31,7 @@ public class DataGenerators
         if (evt.includeServer()) {
             generator.addProvider(true, new LootTableGenerator(packOutput));
 
-//            evt.getGenerator().addProvider(true, new CraftingRecipeBuilder(evt.getGenerator()));
+            generator.addProvider(true, new CraftingRecipeBuilder(packOutput));
 
             BlockTagsProvider blocktags = new BlockTagGenerator(packOutput, lookupProvider, evt.getExistingFileHelper());
             generator.addProvider(true, blocktags);
