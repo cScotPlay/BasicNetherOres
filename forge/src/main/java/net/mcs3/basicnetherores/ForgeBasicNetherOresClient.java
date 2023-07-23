@@ -1,5 +1,6 @@
 package net.mcs3.basicnetherores;
 
+import net.mcs3.basicnetherores.client.ShippedResourcePack;
 import net.mcs3.basicnetherores.client.renderer.BlockRenderLayers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraftforge.api.distmarker.Dist;
@@ -13,6 +14,7 @@ public class ForgeBasicNetherOresClient {
 
     @SubscribeEvent
     public static void clientInit(FMLClientSetupEvent evt) {
+        ShippedResourcePack.extractFiles("Basic Nether Ores 32x");
         BlockRenderLayers.registerRenderLayers(ItemBlockRenderTypes::setRenderLayer);
     }
 }
