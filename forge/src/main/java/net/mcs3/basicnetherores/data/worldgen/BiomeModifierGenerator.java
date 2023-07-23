@@ -1,7 +1,5 @@
 package net.mcs3.basicnetherores.data.worldgen;
 
-
-
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;

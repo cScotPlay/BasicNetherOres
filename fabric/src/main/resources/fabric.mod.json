@@ -21,6 +21,9 @@
         ],
         "client": [
             "net.mcs3.basicnetherores.FabricBasicNetherOresClient"
+        ],
+        "fabric-datagen": [
+            "net.mcs3.basicnetherores.data.FabricDataGenerators"
         ]
     },
     "mixins": [

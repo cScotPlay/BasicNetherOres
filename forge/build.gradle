@@ -54,13 +54,13 @@ minecraft {
         data {
             workingDirectory project.file('run')
             ideaModule "${rootProject.name}.${project.name}.main"
-//            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 //            args '--mod', mod_id, '--all', '--output', file('../common/src/generated/resources/'), '--existing', file('src/main/resources/')
-            args "--mod", mod_id
-            args "--all"
-            args "--output", project(":common").file("src/generated/resources")
-            args "--validate"
-            args "--existing", project(":common").file("src/main/resources")
+//            args "--mod", mod_id
+//            args "--all"
+//            args "--output", file("src/generated/resources")
+//            args "--validate"
+//            args "--existing", file("src/main/resources")
             taskName 'Data'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"

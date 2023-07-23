@@ -27,7 +27,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 
-    implementation project(":common")
+    compileOnly project(":common")
 
     modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${project.wthit_version}"
     modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${project.wthit_version}"
@@ -63,26 +63,27 @@ loom {
             ideConfigGenerated(true)
             runDir("run")
         }
-//        datagen {
-//            client()
-//
-//            setConfigName("Data Generation")
-//            ideConfigGenerated(true)
-//            runDir = "build/datagen"
-//
-//            vmArg("-Dfabric-api.datagen")
-//            vmArg("-Dfabric-api.datagen.output-dir=${file("src/main/generated")}")
-//        }
-//        datagen {
-//            client()
-//
-//            setConfigName("Common Data Generation")
-//            ideConfigGenerated(true)
-//            runDir = "build/datagen"
-//
-//            vmArg "-Dfabric-api.datagen"
-//            vmArg "-Dfabric-api.datagen.output-dir=${file("../Common/src/generated/resources")}"
-//        }
+        datagen {
+            client()
+
+            setConfigName("Fabric Data Generation")
+            ideConfigGenerated(true)
+            runDir = "build/datagen"
+
+            vmArg("-Dfabric-api.datagen")
+            vmArg("-Dfabric-api.datagen.output-dir=${file("../Fabric/src/main/generated")}")
+        }
+        datagen {
+            client()
+
+            setConfigName("Common Data Generation")
+            ideConfigGenerated(true)
+            runDir = "build/datagen"
+
+            vmArg("-Dbno.common_datagen=1")
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("../Common/src/generated/resources")}"
+        }
     }
 }
 
@@ -103,6 +104,8 @@ sourceSets.main.resources {
 
 processResources {
     from project(":common").sourceSets.main.resources
+
+    exclude '.cache'
 }
 
 publishing {

@@ -24,3 +24,5 @@ run
 
 /common/src/generated/resources/.cache/
 /common/src/generated/resources/
+/forge/src/generated/
+/fabric/src/main/generated/
