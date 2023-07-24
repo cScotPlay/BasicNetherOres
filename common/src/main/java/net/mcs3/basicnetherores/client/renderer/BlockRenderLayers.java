@@ -15,6 +15,7 @@ public class BlockRenderLayers {
         consumer.accept(BNOBlocks.NETHER_REDSTONE_ORE, RenderType.cutout());
         consumer.accept(BNOBlocks.NETHER_LAPIS_ORE, RenderType.cutout());
         consumer.accept(BNOBlocks.NETHER_COAL_ORE, RenderType.cutout());
+        consumer.accept(BNOBlocks.NETHER_SILVER_ORE, RenderType.cutout());
         consumer.accept(BNOBlocks.NETHER_IRON_ORE, RenderType.cutout());
         consumer.accept(BNOBlocks.NETHER_LEAD_ORE, RenderType.cutout());
         consumer.accept(BNOBlocks.NETHER_NICKEL_ORE, RenderType.cutout());
