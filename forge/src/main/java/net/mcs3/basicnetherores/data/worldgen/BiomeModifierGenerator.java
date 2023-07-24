@@ -24,6 +24,20 @@ public class BiomeModifierGenerator {
         HolderSet<Biome> netherBiomes = biomeGetter.getOrThrow(BiomeTags.IS_NETHER);
 
         registerOreModifier(context, placedFeatures, ORE_EMERALD_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_DIAMOND_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_REDSTONE_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_LAPIS_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_COAL_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_SILVER_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_IRON_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_LEAD_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_NICKEL_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_COPPER_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_ALUMINUM_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_TIN_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_OSMIUM_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_URANIUM_PLACED_FEATURE, netherBiomes);
+        registerOreModifier(context, placedFeatures, ORE_ZINC_PLACED_FEATURE, netherBiomes);
     }
 
     private static void registerOreModifier(BootstapContext<BiomeModifier> context, HolderGetter<PlacedFeature> placedFeatures, ResourceKey<PlacedFeature> key, HolderSet<Biome> biomes) {

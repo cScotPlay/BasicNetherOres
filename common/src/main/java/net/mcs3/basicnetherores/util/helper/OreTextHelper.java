@@ -59,9 +59,9 @@ public class OreTextHelper {
 
     //Copper Ore Values
     public static String copperOreTip = "tooltip.nethercopper_ore.tip";
-    public static Integer copperPerChunk = 3;
-    public static Integer copperMinHeight = 35;
-    public static Integer copperMaxHeight = 75;
+    public static Integer copperPerChunk = 6;
+    public static Integer copperMinHeight = 25;
+    public static Integer copperMaxHeight = 105;
 
     //Aluminum Ore Values
     public static String aluminumOreTip = "tooltip.netheraluminum_ore.tip";
