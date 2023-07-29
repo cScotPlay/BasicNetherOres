@@ -17,9 +17,8 @@ public class WorldDataGenerator extends DatapackBuiltinEntriesProvider {
 
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, BNOConfiguredFeatures::bootstrap)
-            .add(Registries.PLACED_FEATURE, BNOPlacedFeatures::bootstrap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, BiomeModifierGenerator::bootstrap)
-;
+            .add(Registries.PLACED_FEATURE, BNOPlacedFeatures::bootstrap);
+//            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, BiomeModifierGenerator::bootstrap);
 
     public WorldDataGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(Constants.MOD_ID));
