@@ -96,7 +96,7 @@ public class FabricBasicNetherOresConfig {
                     .finishBranch()
 
                     .fork("silverGeneration")
-                    .beginValue("enabled", BOOLEAN, true)
+                    .beginValue("enabled", BOOLEAN, false)
                     .withComment("Generate Silver Ore")
                     .finishValue(silverGeneration::mirror)
                     .finishBranch()
@@ -108,13 +108,13 @@ public class FabricBasicNetherOresConfig {
                     .finishBranch()
 
                     .fork("leadGeneration")
-                    .beginValue("enabled", BOOLEAN, true)
+                    .beginValue("enabled", BOOLEAN, false)
                     .withComment("Generate Lead Ore")
                     .finishValue(leadGeneration::mirror)
                     .finishBranch()
 
                     .fork("nickelGeneration")
-                    .beginValue("enabled", BOOLEAN, true)
+                    .beginValue("enabled", BOOLEAN, false)
                     .withComment("Generate Nickel Ore")
                     .finishValue(nickelGeneration::mirror)
                     .finishBranch()
@@ -126,31 +126,31 @@ public class FabricBasicNetherOresConfig {
                     .finishBranch()
 
                     .fork("aluminumGeneration")
-                    .beginValue("enabled", BOOLEAN, true)
+                    .beginValue("enabled", BOOLEAN, false)
                     .withComment("Generate Aluminum Ore")
                     .finishValue(aluminumGeneration::mirror)
                     .finishBranch()
 
                     .fork("tinGeneration")
-                    .beginValue("enabled", BOOLEAN, true)
+                    .beginValue("enabled", BOOLEAN, false)
                     .withComment("Generate Tin Ore")
                     .finishValue(tinGeneration::mirror)
                     .finishBranch()
 
                     .fork("osmiumGeneration")
-                    .beginValue("enabled", BOOLEAN, true)
+                    .beginValue("enabled", BOOLEAN, false)
                     .withComment("Generate Osmium Ore")
                     .finishValue(osmiumGeneration::mirror)
                     .finishBranch()
 
                     .fork("uraniumGeneration")
-                    .beginValue("enabled", BOOLEAN, true)
+                    .beginValue("enabled", BOOLEAN, false)
                     .withComment("Generate Uranium Ore")
                     .finishValue(uraniumGeneration::mirror)
                     .finishBranch()
 
                     .fork("zincGeneration")
-                    .beginValue("enabled", BOOLEAN, true)
+                    .beginValue("enabled", BOOLEAN, false)
                     .withComment("Generate Zinc Ore")
                     .finishValue(zincGeneration::mirror)
                     .finishBranch();
