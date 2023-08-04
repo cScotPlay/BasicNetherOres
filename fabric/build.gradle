@@ -19,6 +19,10 @@ repositories{
         name = "JEI"
         url "https://dvs1.progwml6.com/files/maven/"
     }
+
+    maven {
+        url = "https://maven.modmuss50.me/"
+    }
 }
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
@@ -40,7 +44,8 @@ dependencies {
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}")
     // at runtime, use the full JEI jar for Fabric
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-fabric:${jei_version}")
-    runtimeOnly 'blue.endless:jankson:1.1.2'
+
+    modImplementation "me.zeroeightsix:fiber:0.23.0-2"
 }
 
 loom {
