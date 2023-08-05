@@ -1,7 +1,6 @@
 package net.mcs3.basicnetherores;
 
 import net.mcs3.basicnetherores.config.ForgeBasicNetherOresConfig;
-import net.mcs3.basicnetherores.data.worldgen.ForgeBiomeModifier;
 import net.mcs3.basicnetherores.init.BNOBlocks;
 import net.mcs3.basicnetherores.init.BNOItems;
 import net.mcs3.basicnetherores.worldgen.item.ModCreativeModeTabs;
@@ -47,10 +46,6 @@ public class ForgeBasicNetherOres {
         CommonClass.init();
         PLACED_FEATURES.register(modEventBus);
 
-        ForgeBiomeModifier.register(modEventBus);
-
-//        modEventBus.addListener(BiomeModifierGenerator::bootstrap);
-        
     }
 
     private void registryInit() {

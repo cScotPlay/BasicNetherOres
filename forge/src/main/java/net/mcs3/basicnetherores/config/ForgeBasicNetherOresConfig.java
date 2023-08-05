@@ -12,72 +12,13 @@ public class ForgeBasicNetherOresConfig {
 
     private static class Common implements BasicNetherOresConfig.ConfigAccess {
 
-        //Ore Generation Toggle
-        public static ForgeConfigSpec.BooleanValue emeraldGeneration;
-        public static ForgeConfigSpec.BooleanValue diamondGeneration;
-        public static ForgeConfigSpec.BooleanValue redstoneGeneration;
-        public static ForgeConfigSpec.BooleanValue lapisGeneration;
-        public static ForgeConfigSpec.BooleanValue coalGeneration;
-        public static ForgeConfigSpec.BooleanValue silverGeneration;
-        public static ForgeConfigSpec.BooleanValue ironGeneration;
-        public static ForgeConfigSpec.BooleanValue leadGeneration;
-        public static ForgeConfigSpec.BooleanValue nickelGeneration;
-        public static ForgeConfigSpec.BooleanValue copperGeneration;
-        public static ForgeConfigSpec.BooleanValue aluminumGeneration;
-        public static ForgeConfigSpec.BooleanValue tinGeneration;
-        public static ForgeConfigSpec.BooleanValue osmiumGeneration;
-        public static ForgeConfigSpec.BooleanValue uraniumGeneration;
-        public static ForgeConfigSpec.BooleanValue zincGeneration;
-
         public Common(ForgeConfigSpec.Builder builder) {
             builder.push("oreGeneration");
 
             //World Ore Generation
-            emeraldGeneration = builder
-                    .comment("Generate Emerald Ore")
-                    .define("ore_generation.world_generation.emerald", true);
-            diamondGeneration = builder
-                    .comment("Generate Diamond Ore")
-                    .define("ore_generation.world_generation.diamond", true);
-            redstoneGeneration = builder
-                    .comment("Generate Redstone Ore")
-                    .define("ore_generation.world_generation.redstone", true);
-            lapisGeneration = builder
-                    .comment("Generate Lapis Ore")
-                    .define("ore_generation.world_generation.lapis", true);
-            coalGeneration = builder
-                    .comment("Generate Coal Ore")
-                    .define("ore_generation.world_generation.coal", true);
-            silverGeneration = builder
-                    .comment("Generate Silver Ore")
-                    .define("ore_generation.world_generation.silver", false);
-            ironGeneration = builder
-                    .comment("Generate Iron Ore")
-                    .define("ore_generation.world_generation.iron", true);
-            leadGeneration = builder
-                    .comment("Generate Lead Ore")
-                    .define("ore_generation.world_generation.lead", false);
-            nickelGeneration = builder
-                    .comment("Generate Nickel Ore")
-                    .define("ore_generation.world_generation.nickel", false);
-            copperGeneration = builder
-                    .comment("Generate Copper Ore")
-                    .define("ore_generation.world_generation.copper", true);
-            aluminumGeneration = builder
-                    .comment("Generate Aluminum Ore")
-                    .define("ore_generation.world_generation.aluminum", false);
-            tinGeneration = builder
-                    .comment("Generate Tin Ore")
-                    .define("ore_generation.world_generation.tin", false);
-            osmiumGeneration = builder
-                    .comment("Generate Osmium Ore")
-                    .define("ore_generation.world_generation.osmium", false);
-            uraniumGeneration = builder
-                    .comment("Generate Uranium Ore")
-                    .define("ore_generation.world_generation.uranium", false);
-            zincGeneration = builder
-                    .comment("Generate Zinc Ore")
-                    .define("ore_generation.world_generation.zinc", false);
+//            emeraldGeneration = builder
+//                    .comment("Generate Emerald Ore")
+//                    .define("ore_generation.world_generation.emerald", true);
 
             builder.pop();
 
@@ -85,77 +26,77 @@ public class ForgeBasicNetherOresConfig {
 
         @Override
         public boolean emeraldGeneration() {
-            return emeraldGeneration.get();
+            return false;
         }
 
         @Override
         public boolean diamondGeneration() {
-            return diamondGeneration.get();
+            return false;
         }
 
         @Override
         public boolean redstoneGeneration() {
-            return redstoneGeneration.get();
+            return false;
         }
 
         @Override
         public boolean lapisGeneration() {
-            return lapisGeneration.get();
+            return false;
         }
 
         @Override
         public boolean coalGeneration() {
-            return coalGeneration.get();
+            return false;
         }
 
         @Override
         public boolean silverGeneration() {
-            return silverGeneration.get();
+            return false;
         }
 
         @Override
         public boolean ironGeneration() {
-            return ironGeneration.get();
+            return false;
         }
 
         @Override
         public boolean leadGeneration() {
-            return leadGeneration.get();
+            return false;
         }
 
         @Override
         public boolean nickelGeneration() {
-            return nickelGeneration.get();
+            return false;
         }
 
         @Override
         public boolean copperGeneration() {
-            return copperGeneration.get();
+            return false;
         }
 
         @Override
         public boolean aluminumGeneration() {
-            return aluminumGeneration.get();
+            return false;
         }
 
         @Override
         public boolean tinGeneration() {
-            return tinGeneration.get();
+            return false;
         }
 
         @Override
         public boolean osmiumGeneration() {
-            return osmiumGeneration.get();
+            return false;
         }
 
         @Override
         public boolean uraniumGeneration() {
-            return uraniumGeneration.get();
+            return false;
         }
 
         @Override
         public boolean zincGeneration() {
-            return zincGeneration.get();
+            return false;
         }
     }
 
