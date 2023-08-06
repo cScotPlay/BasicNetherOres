@@ -1,10 +1,11 @@
 package net.mcs3.basicnetherores.worldgen.level.block;
 
 import net.mcs3.basicnetherores.init.BNOBlocks;
-
+import net.mcs3.basicnetherores.util.helper.GuardOreBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.stats.Stats;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.player.Player;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 import javax.annotation.Nullable;
@@ -74,34 +76,13 @@ public class ModOreBlock extends DropExperienceBlock {
         super.spawnAfterBreak(state, worldIn, blockPos, itemStack, dropXP);
     }
 
-    public static void piglinGuards(Level worldIn, BlockPos pos, Player thief) {
-
-//        int x = pos.getX(), y = pos.getY(), z = pos.getZ();
-//        int rngProt;
-//
-//        rngProt = OreProtectionConfig.protectionRange.get();
-//
-//        List<Piglin> list = worldIn.getEntitiesOfClass(Piglin.class, new AABB(x - rngProt, y - rngProt, z - rngProt, x + rngProt, y + rngProt, z + rngProt));
-//
-//        PiglinEvent event = new PiglinEvent(worldIn, pos, thief, list);
-//        if (net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(event)) return;
-//
-//        /**
-//         * Aggro the Piglins (Pulls function from PiglinsTasks/ Line 403.)
-//         */
-//        for(Piglin guard : list) {
-//
-//            PiglinAi.angerNearbyPiglins(thief, true);
-//        }
-//
-//        List<ZombifiedPiglin> zombifiedPiglinList = worldIn.getEntitiesOfClass(ZombifiedPiglin.class, new AABB(x - rngProt, y - rngProt, z - rngProt, x + rngProt, y + rngProt, z + rngProt));
-//
-//        /**
-//         * Aggro the Zombified Piglins (Pulls function from ZombifiedPiglin/ Line 152.)
-//         */
-//        for(ZombifiedPiglin guard : zombifiedPiglinList) {
-//
-//            guard.setTarget(event.getThief());
-//        }
+    @Override
+    public void playerDestroy(Level level, Player player, BlockPos blockPos, BlockState blockState, @Nullable BlockEntity blockEntity, ItemStack itemStack) {
+        level.levelEvent(player, 2001, blockPos, getId(blockState));
+        GuardOreBlocks.guardOres(player, level, blockPos, blockState.getBlock());
+        player.awardStat(Stats.BLOCK_MINED.get(this));
+        player.causeFoodExhaustion(0.005F);
+        dropResources(blockState, level, blockPos, blockEntity, player, itemStack);
+        super.playerDestroy(level, player, blockPos, blockState, blockEntity, itemStack);
     }
 }

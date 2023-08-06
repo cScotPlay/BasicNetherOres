@@ -4,6 +4,7 @@ package net.mcs3.basicnetherores;
 import net.mcs3.basicnetherores.init.BNOConfiguredFeatures;
 import net.mcs3.basicnetherores.init.BNOPlacedFeatures;
 import net.mcs3.basicnetherores.platform.Services;
+import net.mcs3.basicnetherores.util.helper.GuardOreBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
 
@@ -32,5 +33,6 @@ public class CommonClass {
         }
         BNOConfiguredFeatures.initialize();
         BNOPlacedFeatures.initialize();
+
     }
 }

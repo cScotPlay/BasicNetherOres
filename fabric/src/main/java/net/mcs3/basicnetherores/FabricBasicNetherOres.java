@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.mcs3.basicnetherores.config.FabricBasicNetherOresConfig;
 import net.mcs3.basicnetherores.init.BNOBlocks;
 import net.mcs3.basicnetherores.init.BNOItems;
+import net.mcs3.basicnetherores.util.helper.GuardOreBlocks;
 import net.mcs3.basicnetherores.worldgen.FabricBiomeModifiers;
 import net.mcs3.basicnetherores.worldgen.item.ModCreativeModeTabs;
 import net.minecraft.core.Registry;
@@ -38,6 +39,7 @@ public class FabricBasicNetherOres implements ModInitializer {
         CommonClass.init();
 
         new FabricBiomeModifiers().biomeModificationHelper();
+
     }
 
     private static <T> BiConsumer<T, ResourceLocation> bind(Registry<? super T> registry) {
