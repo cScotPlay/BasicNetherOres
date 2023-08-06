@@ -47,9 +47,6 @@ public class ModRedstoneOreBlock extends RedStoneOreBlock {
     public void playerDestroy(Level level, Player player, BlockPos blockPos, BlockState blockState, @Nullable BlockEntity blockEntity, ItemStack itemStack) {
         level.levelEvent(player, 2001, blockPos, getId(blockState));
         GuardOreBlocks.guardOres(player, level, blockPos, blockState.getBlock());
-        player.awardStat(Stats.BLOCK_MINED.get(this));
-        player.causeFoodExhaustion(0.005F);
-        dropResources(blockState, level, blockPos, blockEntity, player, itemStack);
         super.playerDestroy(level, player, blockPos, blockState, blockEntity, itemStack);
     }
 }
