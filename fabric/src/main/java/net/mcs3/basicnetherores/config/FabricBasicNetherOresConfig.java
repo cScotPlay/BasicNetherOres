@@ -10,6 +10,8 @@ import net.mcs3.basicnetherores.Constants;
 
 import java.io.*;
 import java.nio.file.*;
+import java.util.Arrays;
+import java.util.List;
 
 import static io.github.fablabsmc.fablabs.api.fiber.v1.schema.type.derived.ConfigTypes.*;
 
@@ -63,6 +65,13 @@ public class FabricBasicNetherOresConfig {
         public final PropertyMirror<Boolean> osmiumGeneration = PropertyMirror.create(BOOLEAN);
         public final PropertyMirror<Boolean> uraniumGeneration = PropertyMirror.create(BOOLEAN);
         public final PropertyMirror<Boolean> zincGeneration = PropertyMirror.create(BOOLEAN);
+
+
+        //Variables for Ore Protection
+        public final PropertyMirror<Boolean> piglinGuard = PropertyMirror.create(BOOLEAN);
+        public final PropertyMirror<Boolean> silkEffect = PropertyMirror.create(BOOLEAN);
+        public final PropertyMirror<Integer> protectionRange = PropertyMirror.create(INTEGER);
+        public final PropertyMirror<List<String>> protectedBlocks = PropertyMirror.create(makeList(STRING));
 
         public ConfigTree configure(ConfigTreeBuilder builder) {
             builder.fork("emeraldGeneration")
@@ -153,7 +162,53 @@ public class FabricBasicNetherOresConfig {
                     .beginValue("enabled", BOOLEAN, false)
                     .withComment("Generate Zinc Ore")
                     .finishValue(zincGeneration::mirror)
-                    .finishBranch();
+                    .finishBranch()
+
+                    .fork("piglinGuard")
+                    .beginValue("enabled", BOOLEAN, true)
+                    .withComment("If set to 'true' Piglins will protect Nether Ores")
+                    .finishValue(piglinGuard::mirror)
+                    .finishBranch()
+
+                    .fork("silkEffect")
+                    .beginValue("enabled", BOOLEAN, true)
+                    .withComment("Set to false if you want the Piglins to attack when using Silk Touch Tools")
+                    .finishValue(silkEffect::mirror)
+                    .finishBranch()
+
+                    .fork("protectionRange")
+                    .beginValue("range", INTEGER, 16)
+                    .withComment("Set range that Piglins will aggro when mining ores(Default = 16)")
+                    .finishValue(protectionRange::mirror)
+                    .finishBranch()
+
+                    .fork("protectedBlocks")
+                    .beginValue("blocks", makeList(STRING), Arrays.asList(
+                            "bno:nether_emerald_ore",
+                            "bno:nether_diamond_ore",
+                            "bno:nether_lapis_ore",
+                            "bno:nether_redstone_ore",
+                            "minecraft:nether_gold_ore",
+                            "bno:nether_silver_ore",
+                            "bno:nether_iron_ore",
+                            "bno:nether_lead_ore",
+                            "bno:nether_nickel_ore",
+                            "bno:nether_coal_ore",
+                            "bno:nether_copper_ore",
+                            "bno:nether_aluminum_ore",
+                            "bno:nether_tin_ore",
+                            "bno:nether_osmium_ore",
+                            "bno:nether_uranium_ore",
+                            "bno:nether_zinc_ore",
+                            "minecraft:glowstone",
+                            "minecraft:nether_quartz_ore"
+                    ))
+                    .withComment("Add Blocks to be protected by Piglins (Example: 'minecraft:glowstone')")
+                    .finishValue(protectedBlocks::mirror)
+                    .finishBranch()
+
+            ;
+
 
             return builder.build();
         }
@@ -232,6 +287,26 @@ public class FabricBasicNetherOresConfig {
         @Override
         public boolean zincGeneration() {
             return zincGeneration.getValue();
+        }
+
+        @Override
+        public boolean piglinGuard() {
+            return piglinGuard.getValue();
+        }
+
+        @Override
+        public boolean silkEffect() {
+            return silkEffect.getValue();
+        }
+
+        @Override
+        public int protectionRange() {
+            return protectionRange.getValue();
+        }
+
+        @Override
+        public List<? extends String> protectedBlocks() {
+            return protectedBlocks.getValue();
         }
     }
 

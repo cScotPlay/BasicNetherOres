@@ -2,6 +2,8 @@ package net.mcs3.basicnetherores.config;
 
 import net.mcs3.basicnetherores.Constants;
 
+import java.util.List;
+
 public class BasicNetherOresConfig {
 
     public interface ConfigAccess {
@@ -22,6 +24,12 @@ public class BasicNetherOresConfig {
         boolean osmiumGeneration();
         boolean uraniumGeneration();
         boolean zincGeneration();
+
+        //Variables for Ore Protection
+        boolean piglinGuard();
+        boolean silkEffect();
+        int protectionRange();
+        List<? extends String> protectedBlocks();
     }
 
     private static ConfigAccess config = null;
