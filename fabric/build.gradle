@@ -46,6 +46,7 @@ dependencies {
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-fabric:${jei_version}")
 
     modImplementation "me.zeroeightsix:fiber:0.23.0-2"
+    include "me.zeroeightsix:fiber:0.23.0-2"
 }
 
 loom {
