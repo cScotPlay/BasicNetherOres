@@ -5,11 +5,11 @@ issueTrackerURL="https://github.com/cScotPlay/BasicNetherOres/issues"
 [[mods]]
 modId = "bno"
 version = "${file.jarVersion}"
-displayName = "${mod_name}"
+displayName = "Basic Nether Ores"
 displayURL="https://minecraft.curseforge.com/projects/basic-nether-ores"
 logoFile = "bno-logo.png"
 credits = "Thanks to An Sar for the help in working through this.  Thanks to McJty for putting together the tutorial videos that helped me to accomplish this."
-authors = "${mod_author}"
+authors = "cScotPlay"
 description = '''
 Basic Nether Ores adds Overworld and Modded Ores to the Nether.
 ''' #mandatory (Supports multiline text)
