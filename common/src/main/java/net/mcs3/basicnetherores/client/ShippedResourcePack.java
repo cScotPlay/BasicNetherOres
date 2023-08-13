@@ -18,9 +18,11 @@ public class ShippedResourcePack {
 
             try {
                 Files.copy(folderInJar, Paths.get("resourcepacks/" + name + ".zip"));
-            } catch (FileSystemAlreadyExistsException e) {
-            } catch (IOException e) {
-                e.printStackTrace();
+            }
+//            catch (FileSystemAlreadyExistsException e) {
+//            }
+            catch (IOException e) {
+//                e.printStackTrace();
             }
 
             try {folderInJar.close();
