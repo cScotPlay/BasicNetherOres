@@ -41,7 +41,7 @@ public class ForgeBasicNetherOres {
         // project.
     
         // Use Forge to bootstrap the Common mod.
-        Constants.LOGGER.info("Hello Forge world!");
+//        Constants.LOGGER.info("Hello Forge world!");
         ForgeBasicNetherOresConfig.setup();
         CommonClass.init();
         PLACED_FEATURES.register(modEventBus);
