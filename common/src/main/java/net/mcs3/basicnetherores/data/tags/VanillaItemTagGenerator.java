@@ -20,14 +20,13 @@ public class VanillaItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
-        copy(BlockTags.COAL_ORES, ItemTags.COAL_ORES);
         copy(BlockTags.EMERALD_ORES, ItemTags.EMERALD_ORES);
-//        copy(Tags.Blocks.ORES_DIAMOND, Tags.Items.ORES_DIAMOND);
-//        copy(Tags.Blocks.ORES_EMERALD, Tags.Items.ORES_EMERALD);
-//        copy(Tags.Blocks.ORES_IRON, Tags.Items.ORES_IRON);
-//        copy(Tags.Blocks.ORES_LAPIS, Tags.Items.ORES_LAPIS);
-//        copy(Tags.Blocks.ORES_REDSTONE, Tags.Items.ORES_REDSTONE);
-//        ItemTags
+        copy(BlockTags.DIAMOND_ORES, ItemTags.DIAMOND_ORES);
+        copy(BlockTags.REDSTONE_ORES, ItemTags.REDSTONE_ORES);
+        copy(BlockTags.LAPIS_ORES, ItemTags.LAPIS_ORES);
+        copy(BlockTags.COAL_ORES, ItemTags.COAL_ORES);
+        copy(BlockTags.IRON_ORES, ItemTags.IRON_ORES);
+        copy(BlockTags.COPPER_ORES, ItemTags.COPPER_ORES);
 
     }
 }
