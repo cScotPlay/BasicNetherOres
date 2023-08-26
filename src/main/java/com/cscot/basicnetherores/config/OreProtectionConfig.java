@@ -16,9 +16,6 @@ public class OreProtectionConfig
     public static ForgeConfigSpec.ConfigValue<List<? extends String>> protectedBlocks;
 
     public static void Init(ForgeConfigSpec.Builder builder) {
-        //builder.pop();
-        builder.comment("Piglin Projection Settings");
-        //builder.push(protName);
 
         piglinGuard = builder
                 .comment("If set to 'true' Piglins will protect Nether Ores")

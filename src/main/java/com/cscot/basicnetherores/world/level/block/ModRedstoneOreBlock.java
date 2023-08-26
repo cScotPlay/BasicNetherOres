@@ -2,7 +2,6 @@ package com.cscot.basicnetherores.world.level.block;
 
 import com.cscot.basicnetherores.api.event.PiglinEvent;
 import com.cscot.basicnetherores.client.renderer.IHelpRender;
-import com.cscot.basicnetherores.config.OreGenerationConfig;
 import com.cscot.basicnetherores.config.OreProtectionConfig;
 import com.cscot.basicnetherores.util.helpers.OreTooltipHelper;
 import net.minecraft.client.renderer.RenderType;
@@ -27,6 +26,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static com.cscot.basicnetherores.util.helpers.OreTooltipHelper.*;
+
 public class ModRedstoneOreBlock extends RedStoneOreBlock implements IHelpRender
 {
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
@@ -40,10 +41,7 @@ public class ModRedstoneOreBlock extends RedStoneOreBlock implements IHelpRender
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         if (this == ModBlocks.NETHER_REDSTONE_ORE.get()) {
-            if (!OreGenerationConfig.redstoneGeneration.get()) {
-                tooltip.add(Component.translatable("tooltip.config.tip"));
-            } else
-                tooltip.add(Component.translatable(OreTooltipHelper.RedstoneOreTip.oreTip, OreGenerationConfig.redstoneMinHeight.get().toString(), OreGenerationConfig.redstoneMaxHeight.get().toString()));
+                tooltip.add(Component.translatable(OreTooltipHelper.redstoneOreTip, redstoneMinHeight, redstoneMaxHeight));
         }
     }
 
