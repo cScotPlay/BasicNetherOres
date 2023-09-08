@@ -9,9 +9,6 @@ base {
 }
 repositories{
     maven {
-        name = "WTHIT"
-        url "https://maven.bai.lol" }
-    maven {
         name = "ModMenu"
         url 'https://maven.terraformersmc.com/releases/' }
 
@@ -32,9 +29,6 @@ dependencies {
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 
     compileOnly project(":common")
-
-    modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${project.wthit_version}"
-    modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${project.wthit_version}"
 
     modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
     modRuntimeOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
