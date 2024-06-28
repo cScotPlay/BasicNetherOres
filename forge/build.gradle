@@ -18,6 +18,7 @@ dependencies {
 
 minecraft {
     mappings channel: 'official', version: minecraft_version
+    reobf = false
 
     copyIdeResources = true // Calls processResources when in dev
 
