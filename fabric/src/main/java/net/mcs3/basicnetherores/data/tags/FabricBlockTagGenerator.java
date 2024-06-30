@@ -215,6 +215,42 @@ public class FabricBlockTagGenerator extends IntrinsicHolderTagsProvider<Block> 
                 BNOBlocks.SOUL_ZINC_ORE
         );
 
+        tag(BlockTags.SOUL_SPEED_BLOCKS).add(
+                BNOBlocks.SOUL_EMERALD_ORE,
+                BNOBlocks.SOUL_DIAMOND_ORE,
+                BNOBlocks.SOUL_REDSTONE_ORE,
+                BNOBlocks.SOUL_LAPIS_ORE,
+                BNOBlocks.SOUL_COAL_ORE,
+                BNOBlocks.SOUL_SILVER_ORE,
+                BNOBlocks.SOUL_IRON_ORE,
+                BNOBlocks.SOUL_LEAD_ORE,
+                BNOBlocks.SOUL_NICKEL_ORE,
+                BNOBlocks.SOUL_COPPER_ORE,
+                BNOBlocks.SOUL_ALUMINUM_ORE,
+                BNOBlocks.SOUL_TIN_ORE,
+                BNOBlocks.SOUL_OSMIUM_ORE,
+                BNOBlocks.SOUL_URANIUM_ORE,
+                BNOBlocks.SOUL_ZINC_ORE
+        );
+
+        tag(BlockTags.SOUL_FIRE_BASE_BLOCKS).add(
+                BNOBlocks.SOUL_EMERALD_ORE,
+                BNOBlocks.SOUL_DIAMOND_ORE,
+                BNOBlocks.SOUL_REDSTONE_ORE,
+                BNOBlocks.SOUL_LAPIS_ORE,
+                BNOBlocks.SOUL_COAL_ORE,
+                BNOBlocks.SOUL_SILVER_ORE,
+                BNOBlocks.SOUL_IRON_ORE,
+                BNOBlocks.SOUL_LEAD_ORE,
+                BNOBlocks.SOUL_NICKEL_ORE,
+                BNOBlocks.SOUL_COPPER_ORE,
+                BNOBlocks.SOUL_ALUMINUM_ORE,
+                BNOBlocks.SOUL_TIN_ORE,
+                BNOBlocks.SOUL_OSMIUM_ORE,
+                BNOBlocks.SOUL_URANIUM_ORE,
+                BNOBlocks.SOUL_ZINC_ORE
+        );
+
         // ***************************************************************************** //
         //  Common Tags (Only Account for Common Tags Here)
         // ***************************************************************************** //
